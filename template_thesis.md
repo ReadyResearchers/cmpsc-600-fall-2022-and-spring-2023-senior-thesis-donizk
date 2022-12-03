@@ -75,6 +75,16 @@ Direct any questions about issues to your first reader.
 
 # Introduction
 
+This chapter describes your completed senior thesis work,
+including the overall aims  and the background motivating your research. Whenever
+possible, you should use one or more concrete examples and technical diagrams.
+
+It is often useful and necessary to separate the introduction into multiple sections.
+Several possible sections are proposed below, you can use these or distribute your
+introductory text into sections in another wayyy.
+
+The headings below propose _one way_ you might structure this section of the document.
+
 ## Motivation
 
 The US Census Bureau defines educational attainment as the highest level of education that an individual completes. Studying educational attainment is important because the level of education a person attains is oftentimes directly linked to the professional, personal, financial, and social opportunities available to a person. For example, a person with a lower level of educational attainment may not have access to job opportunities that require a high level of education. Or in contrast, a person with a high level of education may have access to opportunities and resources resulting from a higher social or financial status.
@@ -87,7 +97,18 @@ Additionally, research has shown that differences in educational attainment by g
 
 Race also has played a role in determining the level of education a person would complete for the better half of the last century. This is as a result of the type of opportunities to access education and ease of accessing this and other related resources available to these groups. Historical events and trends have also exacerbated the racial disparities in educational attainment such as the lingering effects of slavery and segregation.
 
+1. explain why educational attainment study is important!
+2. intro factors that can impact educational attainment study
+3. explain why income is an important factor to study
+4. explain why race is an important factor to study
+5. explain why sex is an important factor to study
+
 ## Current State of the Art
+
+1. explain that other projects dont usually look at intersection btwn these 3 factors
+2. explain projects haven't looked at race differences outside black and white
+3. explain projects recently haven't looked at income differences
+4. few project employ a regression model to test for statistical significance of relationship
 
 There has been a good amount of research done on the topic of educational attainment that has been able to capture differences in gender, race, and income, and their implications. The main focus in a lot of literature is on gendered differences in educational attainment, which seems to be a well-documented issue overall. These gendered differences seem to show that while there was at some point in time (in the past) a male-leaning dominance in levels of educational attainment, women seem to now hold the advantage in educational attainment. However, this gender gap reversal in educational attainment does not seem to reflect a reversal in the gender gap as it relates to occupations or wages.
 
@@ -103,6 +124,10 @@ This project also looks to take on the task of an interdisciplinary study, as re
 
 ## Goals of the Project
 
+1. brief project description + data description
+2. brief implementation description
+3. final product description
+
 This project looks to study the impact of race, gender, and income on educational attainment in the United States. This project will use data from Integrated Public Use Microdata (IPUMS) Current Population Survey (CPS) microdata, which is harmonized and includes relevant demographic information. The data itself is cross-sectional, encompassing years 2010-2015 in the United States. Specifically, the variables in the data extract, created using IPUMS’ platform, include the survey year (YEAR), state identified by FIPS code (STATE), age (AGE), sex (SEX), race (RACE), Hispanic origin (HISPAN), educational attainment code (EDUC), total family income (FTOTVAL), and total personal income (INCTOT). Additional variables were included in the extract, for the purposes of aiding in identification of individuals and individual households, and analysis of specific data: household record of CPSID (CPSID), month (MONTH), household serial number (SERIAL), person number in sample unit (PERNUM), final person-level weight for analysis (WTFINL), and the person-level used for supplement data (ASECWT).
 
 In order to access to all of the data, an SQLite database will be used to store the data to be used in RStudio to wrangle and transform data as needed in order to generate statistics and visualizations, telling of the trends present in different identity groups. These statistics and visualizations will then be output on a web platform that allows for a user to compare two different identity groups or to look at the trend of educational attainment for one identity group over the years.
@@ -111,23 +136,32 @@ The main goal of this project is to provide a tool that will make it easy to obs
 
 ## Ethical Implications
 
-There are a few ethical issues that need to be addressed within this work involving the security and reliability of the data used to analyze the trends of educational attainment across different groups. Additionally, there may be issues related to data collection, as the data only represents attainable and usable samples, as well, as, issues that may arise from the sourcing of the data. The source of the data, Integrated Public Use Microdata (IPUMS), harmonizes Current Population Survey (CPS) microdata to include relevant demographic information about individual people and households.
+This document requires that you discuss the ethical implications of your work -- no
+matter how benign you consider the outcome of your project. As several major studies
+of ethical issues in computer science assert: _no project is completely value-neutral_.
 
-### Information Accuracy and Data Collection Issues
+To assist you in elaborating on these issues, the following areas are topics you might
+consider addressing. You do not need to address all of them.
+
+* Information Privacy
+* Information Accuracy (e.g. can contain reliability)
+* Potential Misuse (e.g. computer crime, unintended consequences)
+* Second- or Third-Party Risk (e.g. safety)
+* Data Collection Issues (e.g. issues inherent in collecting data)
+* Algorithmic or Data Bias
+* Potential Power Difference / Social Imbalance / Issues in Equity
+
+In addition, reflect on ways that the above harms can be or are mitigated by your work
+
+There are a few ethical issues that need to be addressed within this work involving the security and reliability of the data used to analyze the trends of educational attainment across different groups. Additionally, there may be issues related to data collection, as the data only represents attainable and usable samples, as well, as, issues that may arise from the sourcing of the data. The source of the data, Integrated Public Use Microdata (IPUMS), harmonizes Current Population Survey (CPS) microdata to include relevant demographic information about individual people and households.
 
 To address the first issue of reliability, the data itself is collected from a survey, meaning that responses are self-reported. This can be an issue if there is no general mechanism, within the Census' collecting of the data, that verifies the answers given to the survey. This could mean that certain answers could have been given in order to seem better than actuality. In the case of this study, there could have been someone who lied about their highest level of educational attainment or about their level of income in order to seem more or less well-off. Also on the note of survey data, there may also be issues in data collection that may be present. Things like incomplete surveys or filling out of data extracts (on IPUMS' behalf), may result in untrustworthy or inclusive statistics or results.
 
 Additionally, there seems to be a potential issue in data collection or extraction, as there was a discrepancy between the data extract created for this project using IPUMS' extract tool and the actual data that ended up being usable for the project. The original intent of this project was to study data from the last 10 years in order to capture how educational attainment has changed over time, with help from the literature. But upon opening and working with the IPUMS data extract, which should have included years 2010-2021, it became clear that only data from 2010-2015 was accessible and usable. It is not clear if this is an issue resulting in incomplete data or with the data extract tool, but either way this could still be an issue future researchers may encounter with this tool.
 
-### Third Party Risk
-
 As the data for this project was extracted and downloaded from a third-party tool, IPUMS' online data extract creator, there may be risks with using a service like this. Like mentioned above, there may be discrepancies with the data in that more data is expected in an extract than is actually given. There could also be issues in the accessibility of using this data, as an account is required to access the data. Additionally, there is the risk of just having to trust the reliability of the data provided by the third-party source.
 
-### Data Bias
-
 In the initial use of the data, it became apparent that there may also be some data bias within the dataset. This is because when observations are counted by state, a varying amount of individuals are represented in each state, but never fully representing the populations actually present in those states. These counts also vary year to year, which further brings into question the validity of the data. The fact that this data only represents samples may bring up issues in the reliability of the data, in that it is unclear if there was any bias in the collection of the data or if the data may be incorrectly skewed towards representing one group over another.
-
-### Issues in Equity
 
 The last but probably the most important ethical issue that may arise as a result of this project includes the potential issues in equity, that the project generally looks to address. Because this project is rooted in looking for trends in educational attainment, focusing in on gendered, racial, and financial disparities in attainment, the results of this project may have real implications for the groups represented. With that, there should be a great deal of consideration taken when looking at and comparing trends across groups, as well as, when introducing and talking about educational trajectories. This is in order to avoid an unneccessary harm or unreliable characterizations or representations of certain identity groups or specific regions.
 
