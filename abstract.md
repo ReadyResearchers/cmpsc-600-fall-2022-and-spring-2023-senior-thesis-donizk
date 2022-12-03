@@ -1,10 +1,3 @@
 # Abstract
 
-Provide a concise summary of your proposed research of approximately 250
-words. The abstract does _not_ serve as or replace the introduction; consider
-it a summary of the entire document. It makes sense to wait to write the abstract
-until the rest of the document has been written. Write your abstract using
-the `abstract.md` file, and the template will automatically include it.
-
-
-work
+In recent years, trends in educational attainment have reflected simultaneous movements towards closing and widening disparities between different identity groups. Studying educational attainment, specifically revolved around studying differences or disparities in educational attainment, is important because of the implications it has for future work opportunities, financial security, and resource access. This study will look to answer the question of what specific demographic factors and to what degree they are determinants of educational attainment. The demographic factors that this study will focus on include sex, race/ethnicity, and income. The main goal of this study is to address the lack of research in comparing educational attainment trends between different identity groups, with special interest in studying differences in race/ethnicity and income. Leveraging data from IPUMS, and using R and SQLite, trends in educational attainment across different identity groups will be studied in order to answer this question and display results on a data dashboard, in order to draw comparisons.

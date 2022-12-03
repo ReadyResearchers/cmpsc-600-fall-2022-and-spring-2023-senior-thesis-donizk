@@ -2,11 +2,11 @@
 # https://maehr.github.io/academic-pandoc-template/
 
 # Project-specific values
-title: 'Senior Thesis'
-author: 'Student Name'
+title: 'EduAttain: A Statistical Analysis of the Impact of Different Demographic Indicators on Educational Attainment'
+author: 'Kyrie Doniz'
 date: '22 July 2022'
-firstreader: 'First Reader'
-secondreader: 'Second Reader'
+firstreader: 'Janyl Jumadinova'
+secondreader: 'Timothy Bianco'
 logo: 'images/logo'
 
 # Template Values: DO NOT TOUCH
