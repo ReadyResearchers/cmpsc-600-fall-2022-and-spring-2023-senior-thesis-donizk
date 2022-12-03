@@ -85,7 +85,11 @@ introductory text into sections in another wayyy.
 
 The headings below propose _one way_ you might structure this section of the document.
 
-The US Census Bureau defines educational attainment as the highest level of education that an individual completes. This level of attainment could be impacted by differences in various demographic factors such as race, gender, and level of income. These demographic factors may have a say in how an individual’s personal expectations, limitations to access, and accessibility to informational resources informs their decision to pursue greater educational opportunities, such as a postsecondary education. The main goal of this research is to determine to what degree, if at all, these demographic factors (race, income, sex) play a role in determining an individual’s level of educational attainment.
+## Motivation
+
+The US Census Bureau defines educational attainment as the highest level of education that an individual completes. Studying educational attainment is important because the level of education a person attains is oftentimes directly linked to the professional, personal, financial, and social opportunities available to a person. For example, a person with a lower level of educational attainment may not have access to job opportunities that require a high level of education. Or in contrast, a person with a high level of education may have access to opportunities and resources resulting from a higher social or financial status.
+
+The level of educational attainment a person achieves could be impacted by differences in various demographic factors such as race, gender, and level of income. These demographic factors may have a say in how an individual’s personal expectations, limitations to access, and accessibility to informational resources informs their decision to pursue greater educational opportunities, such as a postsecondary education. The main goal of this research is to determine to what degree, if at all, these demographic factors (race, income, sex) play a role in determining an individual’s level of educational attainment.
 
 There is evidence in how income, and more specifically socioeconomic status, can impact one’s education. For example, children from families with a low socioeconomic status “are less likely to have experiences that encourage the development of fundamental skills of reading acquisition” and “to have access to informational resources about college”. (APA) Not only are access to education and development of certain skills impacted by socioeconomic status, but so is academic achievement; low-income children “enter high school with average literacy skills five years behind those of high-income students”, have a lower success rate in the fields of “science, technology, engineering, and mathematics” than those not from underrepresented groups, and have a higher likelihood of dropping out of high school (11.6%) compared to their high-income counterparts (2.8%). (APA)
 
@@ -93,11 +97,24 @@ Additionally, research has shown that differences in educational attainment by g
 
 Race also has played a role in determining the level of education a person would complete for the better half of the last century. This is as a result of the type of opportunities to access education and ease of accessing this and other related resources available to these groups. Historical events and trends have also exacerbated the racial disparities in educational attainment such as the lingering effects of slavery and segregation.
 
-## Motivation
+1. explain why educational attainment study is important
+2. intro factors that can impact educational attainment study
+3. explain why income is an important factor to study
+4. explain why race is an important factor to study
+5. explain why sex is an important factor to study
 
 ## Current State of the Art
 
+1. explain that other projects dont usually look at intersection btwn these 3 factors
+2. explain projects haven't looked at race differences outside black and white
+3. explain projects recently haven't looked at income differences
+
+
 ## Goals of the Project
+
+1. brief project description + data description
+2. brief implementation description
+3. final product description
 
 ## Ethical Implications
 
