@@ -109,7 +109,6 @@ Race also has played a role in determining the level of education a person would
 2. explain projects haven't looked at race differences outside black and white
 3. explain projects recently haven't looked at income differences
 
-
 ## Goals of the Project
 
 1. brief project description + data description
@@ -134,6 +133,14 @@ consider addressing. You do not need to address all of them.
 * Potential Power Difference / Social Imbalance / Issues in Equity
 
 In addition, reflect on ways that the above harms can be or are mitigated by your work
+
+1. Data collection issues and information accuracy
+
+The main ethical issue that needs to be addressed within this work involves the reliability of the data used to analyze the trends of educational attainment across different groups. Additionally, there may be issues related to data collection, as the data only represents attainable and usable samples. The source of the data, Integrated Public Use Microdata (IPUMS), harmonizes Current Population Survey (CPS) microdata to include relevant demographic information about individual people and households.
+
+To address the first issue of reliability, the data itself is collected from a survey, meaning that responses are self-reported. This can be an issue if there is no general mechanism, within the Census' collecting of the data, that verifies the answers given to the survey. This could mean that certain answers could have been given in order to seem better than actuality. In the case of this study, there could have been someone who lied about their highest level of educational attainment or about their level of income in order to seem more or less well-off.
+
+Additionally, there seems to be a potential issue in data collection or extraction, as there was a discrepancy between the data extract created for this project using IPUMS' extract tool and the actual data that ended up being usable for the project. The original intent of this project was to study data from the last 10 years in order to capture how educational attainment has changed over time, with help from the literature. But upon opening and working with the IPUMS data extract, which should have included years 2010-2021, it became clear that only data from 2010-2015 was accessible and usable. It is not clear if this is an issue resulting in incomplete data or with the data extract tool, but either way this could still be an issue future researchers may encounter with this tool.
 
 # Related work
 
