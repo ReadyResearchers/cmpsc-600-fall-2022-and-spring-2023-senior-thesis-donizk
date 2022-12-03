@@ -97,7 +97,7 @@ Additionally, research has shown that differences in educational attainment by g
 
 Race also has played a role in determining the level of education a person would complete for the better half of the last century. This is as a result of the type of opportunities to access education and ease of accessing this and other related resources available to these groups. Historical events and trends have also exacerbated the racial disparities in educational attainment such as the lingering effects of slavery and segregation.
 
-1. explain why educational attainment study is important
+1. explain why educational attainment study is important!
 2. intro factors that can impact educational attainment study
 3. explain why income is an important factor to study
 4. explain why race is an important factor to study
