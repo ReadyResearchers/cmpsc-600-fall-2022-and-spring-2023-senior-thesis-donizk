@@ -108,10 +108,17 @@ Race also has played a role in determining the level of education a person would
 1. explain that other projects dont usually look at intersection btwn these 3 factors
 2. explain projects haven't looked at race differences outside black and white
 3. explain projects recently haven't looked at income differences
+4. few project employ a regression model to test for statistical significance of relationship
 
 There has been a good amount of research done on the topic of educational attainment that has been able to capture differences in gender, race, and income, and their implications. The main focus in a lot of literature is on gendered differences in educational attainment, which seems to be a well-documented issue overall. These gendered differences seem to show that while there was at some point in time (in the past) a male-leaning dominance in levels of educational attainment, women seem to now hold the advantage in educational attainment. However, this gender gap reversal in educational attainment does not seem to reflect a reversal in the gender gap as it relates to occupations or wages.
 
-To date, there has not been research that looks at the combined impact of race, income, and gender on educational attainment
+When racial differences in educational attainment are studied, many authors tend to focus on the differences exclusively between white and black people. This neglects the disparities and differences in educational attainment that could be potentiall observed in other racial or ethnic groups. One of the goals of this study and subsequent tool is to analyze differences across different racial and ethnic groups, with special interest in observing differences in racial groups that literature has failed to cover.
+
+In contrast, there seems to be a good breadth of literature studying the effects of income on educational attainment. This literature, however, is mostly outdated and does not touch upon if there have been any movements in trends of educational attainment. Another goal of this project is to expand on the research that has already been done on the effects of income, with special priority in seeing how this impact has changed and if there are any other different implications that have not yet been covered in the literature.
+
+To date, there has not been research that looks at the combined impact of race, income, and gender on educational attainment and as there are various factors that can go into play in impacting whether or not a person will recieve a certain level of educational attainment, doing this research is important. It is not clear why these three factors haven't been studied in tandem before, but it can be presumed that it may be a result of complexities in researching the combined effects of these factors on attainment. Another goal of this project is to address this specific gap in measuring the combined effects in the literature.
+
+Lastly, few studies employ the use of a regression model in order to study the effects of different factors on educational attainment, and the ones that are most likely to were on the topic of income. One of the goals of this project is to construct and run a regression model that includes the factors of race, income, and gender as they relate to educational attainment, and also regressions that look at each of these factors in isolation. This is in order to get the statistical significance of the relationships between each of these factors in relation to educational attainment, which can then be used to determine the strength of the relationship between each of the factors. It could also help determine which of these factors plays a bigger role as a determinant of educational attainment.
 
 ## Goals of the Project
 
