@@ -81,7 +81,7 @@ possible, you should use one or more concrete examples and technical diagrams.
 
 It is often useful and necessary to separate the introduction into multiple sections.
 Several possible sections are proposed below, you can use these or distribute your
-introductory text into sections in another way.
+introductory text into sections in another wayyy.
 
 The headings below propose _one way_ you might structure this section of the document.
 
