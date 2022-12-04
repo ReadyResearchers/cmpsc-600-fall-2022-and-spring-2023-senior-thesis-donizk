@@ -77,7 +77,7 @@ Direct any questions about issues to your first reader.
 
 This chapter describes your completed senior thesis work,
 including the overall aims  and the background motivating your research. Whenever
-possible, you should use one or more concrete examples and technical diagrams.
+possible, you should use one or more concrete examples and technical diagrams. -- technical diagram of program structure, regression model, and results and can also show differences in state data for issues section
 
 It is often useful and necessary to separate the introduction into multiple sections.
 Several possible sections are proposed below, you can use these or distribute your
