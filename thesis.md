@@ -211,6 +211,27 @@ For those projects whose implications address social or moral issues (i.e. ethic
 standards, causes, effects), you will want to use this section to describe how you
 actively mitigated or considered these issues.
 
+## Data Description
+
+insert existing writing + make sure to have elaborated on ipums
+
+## Tools
+
+* R
+* SQLite
+* dplyr
+* shiny
+* shinydashboard
+* ggplot2
+* plotly
+* other libraries etc
+
+outline each tool/lib and how they fit into construction of tool
+
+## Regression Analysis
+
+intro Ordinal Logistic Regression and equation, preview results
+
 # Experiments
 
 This chapter describes your experimental set up and evaluation. It should also
