@@ -109,6 +109,12 @@ One noteworthy element of this data extract is that even though I had selected t
 
 In future versions of this document, I hope to be able to more clearly elaborate on why this data is inaccessible or not included in the extract.
 
+The raw data extract from IPUMS, before cleaning and transformation, looked much like the figure below.
+
+![Raw Data](images/raw-data.JPG)
+
+There are a couple of noteworthy aspects about this data. In the case of CPSIDP, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the SERIAL, YEAR, PERNUM, BPL and MONTH variables will not be considered in the analysis. The SEX variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The STATEFIP variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order. RACE, and HISPAN are also qualitative nominal variables, similar to STATEFIP, where each level of education, race, and Hispanic ethnicity is assigned to a numerical code.  The full list of number/level assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
+
 ## Descriptive Statistics
 
 For this study, R will be the main tool used to perform data analysis, as such built-in functions such as summary() and count(), along with outside libraries and packages, will be employed.
@@ -178,12 +184,6 @@ This shows that the number of observations for each of these variables is incons
 When using summary() in order to generate summary statistics on the raw data set, the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are either classified as qualitative nominal or ordinal, so the interpretation of these summary statistics is negligible for those variables.
 
 ![Summary Stats](images/summary-stats.JPG)
-
-The raw data extract from IPUMS, before cleaning and transformation, looked much like the figure below.
-
-![Raw Data](images/raw-data.JPG)
-
-There are a couple of noteworthy aspects about this data. In the case of CPSIDP, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the SERIAL, YEAR, PERNUM, BPL and MONTH variables will not be considered in the analysis. The SEX variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The STATEFIP variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order. RACE, and HISPAN are also qualitative nominal variables, similar to STATEFIP, where each level of education, race, and Hispanic ethnicity is assigned to a numerical code.  The full list of number/level assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
 
 For the initial analysis of the data, the main focus is to observe how educational attainment varies by gender, income, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year.
 
