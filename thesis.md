@@ -179,6 +179,8 @@ The raw data extract from IPUMS, before cleaning and transformation, looked much
 
 ![Raw Data](images/raw-data.JPG)
 
+There are a couple of noteworthy aspects about this data. In the case of CPSIDP, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the SERIAL, YEAR, PERNUM, BPL and MONTH variables will not be considered in the analysis. The SEX variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The STATEFIP variable represents an ordinal variable that specifies entries by state with a number code, the full list of number/level assignments is available on the IPUMS CPS official website. EDUC, RACE, and HISPAN are also ordinal variables, similar to STATEFIP, where each level of education, race, and Hispanic ethnicity is assigned to a numerical code value, available on IPUMS CPS, as well. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
+
 ## Descriptive Statistics
 
 Duhhhh -- insert from doc
