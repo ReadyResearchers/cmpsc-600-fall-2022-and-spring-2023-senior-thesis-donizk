@@ -115,7 +115,7 @@ The main goal of this project is to provide a tool that will make it easy to obs
 
 ## Ethical Implications
 
-There are a few ethical issues that need to be addressed within this work involving the security and reliability of the data used to analyze the trends of educational attainment across different groups. Additionally, there may be issues related to data collection, as the data only represents attainable and usable samples, as well, as, issues that may arise from the sourcing of the data. The source of the data, Integrated Public Use Microdata (IPUMS), harmonizes Current Population Survey (CPS) microdata to include relevant demographic information about individual people and households.
+There are a few ethical issues that need to be addressed within this work involving the security and reliability of the data used to analyze the trends of educational attainment across different groups. Additionally, there may be issues related to data collection, as the data only represents attainable and usable samples, as well, as, issues that may arise from the sourcing of the data -- since IPUMS only works with microdata.
 
 ### Information Accuracy and Data Collection Issues
 
@@ -213,7 +213,32 @@ actively mitigated or considered these issues.
 
 ## Data Description
 
-insert existing writing + make sure to have elaborated on ipums
+The data used in this study comes from IPUMS CPS and is cross-sectional, encompassing data for years 2010-2015 in the United States. Specifically, the variables in the data extract, created using IPUMS’ platform, include the survey year (YEAR), state identified by FIPS code (STATE), age (AGE), sex (SEX), race (RACE), Hispanic origin (HISPAN), educational attainment code (EDUC), total family income (FTOTVAL), and total personal income (INCTOT). Additional variables were included in the extract, for the purposes of aiding in identification of individuals and individual households, and analysis of specific data: household record of CPSID (CPSID), month (MONTH), household serial number (SERIAL), person number in sample unit (PERNUM), final person-level weight for analysis (WTFINL), and the person-level used for supplement data (ASECWT).
+
+One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the range() function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for my data, as I was under the impression that I was accessing more data than was actually provided. Additionally, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. In doing some preliminary analysis using R’s count() function and having wrangled the data to be separated by year, it seems as though only a sample represented each state each year, with the amount of people represented not remaining constant across the years. As a result, my analysis will be focused on generating key findings for the entirety of the US, split by year, attempting to capture how rates of educational attainment (based on other variables) change over time. This may result in findings that are not fully representative of the populations being captured within the data, but it does provide some key insights into the trends present in the US.
+
+In future versions of this document, I hope to be able to more clearly elaborate on why this data is inaccessible or not included in the extract.
+
+After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample went from 1,048,575 to 753,243 observations. Additionally, using the count() function from R, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below.
+
+2010 Race Count
+
+|Row number | RACE | n |
+|:----------|:------------|:------------|
+|1          |White        |117536       |
+|2          |Black        |17809        |
+|3          |Asian        |8072         |
+|4          |Other        |2972         |
+|5          |American Indian|1977         |
+|6          |Pacific Islander|705          |
+
+* count of race, gender, hispan for each year
+* sd/mean of age and income
+* total obs.
+
+The raw data extract from IPUMS, before cleaning and transformation, looked much like the figure below.
+
+* insert table
 
 ## Tools
 
@@ -224,6 +249,10 @@ insert existing writing + make sure to have elaborated on ipums
 * shinydashboard
 * ggplot2
 * plotly
+* RSQLite
+* tidyverse
+* plotly
+* rsconnect
 * other libraries etc
 
 outline each tool/lib and how they fit into construction of tool
