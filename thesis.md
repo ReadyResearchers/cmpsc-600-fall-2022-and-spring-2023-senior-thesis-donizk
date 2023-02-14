@@ -1,78 +1,3 @@
-# Template description
-
-This repository contains the starter materials for your thesis in Computer
-Science 600 and 610 in Fall 2022  and Spring 2023 academic term. The main
-directory of this repository contains the Markdown template for a project that
-is designed for use with GitHub Classroom. To learn more about the course
-in which these assignments were completed, please refer to the `README.md` file.
-
-The template specifies various settings in the `config.yaml` file included in the
-repository. Change the appropriate values under the `Project-specific values`
-heading. Changing other values outside of that section may cause the project to
-fail to build. **Modify these values at your own risk.**
-
-Author your thesis in the `thesis.md` document using appropriate Markdown
-hierarchy and syntax; GitHub Actions will automatically create a PDF from the
-`abstract.md` and `proposal.md` files. Consult the `README` of the proposal
-repository to learn how to properly build and release this PDFs.
-
-## Citations and references
-
-Including references throughout requires a specific pseudo-Markdown tag, demonstrated
-in the following blockquote. (Inspect the `thesis.md` file to see the format.)
-
-> A citation, when included correctly, will appear as it does at the end of this
-> sentence. [@plaat1996research]
-
-## Labeling figures
-
-To label a figure (i.e. an image), referencing the image using correct Markdown
-will automatically caption the figure:
-
-```markdown
-![Label](images/IMAGE_NAME.png)
-```
-
-## Labeling tables
-
-To provide a label for a table, write a short caption for the table and prefix the caption
-with `Table:` as in the example below:
-
-```
-Table: A two-row table demonstrating tables
-
-|Row number | Description |
-|:----------|:------------|
-|1          |Row 1        |
-|2          |Row 2        |
-```
-
-## Other template information
-
-Two things specific to this template to also keep in mind:
-
-1. It is your responsibility to remove this description section before building
-the PDF version you plan to defend.
-2. References _will only appear if cited correctly_ in the text
-
-## Note on `LaTeX` commands
-
-Documents may include specific `LaTeX` commands _in Markdown_. To render these, surround the commands
-with markup denoting `LaTeX`. For example:
-
-```
-Checkmark character:   $\checkmark$
-Superscript character: $^{\dag}$
-```
-
-If using a special package not included in the template, add the desired `LaTeX`
-package or command/macro to the `header-includes` property in [config.yaml](config.yaml).
-
-Should this package not be included in the environment shipped with this template,
-you may also need to add the package to the [GitHub Actions Workflow](.github/workflows/main.yml).
-
-Direct any questions about issues to your first reader.
-
 # Introduction
 
 ## Motivation
@@ -145,25 +70,7 @@ Issues with data entry could also be present in the data, either on behalf of th
 
 The last but probably the most important ethical issue that may arise as a result of this project includes the potential issues in equity, that the project generally looks to address. Because this project is rooted in looking for trends in educational attainment, focusing in on gendered, racial, and financial disparities in attainment, the results of this project may have real implications for the groups represented. With that, there should be a great deal of consideration taken when looking at and comparing trends across groups, as well as, when introducing and talking about educational trajectories. This is in order to avoid an unneccessary harm or unreliable characterizations or representations of certain identity groups or specific regions.
 
-# Related work
-
-This chapter includes a broad and detailed review of relevant existing work.
-The literature review should provide background and context for the thesis work.
-The subsections may be organized in whatever manner seems best suited to the material--
-chronological, or by topic, or according to some other criteria
-(e.g., primary versus secondary resources).
-
-If ethical issues are central to this work, you should also address historical and
-contemporary issues or efforts made to address them.
-
-*Insert intro paragraphs here to intro topics of lit review*
-1. genderxeduc
-2. racexeduc
-3. incomexeduc
-4. fusion analysis
-5. regression analysis
-6. data analysis in education/socioeconomic research
-7. other factors that impact educ that are not being studied in this paper
+# Related Work
 
 ## Gender and Educational Attainment
 
@@ -194,23 +101,6 @@ An earlier study found that parental income only impacts educational attainment 
 
 # Method of approach
 
-This chapter answers the "how" question - how did you complete your project,
-including the overall design of your study, details of the algorithms and tools you
-have used, etc.  Use technical diagrams, equations, algorithms, and paragraphs of text
-to describe the research that you have completed. Be sure to number all figures and
-tables and to explicitly refer to them in your text.
-
-This should contain:
-
-* lists
-* with points
-* and more points
-  * possibly subpoints
-
-For those projects whose implications address social or moral issues (i.e. ethical
-standards, causes, effects), you will want to use this section to describe how you
-actively mitigated or considered these issues.
-
 ## Data Description
 
 The data used in this study comes from IPUMS CPS and is cross-sectional, encompassing data for years 2010-2015 in the United States. Specifically, the variables in the data extract, created using IPUMS’ platform, include the survey year (YEAR), state identified by FIPS code (STATE), age (AGE), sex (SEX), race (RACE), Hispanic origin (HISPAN), educational attainment code (EDUC), total family income (FTOTVAL), and total personal income (INCTOT). Additional variables were included in the extract, for the purposes of aiding in identification of individuals and individual households, and analysis of specific data: household record of CPSID (CPSID), month (MONTH), household serial number (SERIAL), person number in sample unit (PERNUM), final person-level weight for analysis (WTFINL), and the person-level used for supplement data (ASECWT).
@@ -219,7 +109,7 @@ One noteworthy element of this data extract is that even though I had selected t
 
 In future versions of this document, I hope to be able to more clearly elaborate on why this data is inaccessible or not included in the extract.
 
-After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample went from 1,048,575 to 753,243 observations. Additionally, using the count() function from R, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below.
+After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample went from 1,048,575 to 753,243 observations. Additionally, using the count() function from R, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
 
 2010 Race Count
 
@@ -232,13 +122,66 @@ After filtering the data to only include entries accounting for adults (18 and o
 |5          |American Indian|1977         |
 |6          |Pacific Islander|705          |
 
-* count of race, gender, hispan for each year
-* sd/mean of age and income
-* total obs.
+2015 Race Count
+
+|Row number | RACE | n |
+|:----------|:------------|:------------|
+|1          |White        |18246       |
+|2          |Black        |2258        |
+|3          |Asian        |1570         |
+|4          |Other        |289         |
+|5          |American Indian|121         |
+|6          |Pacific Islander|41          |
+
+2010 Gender Count
+
+|Row number | SEX | n |
+|:----------|:------------|:------------|
+|1          |Male        |71001       |
+|2          |Female        |78070         |
+
+2015 Gender Count
+
+|Row number | SEX | n |
+|:----------|:------------|:------------|
+|1          |Male        |10651       |
+|2          |Female        |11874        |
+
+2010 Hispanic Heritage Count
+
+|Row number | HISPAN | n |
+|:----------|:------------|:------------|
+|1          |Not Hispanic   |125188       |
+|2          |Mexican        |14569        |
+|3          |Other        |6086     |
+|4          |Puerto Rican     |2233         |
+|5          |Cuban          |995         |
+
+2015 Hispanic Heritage Count
+
+|Row number | HISPAN | n |
+|:----------|:------------|:------------|
+|1          |Not Hispanic   |19644       |
+|2          |Puerto Rican    |958        |
+|3          |Other        |866   |
+|4          |Dominican    |515         |
+|5          |Mexican        |317        |
+|6          |Salvadoran        |136         |
+|7          |Cuban          |89          |
+
+This shows that the number of observations for each of these variables in the data are inconsistent across years, suggesting that this data is only representative of a sample.
+
+When using summary() in order to generate summary statistics on the data, the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are ordinal.
+
+![Summary Stats](images/summary-stats.JPG)
 
 The raw data extract from IPUMS, before cleaning and transformation, looked much like the figure below.
 
-* insert table
+![Raw Data](images/raw-data.JPG)
+
+## Descriptive Statistics
+
+Duhhhh -- insert from doc
 
 ## Tools
 
