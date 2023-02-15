@@ -120,7 +120,7 @@ For this study, R will be the main tool used to perform data analysis, as such b
 
 After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample went from 1,048,575 to 753,243 observations. Additionally, using R's built-in count() function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
 
-2010 Race Count
+Table: 2010 Race Count
 
 |Row number | RACE | n |
 |:----------|:------------|:------------|
@@ -131,7 +131,7 @@ After filtering the data to only include entries accounting for adults (18 and o
 |5          |American Indian|1977         |
 |6          |Pacific Islander|705          |
 
-2015 Race Count
+table: 2015 Race Count
 
 |Row number | RACE | n |
 |:----------|:------------|:------------|
@@ -142,21 +142,21 @@ After filtering the data to only include entries accounting for adults (18 and o
 |5          |American Indian|121         |
 |6          |Pacific Islander|41          |
 
-2010 Gender Count
+Table: 2010 Gender Count
 
 |Row number | SEX | n |
 |:----------|:------------|:------------|
 |1          |Male        |71001       |
 |2          |Female        |78070         |
 
-2015 Gender Count
+Table: 2015 Gender Count
 
 |Row number | SEX | n |
 |:----------|:------------|:------------|
 |1          |Male        |10651       |
 |2          |Female        |11874        |
 
-2010 Hispanic Heritage Count
+Table: 2010 Hispanic Heritage Count
 
 |Row number | HISPAN | n |
 |:----------|:------------|:------------|
@@ -166,7 +166,7 @@ After filtering the data to only include entries accounting for adults (18 and o
 |4          |Puerto Rican     |2233         |
 |5          |Cuban          |995         |
 
-2015 Hispanic Heritage Count
+Table: 2015 Hispanic Heritage Count
 
 |Row number | HISPAN | n |
 |:----------|:------------|:------------|
@@ -180,11 +180,21 @@ After filtering the data to only include entries accounting for adults (18 and o
 
 This shows that the number of observations for each of these variables is inconsistent across years, suggesting that this data is only representative of a sample.
 
-When using summary() in order to generate summary statistics on the raw data set, the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are either classified as qualitative nominal or ordinal, so the interpretation of these summary statistics is negligible for those variables.
+When using summary() in order to generate summary statistics on the data set (filtered for entries where age is 18 and older), the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are either classified as qualitative nominal or ordinal, so the interpretation of these summary statistics is negligible for those variables.
 
 ![Summary Stats](images/summary-stats.JPG)
 
-For the initial analysis of the data, the main focus is to observe how educational attainment varies by gender, income, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year.
+Based on these summary statistics, across all of the data points in the extract, the minimum reported total family income was -19,998 and the max reported income was 2,742,997. For age, the minimum value was 18, while the max was 85.
+
+For the initial analysis of the data, the main focus is to visualize how educational attainment varies by gender, income, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following barplots representing data for 2010 were generated. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
+
+![US Educational Attainment by Gender](images/genderxedu2010.png)
+
+![US Educational Attainment by Race](images/genderxrace2010.png)
+
+![US Educational Attainment by Hispanic Origin](images/hispanxedu2010.png)
+
+In the Results section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
 
 ## Tools
 
