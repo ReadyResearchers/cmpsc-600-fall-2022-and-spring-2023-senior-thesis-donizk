@@ -186,19 +186,20 @@ When using summary() in order to generate summary statistics on the data set (fi
 
 Based on these summary statistics, across all of the data points in the extract, the minimum reported total family income was -19,998 and the max reported income was 2,742,997. For age, the minimum value was 18, while the max was 85.
 
-For the initial analysis of the data, the main focus is to visualize how educational attainment varies by gender, income, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following barplots representing data for 2010 were generated. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
+For the initial exploratory analysis of the data, the main focus is to visualize how educational attainment varies by gender, income, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following barplots representing data for 2010 were generated. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
 ![US Educational Attainment by Gender](images/genderxedu2010.png)
 
-![US Educational Attainment by Race](images/genderxrace2010.png)
+![US Educational Attainment by Race](images/racexedu2010.png)
 
 ![US Educational Attainment by Hispanic Origin](images/hispanxedu2010.png)
 
-In the Results section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
+In the Experiments section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
 
 ## Tools
 
-* R
+* R and RStudio
+As mentioned in the previous section, R is the primary 
 * SQLite
 * dplyr
 * shiny
