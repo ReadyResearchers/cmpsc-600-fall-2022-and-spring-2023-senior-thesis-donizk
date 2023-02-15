@@ -198,21 +198,27 @@ In the Experiments section, these and visualizations for the following years wil
 
 ## Tools
 
-* R and RStudio
-As mentioned in the previous section, R is the primary 
-* SQLite
-* dplyr
-* shiny
-* shinydashboard
-* ggplot2
-* plotly
-* RSQLite
-* tidyverse
-* plotly
-* rsconnect
-* other libraries etc
+As mentioned in the previous section, R is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly.
 
-outline each tool/lib and how they fit into construction of tool
+The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, SQLite was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R.
+
+### R Packages
+
+The following section will touch on the specific R packages that were utilized in the development and completion of this project
+
+One of the packages used most prevalently throughout the project was Tidyverse, which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way. In particular, the sub-packages used in this project include dplyr and ggplot2. dplyr specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation. The ggplot2 package from tidyverse supports data visualization by allowing the creation of a variety of high quality graphics. Plots are constructed in ggplot using a data source, a declared x and y variable (coordinates), and a selected way of representing data points (referred to as geoms), based on the "grammar of graphics". In this project, the plots constructed either used points on the plot or as grouped bars to represent data.
+
+In order to actually implement a data analysis dashboard, I chose to employ the use of shiny and shinydashboard packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages is that while providing the structure for a standalone dashboard, while also executings the necessary code to fill the dashboard with visualizations and other relevant output.
+
+plotly is an R package that supports the creation of interactive graphs using the open-source graphing library written in Javascript, plotly.js. This specific package was employed to embed an element of interactivity to the existing ggplot visualizations, specifically through letting users scroll over data points to see the exact reported values, as well as to zoom and pan over values in a relatively simple way.
+
+RSQLite is a driver for R used to connect database interface (DBI) and database engine of SQLite to R. Through the use of this package, the SQLite database created to house the data from IPUMS is accessible for use throughout the R code in the project. As this package was made to be compliant with the DBI package, many of the common functions employed throughout the project are available in both packages. These functions include dbConnect(), dbGetQuery(), and dbDisconnect(). dbConnect() is used to establish a connection to the SQLite database, while dbDisconnect() is used to close the connection after use. dbGetQuery() is used to fetch data from the database based on specifics provided in the query that's passed in as an argument to the function.
+
+The rsconnect package allows Shiny web apps to be deployed and hosted on the cloud, using the shinyapps.io service. In order to allow for ease of use and access of this tool, the project will be deployed on shinyapps.io upon its completion.
+
+## Economic Model
+
+Human Capital Model
 
 ## Regression Analysis
 
