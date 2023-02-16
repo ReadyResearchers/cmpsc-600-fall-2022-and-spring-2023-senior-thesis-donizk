@@ -116,7 +116,7 @@ In order to analyze the data properly, each variable was considered in relation 
 
 ## Descriptive Statistics
 
-For this study, R will be the main tool used to perform data analysis, as such built-in functions such as summary() and count(), along with outside libraries and packages, will be employed.
+For this study, R will be the main tool used to perform data analysis, as such built-in functions such as summary() and count(), along with outside libraries and packages, will be employed to perform the initial exploratory analysis on the data.
 
 After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample went from 1,048,575 to 753,243 observations. Additionally, using R's built-in count() function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
 
@@ -218,11 +218,12 @@ The rsconnect package allows Shiny web apps to be deployed and hosted on the clo
 
 ## Economic Model
 
-Human Capital Model
+As an interdisciplinary project attempting to leverage computational and Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961; Becker, 1993; Mincer, 1974) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. As the main income variable included in the data is that reporting back an individual's household income, the Human Capital Theory will be considered in light of private investment into education. Whenever individuals invest more into their education, the higher their lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become. When considering how race, gender, and Hispanic ethnicity could fit into the framework of Human Capital Theory, it's hard to consider as the model itself doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity).
 
 ## Regression Analysis
 
 intro Ordinal Logistic Regression and equation, preview results
+As the response variable of interest for this study is educational attainment and the nature of the variable's values themselves are ordinal, the most appropriate way of determining a relationship to the explanatory variables of race, gender, Hispanic ethnicity, and income is through making use of an Ordinal Logistic Regression (Ordinal logit/probit).
 
 # Experiments
 
