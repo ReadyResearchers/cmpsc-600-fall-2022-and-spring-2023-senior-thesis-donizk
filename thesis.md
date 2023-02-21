@@ -236,9 +236,19 @@ a typical structure used for this chapter.
 Especially as it pertains to responisble computing, if conducting experiments or
 evaluations that involve particular ethical considerations, detail those issues here.
 
+- discuss how experiments will involve interpreting the generated results of each individual plot and the regression results
+- reiterate goal of looking at the impact of each of the variables on educational attainment and see if there is any demonstrated relationship between education and those variables
+
 ## Evaluation
+- talk about testing
+- table of things to test on the web interface
+- when hosting: can figure out how to run for response time metrics
 
 ## Threats to Validity
+
+bias + validation procedures -- narrow scope --> aforementioned data collection/extraction issues
+
+using outside libraries -- if they aren't working properly --> factors relying on that could impact results being reported
 
 # Conclusion
 
@@ -248,6 +258,14 @@ not necessarily in this order or organized as offered. However, the last section
 details.
 
 ## Summary of Results
+
+run through each plot
+    - observe and report rate of growth for educ for each var
+- run through regression results and interpretations
+- questions for each experiment
+    - How has educational attainment varied by gender over the years? Has there been growth or losses in the rates of educational attainment based on differences in gender?
+    - How has educational attainment varied by race over the years? Has there been growth or losses in the rates of educational attainment based on differences in race?
+    - How has educational attainment varied by Hispanic ethnicity over the years? Has there been growth or losses in the rates of educational attainment based on differences in ethnicity?
 
 ## Future Work
 
