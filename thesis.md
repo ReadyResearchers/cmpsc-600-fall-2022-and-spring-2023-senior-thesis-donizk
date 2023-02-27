@@ -102,6 +102,10 @@ An earlier study found that parental income only impacts educational attainment 
 
 # Method of approach
 
+The focus of this chapter is to present the process that will be taken in order to complete this project. This process is split into multiple steps, depicted in the flowchart below.
+
+![Methodology Flowchart](images/flowchart.jpg)
+
 ## Data Description
 
 One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the range() function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for data, as I was under the impression that more data was being accessed, given that my selected extract should have included 2010-2021. Additionally, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. The goal of this study is to generate key findings for the entirety of the US, split by year, to attempt to capture how rates of educational attainment (based on other variables) change over time. Due to the aforementioned potential issues with the data, this study may result in findings that are not fully representative of the populations being captured within the data, though it should provide some key insights into the trends present in the US.
@@ -186,7 +190,7 @@ When using summary() in order to generate summary statistics on the data set (fi
 
 Based on these summary statistics, across all of the data points in the extract, the minimum reported total family income was -19,998 and the max reported income was 2,742,997. For age, the minimum value was 18, while the max was 85.
 
-For the initial exploratory analysis of the data, the main focus is to visualize how educational attainment varies by gender, income, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following barplots representing data for 2010 were generated. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
+For the initial exploratory analysis of the data, the main focus is to visualize how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following barplots representing data for 2010 were generated. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
 ![US Educational Attainment by Gender](images/genderxedu2010.png)
 
@@ -198,6 +202,7 @@ In the Experiments section, these and visualizations for the following years wil
 
 ## Tools
 
+[CITE]
 As mentioned in the previous section, R is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly.
 
 The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, SQLite was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R.
@@ -208,17 +213,27 @@ The following section will touch on the specific R packages that were utilized i
 
 [CITE]
 
-One of the packages used most prevalently throughout the project was Tidyverse, which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way. In particular, the sub-packages used in this project include dplyr and ggplot2. dplyr specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation. The ggplot2 package from tidyverse supports data visualization by allowing the creation of a variety of high quality graphics. Plots are constructed in ggplot using a data source, a declared x and y variable (coordinates), and a selected way of representing data points (referred to as geoms), based on the "grammar of graphics". In this project, the plots constructed either used points on the plot or as grouped bars to represent data.
+#### tidyverse
 
-In order to actually implement a data analysis dashboard, I chose to employ the use of shiny and shinydashboard packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages are that they provide the structure for a standalone dashboard, while also executing the necessary code to fill the dashboard with visualizations and other relevant output for the project.
+One of the packages used most prevalently throughout the project was `Tidyverse`, which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way. In particular, the sub-packages used in this project include dplyr and ggplot2. dplyr specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation. The ggplot2 package from tidyverse supports data visualization by allowing the creation of a variety of high quality graphics. Plots are constructed in ggplot using a data source, a declared x and y variable (coordinates), and a selected way of representing data points (referred to as geoms), based on the "grammar of graphics". In this project, the plots constructed either used points on the plot or as grouped bars to represent data.
 
-plotly is an R package that supports the creation of interactive graphs using the open-source graphing library written in Javascript, plotly.js. This specific package was employed to embed an element of interactivity to the existing ggplot visualizations, specifically through letting users scroll over data points to see the exact reported values, as well as to zoom and pan over values in a relatively simple way.
+#### shiny and shinydashboard
 
-RSQLite is a driver for R used to connect database interface (DBI) and database engine of SQLite to R. Through the use of this package, the SQLite database created to house the data from IPUMS is accessible for use throughout the R code in the project. As this package was made to be compliant with the DBI package, many of the common functions employed throughout the project are available in both packages. These functions include dbConnect(), dbGetQuery(), and dbDisconnect(). dbConnect() is used to establish a connection to the SQLite database, while dbDisconnect() is used to close the connection after use. dbGetQuery() is used to fetch data from the database based on specifics provided in the query that's passed in as an argument to the function.
+In order to actually implement a data analysis dashboard, I chose to employ the use of `shiny` and `shinydashboard` packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages are that they provide the structure for a standalone dashboard, while also executing the necessary code to fill the dashboard with visualizations and other relevant output for the project.
 
-The rsconnect package allows Shiny web apps to be deployed and hosted on the cloud, using the shinyapps.io service. In order to allow for ease of use and access of this tool, the project will be deployed on shinyapps.io upon its completion.
+#### plotly
 
-## Economic Model
+`plotly` is an R package that supports the creation of interactive graphs using the open-source graphing library written in Javascript, plotly.js. This specific package was employed to embed an element of interactivity to the existing ggplot visualizations, specifically through letting users scroll over data points to see the exact reported values, as well as to zoom and pan over values in a relatively simple way.
+
+#### RSQLite
+
+`RSQLite` is a driver for R used to connect database interface (DBI) and database engine of SQLite to R. Through the use of this package, the SQLite database created to house the data from IPUMS is accessible for use throughout the R code in the project. As this package was made to be compliant with the DBI package, many of the common functions employed throughout the project are available in both packages. These functions include dbConnect(), dbGetQuery(), and dbDisconnect(). dbConnect() is used to establish a connection to the SQLite database, while dbDisconnect() is used to close the connection after use. dbGetQuery() is used to fetch data from the database based on specifics provided in the query that's passed in as an argument to the function.
+
+#### rsconnect and shinyapps.io
+
+The `rsconnect` package allows Shiny web apps to be deployed and hosted on the cloud, using the shinyapps.io service. In order to allow for ease of use and access of this tool, the project will be deployed on shinyapps.io upon its completion.
+
+## Economic Theory
 
 As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961; Becker, 1993; Mincer, 1974) [CITE] states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
 
@@ -230,7 +245,7 @@ As the response variable of interest for this study is educational attainment an
 
 The initial model takes the following form:
 
-$$logit(EDUC \leq j) = \beta_0 + \beta_1 GENDER + \beta_2 RACE + \beta_3 HISPANIC, j \in [1, J-1]$$$
+$$logit(EDUC \leq j) = \beta_0 + \beta_1 GENDER + \beta_2 RACE + \beta_3 HISPANIC, j \in [1, J-1]$$
 
 Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation is needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. The only exception to this is the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below shows the recoding for the RACE variable into individual dummy variables.
 
@@ -245,13 +260,17 @@ result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
 
 Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the ordinal logistic regression that will be run to the following:
 
-$$logit(EDUC \leq j) = \beta_0 + \beta_1 FEMALE + \beta_2 BLACK + \beta_3 AMERICAN INDIAN + \beta_4 ASIAN + \beta_5 ISLANDER + \beta_5 PACIFIC ISLANDER + \beta_6 MIXED RACE + \beta_7 MEXICAN + \beta_8 PUERTO RICAN + \beta_9 CUBAN + \beta_10 DOMINICAN + \beta_11 SALVADORIAN + \beta_12 OTHER HISPANIC + \beta_12 CENTRAL AMERICAN + \beta_13 SOUTH AMERICAN, j \in [1, J-1]$$$
+$$logit(EDUC \leq j) = \beta_0 + \beta_1 FEMALE + \beta_2 BLACK + \beta_3 AMERICAN INDIAN + \beta_4 ASIAN + \beta_5 ISLANDER + \beta_5 PACIFIC ISLANDER$$
+$$+ \beta_6 MIXED RACE + \beta_7 MEXICAN + \beta_8 PUERTO RICAN + \beta_9 CUBAN + \beta_10 DOMINICAN + \beta_11 SALVADORIAN + \beta_12 OTHER HISPANIC$$
+$$+ \beta_12 CENTRAL AMERICAN + \beta_13 SOUTH AMERICAN, j \in [1, J-1]$$
 
 In order to run and store the results of running an ordinal logistic regression in R, the polr() function from the MASS package will be used. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
 ```R
 # ordered logistic regression model
-m <- polr(EDUC ~ female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan + centralamer + southamer, data = result, Hess=TRUE, method = c("logistic"))
+m <- polr(EDUC ~ female + black + amer_indian + asian + islander + mixed_race 
++ mex + pr + cuban + dom + salv + otherhispan + centralamer 
++ southamer, data = result, Hess=TRUE, method = c("logistic"))
 
 # summary of model
 summary(m)
@@ -265,6 +284,8 @@ In order to compute the odds ratio in R, the exp() and coef() functions need to 
 ## odds ratio for interpretation
 exp(coef(m))
 ```
+
+explain expected result
 
 # Experiments
 
@@ -282,6 +303,7 @@ evaluations that involve particular ethical considerations, detail those issues 
 
 ## Evaluation
 - talk about testing
+    - using R's testthat
 - table of things to test on the web interface
 - when hosting: can figure out how to run for response time metrics
 - explain how plots and regression will be evaluated and used for interpretations
