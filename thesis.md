@@ -208,7 +208,7 @@ The following section will touch on the specific R packages that were utilized i
 
 One of the packages used most prevalently throughout the project was Tidyverse, which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way. In particular, the sub-packages used in this project include dplyr and ggplot2. dplyr specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation. The ggplot2 package from tidyverse supports data visualization by allowing the creation of a variety of high quality graphics. Plots are constructed in ggplot using a data source, a declared x and y variable (coordinates), and a selected way of representing data points (referred to as geoms), based on the "grammar of graphics". In this project, the plots constructed either used points on the plot or as grouped bars to represent data.
 
-In order to actually implement a data analysis dashboard, I chose to employ the use of shiny and shinydashboard packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages is that while providing the structure for a standalone dashboard, while also executings the necessary code to fill the dashboard with visualizations and other relevant output.
+In order to actually implement a data analysis dashboard, I chose to employ the use of shiny and shinydashboard packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages are that they provide the structure for a standalone dashboard, while also executing the necessary code to fill the dashboard with visualizations and other relevant output for the project.
 
 plotly is an R package that supports the creation of interactive graphs using the open-source graphing library written in Javascript, plotly.js. This specific package was employed to embed an element of interactivity to the existing ggplot visualizations, specifically through letting users scroll over data points to see the exact reported values, as well as to zoom and pan over values in a relatively simple way.
 
@@ -218,12 +218,28 @@ The rsconnect package allows Shiny web apps to be deployed and hosted on the clo
 
 ## Economic Model
 
-As an interdisciplinary project attempting to leverage computational and Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961; Becker, 1993; Mincer, 1974) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. As the main income variable included in the data is that reporting back an individual's household income, the Human Capital Theory will be considered in light of private investment into education. Whenever individuals invest more into their education, the higher their lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become. When considering how race, gender, and Hispanic ethnicity could fit into the framework of Human Capital Theory, it's hard to consider as the model itself doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity).
+As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961; Becker, 1993; Mincer, 1974) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become. When considering how race, gender, and Hispanic ethnicity could fit into the framework of Human Capital Theory, it's hard to consider as the model itself doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Additionally, prior research referenced in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
 
 ## Regression Analysis
 
-intro Ordinal Logistic Regression and equation, preview results
-As the response variable of interest for this study is educational attainment and the nature of the variable's values themselves are ordinal, the most appropriate way of determining a relationship to the explanatory variables of race, gender, Hispanic ethnicity, and income is through making use of an Ordinal Logistic Regression (Ordinal logit/probit).
+As the response variable of interest for this study is educational attainment and the nature of the variable's values are ordinal, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Ordinal Logistic Regression, otherwise known as the Ordinal logit/probit.
+
+The model will take the following form:
+[insert equation]
+
+$logit(P(y<=j)) = $
+
+$$P(Y \leq j | X) = \frac{\exp(\beta_{0j} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p)}{1 + \exp(\beta_{01} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p) + \exp(\beta_{02} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p) + \dots + \exp(\beta_{0(j-1)} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p)}$$
+
+In order to run and store the results of running an ordinal logistic regression in R, the polr() function from the MASS package will be used. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
+
+[code snippet of regression w/summary]
+
+This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of an ordinal logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to each level of educational attainment.
+
+In order to compute the odds ratio in R, the exp() and coef() functions need to be used in conjunction taking in the stored variable for the regression model. This line of code will produce an output result of a value for each explanatory variable in the model, to be used when evaluating the results of the regression.
+
+[code snippet of odds ratio code]
 
 # Experiments
 
@@ -243,6 +259,7 @@ evaluations that involve particular ethical considerations, detail those issues 
 - talk about testing
 - table of things to test on the web interface
 - when hosting: can figure out how to run for response time metrics
+- explain how plots and regression will be evaluated and used for interpretations
 
 ## Threats to Validity
 
