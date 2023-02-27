@@ -206,6 +206,8 @@ The raw data extract from IPUMS was too large to open in R Studio and as such, a
 
 The following section will touch on the specific R packages that were utilized in the development and completion of this project
 
+[CITE]
+
 One of the packages used most prevalently throughout the project was Tidyverse, which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way. In particular, the sub-packages used in this project include dplyr and ggplot2. dplyr specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation. The ggplot2 package from tidyverse supports data visualization by allowing the creation of a variety of high quality graphics. Plots are constructed in ggplot using a data source, a declared x and y variable (coordinates), and a selected way of representing data points (referred to as geoms), based on the "grammar of graphics". In this project, the plots constructed either used points on the plot or as grouped bars to represent data.
 
 In order to actually implement a data analysis dashboard, I chose to employ the use of shiny and shinydashboard packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages are that they provide the structure for a standalone dashboard, while also executing the necessary code to fill the dashboard with visualizations and other relevant output for the project.
@@ -218,28 +220,51 @@ The rsconnect package allows Shiny web apps to be deployed and hosted on the clo
 
 ## Economic Model
 
-As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961; Becker, 1993; Mincer, 1974) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become. When considering how race, gender, and Hispanic ethnicity could fit into the framework of Human Capital Theory, it's hard to consider as the model itself doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Additionally, prior research referenced in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
+As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961; Becker, 1993; Mincer, 1974) [CITE] states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
+
+It is difficult to visualize how race, gender, and Hispanic ethnicity could fit into the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Additionally, prior research referenced in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
 
 ## Regression Analysis
 
 As the response variable of interest for this study is educational attainment and the nature of the variable's values are ordinal, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Ordinal Logistic Regression, otherwise known as the Ordinal logit/probit.
 
-The model will take the following form:
-[insert equation]
+The initial model takes the following form:
 
-$logit(P(y<=j)) = $
+$$logit(EDUC \leq j) = \beta_0 + \beta_1 GENDER + \beta_2 RACE + \beta_3 HISPANIC, $j \in [1, J-1], where $j \in [1, J-1] are the levels of the ordinal outcome of EDUC$$$
 
-$$P(Y \leq j | X) = \frac{\exp(\beta_{0j} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p)}{1 + \exp(\beta_{01} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p) + \exp(\beta_{02} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p) + \dots + \exp(\beta_{0(j-1)} + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p)}$$
+Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation is needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. The only exception to this is the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below shows the recoding for the RACE variable into individual dummy variables.
+
+```R
+# race
+result$black <- ifelse(result$RACE == "200", 1, 0)
+result$amer_indian <- ifelse(result$RACE == "300", 1, 0)
+result$asian <- ifelse(result$RACE == "651", 1, 0)
+result$islander <- ifelse(result$RACE == "652", 1, 0)
+result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
+```
+
+Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the ordinal logistic regression that will be run to the following:
+
+$$logit(EDUC \leq j) = \beta_0 + \beta_1 FEMALE + \beta_2 BLACK + \beta_3 AMERICAN INDIAN + \beta_4 ASIAN + \beta_5 ISLANDER + \beta_5 PACIFIC ISLANDER + \beta_6 MIXED RACE + \beta_7 MEXICAN + \beta_8 PUERTO RICAN + \beta_9 CUBAN + \beta_10 DOMINICAN + \beta_11 SALVADORIAN + \beta_12 OTHER HISPANIC + \beta_12 CENTRAL AMERICAN + \beta_13 SOUTH AMERICAN, $j \in [1, J-1], where $j \in [1, J-1] are the levels of the ordinal outcome of EDUC$$$
 
 In order to run and store the results of running an ordinal logistic regression in R, the polr() function from the MASS package will be used. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
-[code snippet of regression w/summary]
+```R
+# ordered logistic regression model
+m <- polr(EDUC ~ female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan + centralamer + southamer, data = result, Hess=TRUE, method = c("logistic"))
+
+# summary of model
+summary(m)
+```
 
 This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of an ordinal logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to each level of educational attainment.
 
 In order to compute the odds ratio in R, the exp() and coef() functions need to be used in conjunction taking in the stored variable for the regression model. This line of code will produce an output result of a value for each explanatory variable in the model, to be used when evaluating the results of the regression.
 
-[code snippet of odds ratio code]
+```R
+## odds ratio for interpretation
+exp(coef(m))
+```
 
 # Experiments
 
