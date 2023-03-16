@@ -1,42 +1,46 @@
 # Introduction
 
+This chapter will detail the existing research behind EduAttain, as well as, detail the motivation and goals of the project.
+
 ## Motivation
 
-The US Census Bureau defines educational attainment as the highest level of education that an individual completes. Studying educational attainment is important because the level of education a person attains is oftentimes directly linked to the professional, personal, financial, and social opportunities available to a person. For example, a person with a lower level of educational attainment may not have access to job opportunities that require a high level of education. Or in contrast, a person with a high level of education may have access to opportunities and resources resulting from a higher social or financial status.
+The US Census Bureau defines educational attainment as the highest level of education that an individual completes. Studying educational attainment is important because the level of education a person attains is oftentimes directly linked to the professional, personal, financial, and social opportunities available to a person [@holtz-eakin]. For example, a person with a lower level of educational attainment may not have access to job opportunities that require a high level of education. Or in contrast, a person with a high level of education may have access to opportunities and resources resulting from a higher social or financial status.
 
-The level of educational attainment a person achieves could be impacted by differences in various demographic factors such as race, gender, and level of income. These demographic factors may have a say in how an individual’s personal expectations, limitations to access, and accessibility to informational resources informs their decision to pursue greater educational opportunities, such as a postsecondary education. The main goal of this research is to determine to what degree, if at all, these demographic factors (race, income, sex) play a role in determining an individual’s level of educational attainment.
+An individual’s educational attainment is likely to be impacted by differences in race, gender, and ethnicity [@darling-hammond],[@buch]. Such demographic factors influence how an individual’s personal expectations, limitations to access, and accessibility to informational resources informs the decision to pursue greater educational opportunities, such as a postsecondary education. The main goal of this research is to determine to what degree these demographic factors play a role in determining an individual’s level of educational attainment.
 
-There is evidence in how income, and more specifically socioeconomic status, can impact one’s education. For example, children from families with a low socioeconomic status “are less likely to have experiences that encourage the development of fundamental skills of reading acquisition” and “to have access to informational resources about college”. [@apa] Not only are access to education and development of certain skills impacted by socioeconomic status, but so is academic achievement; low-income children “enter high school with average literacy skills five years behind those of high-income students”, have a lower success rate in the fields of “science, technology, engineering, and mathematics” than those not from underrepresented groups, and have a higher likelihood of dropping out of high school (11.6%) compared to their high-income counterparts (2.8%). [@apa]
+Research shows that differences in educational attainment by gender have varied greatly over the last century, as initially the trends appeared to be favorable to men but by 1982, women started to lead in rates of enrollment and graduation from high school and college [@buch], [@jaco], [@dipre]. These gendered differences in educational attainment have various causes including gender expectations towards receiving a higher education, accessibility to education, opportunities available post-graduation, and personal aspirations in completing some form of postsecondary education [@buch], [@jaco], [@dipre]. The gender disparities in educational attainment also intermingle with racial and ethnic disparities as there are different historical trends between each racial and ethnic group and the dispersion of educational attainment also plays out differently for each group [@dipre].
 
-Additionally, research has shown that differences in educational attainment by gender have varied greatly over the last century, initially the trends appeared to be favorable to men but by 1982, women started to lead in rates of enrollment and graduation from high school and college. These gendered differences in educational attainment have various causes including gender expectations towards receiving a higher education, accessibility to education, opportunities available post-graduation, and personal aspirations in completing some form of postsecondary education. The gender disparities in educational attainment also intermingle with racial disparities as there are different historical trends between each racial/ethnic group and the dispersion of educational attainment also plays out differently for each group.
+Race also plays a role in determining the level of education a person completes, at least for the better half of the last century [@dipre], [@darling-hammond],[@gamo]. This results from opportunities to access education and the ease of accessing it. Historical events and trends have also exacerbated the racial disparities in educational attainment such as the lingering effects of slavery and segregation [@dipre], [@darling-hammond],[@gamo].
 
-Race also has played a role in determining the level of education a person would complete for the better half of the last century. This is as a result of the type of opportunities to access education and ease of accessing this and other related resources available to these groups. Historical events and trends have also exacerbated the racial disparities in educational attainment such as the lingering effects of slavery and segregation.
+[Add blurb about ethnicity]
 
 ## Current State of the Art
 
-There has been a good amount of research done on the topic of educational attainment that has been able to capture differences in gender, race, and income, and their implications. The main focus in a lot of literature is on gendered differences in educational attainment, which seems to be a well-documented issue overall. These gendered differences seem to show that while there was at some point in time (in the past) a male-leaning dominance in levels of educational attainment, women seem to now hold the advantage in educational attainment. However, this gender gap reversal in educational attainment does not seem to reflect a reversal in the gender gap as it relates to occupations or wages.
+There is a robust literature surrounding educational attainment that captures the role of gender, race, and ethnicity. A focus in much of this literature is the gendered differences in educational attainment, which is a well-documented issue overall [@buch], [@jaco], [@dipre]. These gendered differences show that while there was at some point a male-leaning dominance in the levels of educational attainment, women now exceed men in rates of educational attainment, especially post secondary education [@buch], [@jaco], [@dipre]. However, this gender gap reversal does not reflect a reversal in the gender gap as it relates to occupations or wages, according to the literature.
 
-When racial differences in educational attainment are studied, many authors tend to focus on the differences exclusively between white and black people. This neglects the disparities and differences in educational attainment that could be potentiall observed in other racial or ethnic groups. One of the goals of this study and subsequent tool is to analyze differences across different racial and ethnic groups, with special interest in observing differences in racial groups that literature has failed to cover.
+Much of the focus in the existing literature concerns differences between white and black individuals. This neglects the disparities and differences in educational attainment that might be observed in other racial and ethnic groups. One of the goals of this study and subsequent tool is to analyze differences across different racial and ethnic groups, with special interest in observing differences in those racial and ethnic groups that literature has failed to cover.
 
-In contrast, there seems to be a good breadth of literature studying the effects of income on educational attainment. This literature, however, is mostly outdated and does not touch upon if there have been any movements in trends of educational attainment. Another goal of this project is to expand on the research that has already been done on the effects of income, with special priority in seeing how this impact has changed and if there are any other different implications that have not yet been covered in the literature.
+To my knowledge, there is no research that analyzes the combined impact of race, ethnicity, and gender on educational attainment and the degree to which interactions between these factors can influence whether a person will recieve a certain level of educational attainment.
 
-To date, there has not been research that looks at the combined impact of race, income, and gender on educational attainment and as there are various factors that can go into play in impacting whether or not a person will recieve a certain level of educational attainment, doing this research is important. It is not clear why these three factors haven't been studied in tandem before, but it can be presumed that it may be a result of complexities in researching the combined effects of these factors on attainment. Another goal of this project is to address this specific gap in measuring the combined effects in the literature.
+Few studies employ the use of regression to study the effects of different factors on educational attainment [ADD CITATION HERE]. One of the goals of this project is to use a regression model that includes  race, ethnicity, and gender as they relate to educational attainment. This research shed light on the strength of the relationship between each of the factors. It could also help determine which of these factors plays a bigger role as a determinant of educational attainment.
 
-Few studies employ the use of a regression model in order to study the effects of different factors on educational attainment, and the ones that are most likely to were on the topic of income. One of the goals of this project is to construct and run a regression model that includes the factors of race, income, and gender as they relate to educational attainment, and also regressions that look at each of these factors in isolation. This is in order to get the statistical significance of the relationships between each of these factors in relation to educational attainment, which can then be used to determine the strength of the relationship between each of the factors. It could also help determine which of these factors plays a bigger role as a determinant of educational attainment.
-
-This project also looks to take on the task of an interdisciplinary study, as research from various fields of study including Sociology and Economics will be leveraged in the creation of a tool that is created using computer science and data science fundamentals. The goal is that this project represents a type of study called fusion analysis, where multiple disciplines are used together in order to analyze data and draw greater conclusions from that data (had only traditional data analysis been employed).
+This project also looks to take on the task of an interdisciplinary study, as research from various fields of study including Sociology and Economics will be leveraged in the creation of a tool that is created using computer science and data science fundamentals. The goal is that this project represents a type of study called fusion analysis, where multiple disciplines are used together in order to analyze data and draw greater conclusions from that data (had only traditional data analysis been employed) [ADD CITATION].
 
 ## Goals of the Project
 
-This project looks to study the impact of race, gender, and income on educational attainment in the United States. This project will use data from Integrated Public Use Microdata (IPUMS) Current Population Survey (CPS) microdata, which is harmonized and includes relevant demographic information. The data itself is cross-sectional, encompassing years 2010-2015 in the United States. Specifically, the variables in the data extract, created using IPUMS’ platform, include the survey year (YEAR), state identified by FIPS code (STATE), age (AGE), sex (SEX), race (RACE), Hispanic origin (HISPAN), educational attainment code (EDUC), total family income (FTOTVAL), birthplace (BPL), and total personal income (INCTOT). Additional variables were included in the extract, for the purposes of aiding in identification of individuals and individual households, and analysis of specific data: household record of CPSID (CPSID), month (MONTH), household serial number (SERIAL), person number in sample unit (PERNUM), final person-level weight for analysis (WTFINL), and the person-level used for supplement data (ASECWT).
+This project looks to study the impact of race, gender, and Hispanic origin on educational attainment in the United States. This project will use data from Integrated Public Use Microdata (IPUMS) Current Population Survey (CPS) microdata, which is harmonized to include relevant demographic information about the US population. The data itself is cross-sectional, encompassing years 2010-2015 in the United States. Specifically, the variables in the data extract, created using IPUMS’ platform, include the survey year (YEAR), state identified by FIPS code (STATE), age (AGE), sex (SEX), race (RACE), Hispanic origin (HISPAN), educational attainment code (EDUC), total family income (FTOTVAL), birthplace (BPL), and total personal income (INCTOT). Additional variables were included in the extract, for the purposes of aiding in identification of individuals and individual households, and analysis of specific data: household record of CPSID (CPSID), month (MONTH), household serial number (SERIAL), person number in sample unit (PERNUM), final person-level weight for analysis (WTFINL), and the person-level used for supplement data (ASECWT).
 
-In order to access to all of the data, an SQLite database will be used to store the data to be used in RStudio to wrangle and transform data as needed in order to generate statistics and visualizations, telling of the trends present in different identity groups. Visualizations that will be produced using the data include bar graphs, line graphs, and scatter plots, and will look much like Figures 1-2. Figure 1 presents a bar graph that shows the educational attainment for males in the state of New York, while Figure 2 presents a bar graph showing the educational attainment for females in New York. This and other statistics and visualizations will then be output on a web platform that allows for a user to compare two different identity groups or to look at the trend of educational attainment for one identity group over the years.
+In order to access to all of the data, an SQLite database will be used to store the data to be used in RStudio to wrangle and transform data as needed in order to generate statistics and visualizations, telling of the educational trends present amongst the varying identity groups represented in the data. One such transformation is to limit the data to observations at or above 18 years old, to only take adults into account within the analysis. For this project, the pie chart will be the main visualization generated to illustrate the data. These visualizations will be constructed for each year and each identity group, as to give an idea of the proportion of that population that attained a certain level of education. An example of these visualizations can be observed in Figures 1-2.
 
-The main goal of this project is to provide a tool that will make it easy to observe trends in educational attainment across different states and determining, within each of those states, the different race, gender, and income backgrounds accounted for and their levels of educational attainment within the sample. An auxiliary goal of this project is to be able to compare trends in educational attainment based on state, as well as, when grouped off by factor like gender, race, or income. This is so that the trends based on individual factors can be studied/observed in isolation, as well. A final goal of this project is to determine if there is a statistical relationship between educational attainment and each of these factors, and whether or not these factors can be viewed as determinants of educational attainment.
+Figure 1 presents a pie chart comprised of proportions of the male population at each level of educational attainment, while Figure 2 presents a similar pie chart but for the female population accounted for in 2010. This along with additional statistics and visualizations will be output on a web-based dashboard, which will allow for users to compare different identity groups or to look at the trend of educational attainment for one identity group over the years.
 
-![Male Educational Attainment in New York (2010)](images/nymaleeduc-2010.jpg)
+The main goal of this project is to provide a tool that will make it easy to observe trends in US educational attainment by race, gender, and Hispanic origin. An auxiliary goal of this project is to be able to compare trends in educational attainment by identity group and by year,through comparing the proportions of the population at each level of education. This is so that the trends based on individual factors can be observed in isolation, as well. A final goal of this project is to determine if there is a statistical relationship between educational attainment and each of these factors, and whether or not these factors can be viewed as determinants of educational attainment.
 
-![Female Educational Attainment in New York (2010)](images/nyfemeduc-2010.jpg)
+![US Male Educational Attainment in 2010](images/malexedu2010.png)
+
+![US Female Educational Attainment in 2010](images/femalexedu2010.png)
+
+[summarize projects findings and accomplishments]
 
 ## Ethical Implications
 
@@ -44,9 +48,9 @@ There are a few ethical issues that need to be addressed within this work involv
 
 ### Information Accuracy and Data Collection Issues
 
-To address the first issue of reliability, the data itself is collected from a survey, meaning that responses are self-reported. This can be an issue if there is no general mechanism, within the Census' collecting of the data, that verifies the answers given to the survey. This could mean that certain answers could have been given in order to seem better than actuality. In the case of this study, there could have been someone who lied about their highest level of educational attainment or about their level of income in order to seem more or less well-off. Also on the note of survey data, there may also be issues in data collection that may be present. Things like incomplete surveys or filling out of data extracts (on IPUMS' behalf), may result in untrustworthy or inclusive statistics or results.
+To address the first issue of reliability, the data itself is collected from a survey, meaning that responses are self-reported. This can be an issue if there is no general mechanism, within the Census' collecting of the data, validating the answers given to the survey. This could mean that certain answers could have been given in order to seem better than actuality. In the case of this study, there could have been someone who lied about their highest level of educational attainment or about their level of income in order to seem more or less well-off. Also on the note of survey data, there may also be issues in data collection that may be present. Issues such as incomplete surveys or filling out of data extracts (on IPUMS' behalf), may result in untrustworthy or inclusive statistics and results.
 
-Additionally, there seems to be a potential issue in data collection or extraction, as there was a discrepancy between the data extract created for this project using IPUMS' extract tool and the actual data that ended up being usable for the project. The original intent of this project was to study data from the last 10 years in order to capture how educational attainment has changed over time, with help from the literature. But upon opening and working with the IPUMS data extract, which should have included years 2010-2021, it became clear that only data from 2010-2015 was accessible and usable. It is not clear if this is an issue resulting in incomplete data or with the data extract tool, but either way this could still be an issue future researchers may encounter with this tool.
+Additionally, there seems to be a potential issue in data collection or extraction, as there was a discrepancy between the data extract created for this project using IPUMS' extract tool and the actual data that ended up being usable for the project. The original intent of this project was to study data from the last 10 years in order to capture how educational attainment has changed over time, with help from the literature. But upon opening and working with the IPUMS data extract, which should have included years 2010-2021, it became clear that only data from 2010-2015 was accessible and usable. It is not clear if this is an issue resulting in incomplete data or with the data extract tool, but either way this could still be an issue future researchers may encounter upon using IPUMS as a data source and extraction tool.
 
 ### Third Party Risk
 
@@ -54,15 +58,119 @@ As the data for this project was extracted and downloaded from a third-party too
 
 ### Data Bias
 
-In the initial use of the data, it became apparent that there may also be some data bias within the dataset. This is because when observations are counted by state, a varying amount of individuals are represented in each state, but never fully representing the populations actually present in those states. These counts remain constant year to year, which seems to indicate that the same sample of people was captured each year by the survey. The fact that this data only represents samples may bring up issues in the reliability of the data, in that it is unclear if there was any bias in the collection of the data or if the data may be incorrectly skewed towards representing one group over another. An example of this issue is present in the Figures 3-6 below. If you compare the results of 2010 and 2014, you can see that there are ranging amounts of people represented between both samples by each state, though these sample sizes stay the same across different years. The fact that these population counts are relatively constant across each year brings into question what the selection criteria to be considered for the survey was, and what was considered complete data that could be put into IPUMS.
+In the initial use of the data, it became apparent that there may also be some data bias within the dataset. This is because when observations are counted by state, a varying amount of individuals are represented in each state, but never fully representing the populations actually present in those states. These counts remain constant year to year, which seems to indicate that the same sample of people was captured each year by the survey. The fact that this data only represents samples may bring up issues in the reliability of the data, in that it is unclear if there was any bias in the collection of the data or if the data may be incorrectly skewed towards representing one group over another. An example of this issue is present in the Figures 3-6 below. If you compare the results of 2010 and 2014, you can see that there are ranging amounts of people represented between both samples by each state, though these sample sizes stay the same across different years. The fact that these population counts are relatively constant across each year brings into question what the selection criteria to be considered for the survey was, and what was considered complete data that could be put into IPUMS. This factor may also impact the findings produced in this project.
 
-![2010 Sample Population Count by State (first 26 rows)](images/2010statect-1thru26.JPG)
+Table: 2010 Sample Population Count by State
 
-![2010 Sample Population Count by State (last 25 rows)](images/2010statect-27thru51.JPG)
+|Row number | STATE | n |
+|:----------|:------------|:------------|
+|1          |CA        |20394       |
+|2          |TX        |12433        |
+|3          |NY        |8396       |
+|4          |FL        |8277        |
+|5          |IL        |6237       |
+|6          |PA        |5519        |
+|7          |OH        |4984       |
+|8          |MD        |4665        |
+|9          |MI        |4554       |
+|10          |MN        |4518        |
+|11         |CO        |4417       |
+|12         |GA        |4368        |
+|13         |VA        |4261       |
+|14         |CT        |4159        |
+|15         |NC        |4053       |
+|16         |NJ        |3864        |
+|17         |NH        |3540       |
+|18         |WA        |3540        |
+|19         |IA        |3529       |
+|20         |HI        |3528        |
+|21         |WI        |3514       |
+|22         |MO        |3125        |
+|23         |DE        |3095       |
+|24          |NV        |3053        |
+|25         |IN        |2997       |
+|26         |RI        |2907        |
+|27         |SD        |2897       |
+|28         |KS        |2884        |
+|29         |OR        |2881       |
+|30         |UT        |2851        |
+|31         |NE        |2844       |
+|32         |ME        |2797        |
+|33          |MA        |2781        |
+|34         |DC        |2726       |
+|35         |KY        |2717        |
+|36         |AZ        |2630       |
+|37         |TN        |2628        |
+|38         |SC        |2519       |
+|39         |WY        |2427        |
+|40         |OK        |2383       |
+|41         |ID        |2375        |
+|42         |ND        |2337       |
+|43         |AK        |2328        |
+|44         |VT        |2320       |
+|45         |AR        |2260        |
+|46         |LA        |2193       |
+|47          |AL        |2146        |
+|48         |WV        |2003       |
+|49         |NM        |1965        |
+|50         |MS        |1927       |
+|51         |MT        |1810       |
 
-![2014 Sample Population Count by State (first 26 rows)](images/2014statect-1thru26.JPG)
+Table: 2014 Sample Population Count by State
 
-![2014 Sample Population Count by State (last 25 rows)](images/2014statect-27thru51.JPG)
+|Row number | STATE | n |
+|:----------|:------------|:------------|
+|1          |CA        |20394       |
+|2          |TX        |12433        |
+|3          |NY        |8396       |
+|4          |FL        |8277        |
+|5          |IL        |6237       |
+|6          |PA        |5519        |
+|7          |OH        |4984       |
+|8          |MD        |4665        |
+|9          |MI        |4554       |
+|10          |MN        |4518        |
+|11         |CO        |4417       |
+|12         |GA        |4368        |
+|13         |VA        |4261       |
+|14         |CT        |4159        |
+|15         |NC        |4053       |
+|16         |NJ        |3864        |
+|17         |NH        |3540       |
+|18         |WA        |3540        |
+|19         |IA        |3529       |
+|20         |HI        |3528        |
+|21         |WI        |3514       |
+|22         |MO        |3125        |
+|23         |DE        |3095       |
+|24          |NV        |3053        |
+|25         |IN        |2997       |
+|26         |RI        |2907        |
+|27         |SD        |2897       |
+|28         |KS        |2884        |
+|29         |OR        |2881       |
+|30         |UT        |2851        |
+|31         |NE        |2844       |
+|32         |ME        |2797        |
+|33          |MA        |2781        |
+|34         |DC        |2726       |
+|35         |KY        |2717        |
+|36         |AZ        |2630       |
+|37         |TN        |2628        |
+|38         |SC        |2519       |
+|39         |WY        |2427        |
+|40         |OK        |2383       |
+|41         |ID        |2375        |
+|42         |ND        |2337       |
+|43         |AK        |2328        |
+|44         |VT        |2320       |
+|45         |AR        |2260        |
+|46         |LA        |2193       |
+|47          |AL        |2146        |
+|48         |WV        |2003       |
+|49         |NM        |1965        |
+|50         |MS        |1927       |
+|51         |MT        |1810       |
 
 Issues with data entry could also be present in the data, either on behalf of the US Census and Bureau of Labor Statistics, who administer the Current Population Survey or on behalf of IPUMS, where microdata from the CPS is harmonized. This could present additional issues related to data bias because if data is entered in incorrectly, then populations may be missrepresented in analysis. This does not necessarily seem to be big issue as of current, but it is a potential issue that can arise as a result of the data selected for this study.
 
