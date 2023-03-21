@@ -504,7 +504,7 @@ To run and store the results of running a binary logistic regression in R the gl
 m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
 ```
 
-Due to constraints in computing power and the breadth of the data used in this project, the binary logistic regression was run using a randomly selected sample population of 100,000 observations. This did not change the code for binary logistic regression much, only impact the data source for the equation. The code for the sample construction and the subsequent changes to the binary logit are below.
+Due to constraints in computing power and the breadth of the data used in this project, the binary logistic regression was run using a randomly selected sample population of 100,000 observations. This did not change the code for binary logistic regression much, only impacting the data source for the equation. The code for the sample construction and the subsequent changes to the binary logit are below.
 
 ```R
 # sample data
@@ -525,7 +525,7 @@ exp(coef(m))
 
 Additionally, in order to capture how Hispanics, the ethnic group of focus in this study, compare to other racial groups, an additional regression was constructed and run. This regression, like the previous one, looks at the odds of having an educational attainment of a completed high school education or higher. This model took the following form:
 
-$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{hispanic}$$
+$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$$
 
 In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
 
@@ -558,8 +558,13 @@ In order to get more interpretable results, the odds ratio was also generated fo
 
 The results of running the code for both regressions and subsequent odds ratios are as follows:
 
+**First Regression and Odds Ratio**
+
 ![Regression 1](images/reg1.jpg)
 ![Odds Ratio 1](images/or1.jpg)
+
+**Second Regression and Odds Ratio**
+
 ![Regression 2, with Hispanic ethnic subgroups merged together](images/reg2.jpg)
 ![Odds Ratio 2](images/or2.jpg)
 
