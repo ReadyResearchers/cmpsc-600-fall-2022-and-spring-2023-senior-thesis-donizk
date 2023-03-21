@@ -340,7 +340,7 @@ Based on these summary statistics, across all of the data points in the extract,
 
 For the initial exploratory analysis of the data, the main focus will be visualizing how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following piecharts representing data for 2010 were generated to aid in descriptive analysis. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
-**Gender**
+### Gender
 
 ![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
