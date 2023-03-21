@@ -418,10 +418,10 @@ The initial binary logistic regression model takes the following form:
 
 In this project, the regression considers the following odds.
 
-Y_j = \begin{cases} 
+$$Y_j = \begin{cases} 
       1 & \mbox{if } EDUC \leq j \\
       0 & \mbox{if } EDUC > j 
-      \end{cases}
+      \end{cases}$$
 
 Where if EDUC is equal to 1, the odds of having an educational attainment of a high school diploma or greater are greater. If EDUC is equal to 0, the odds of having an educational attainment of some high school or lesser education are greater.
 
