@@ -16,9 +16,9 @@ In addition to racial disparities in educational attainment, there are also nota
 
 ## Current State of the Art
 
-There is a robust literature surrounding educational attainment that captures the role of gender, race, and ethnicity. A focus in much of this literature is the gendered differences in educational attainment, which is a well-documented issue overall [@buch], [@jaco], [@dipre]. These gendered differences show that while there was at some point a male-leaning dominance in the levels of educational attainment, women now exceed men in rates of educational attainment, especially post secondary education [@buch], [@jaco], [@dipre]. However, this gender gap reversal does not reflect a reversal in the gender gap as it relates to occupations or wages, according to the literature.
+There is a robust literature surrounding educational attainment that captures the role of gender, race, and ethnicity. A focus in much of this literature is the gendered differences in educational attainment, which is a well-documented issue overall [@buch], [@jaco], [@dipre]. These gendered differences show that while there was at some point a male-leaning dominance in the levels of educational attainment, women now exceed men in rates of educational attainment, especially post secondary education [@buch], [@jaco], [@dipre]. However, this gender gap reversal does not reflect a reversal in the gender gap as it relates to occupations or wages, according to the literature [@gmao].
 
-Much of the focus in the existing literature concerns differences between white and black individuals. This neglects the disparities and differences in educational attainment that might be observed in other racial and ethnic groups. One of the goals of this study and subsequent tool is to analyze differences across different racial and ethnic groups, with special interest in observing differences in those racial and ethnic groups that literature has failed to cover.
+Much of the focus in the existing literature concerns differences between white and black individuals. This neglects the disparities and differences in educational attainment that might be observed in other racial and ethnic groups. One of the goals of this study and subsequent tool is to analyze differences across different racial and ethnic groups, with special interest in observing differences in those racial and ethnic groups that literature has failed to cover in detail.
 
 To my knowledge, there is no research that analyzes the combined impact of race, ethnicity, and gender on educational attainment and the degree to which interactions between these factors can influence whether a person will recieve a certain level of educational attainment. This gap in research is particularly concerning given the impact on these intersections of identity on educational outcomes.
 
@@ -50,7 +50,7 @@ There are a few ethical issues that need to be addressed within this work involv
 
 ### Information Accuracy and Data Collection Issues
 
-To address the first issue of reliability, the data itself is collected from a survey, meaning that responses are self-reported. This can be an issue if there is no general mechanism, within the Census' collecting of the data, validating the answers given to the survey. This could mean that certain answers could have been given in order to seem better than actuality. In the case of this study, there could have been someone who lied about their highest level of educational attainment or about their level of income in order to seem more or less well-off. Also on the note of survey data, there may also be issues in data collection that may be present. Issues such as incomplete surveys or filling out of data extracts (on IPUMS' behalf), may result in untrustworthy or inclusive statistics and results.
+To address the first issue of reliability, the data itself is collected from a survey, meaning that responses are self-reported. This can be an issue if there is no internal mechanism, within the Census' collecting of the data, validating the answers given to the survey. This could mean that certain answers could have been given in order to seem better than actuality. In the case of this study, there could have been someone who lied about their highest level of educational attainment or about their level of income in order to seem more or less well-off. Also on the note of survey data, there may also be issues in data collection that may be present. Issues such as incomplete surveys or filling out of data extracts (on IPUMS' behalf), may result in untrustworthy or inclusive statistics and results.
 
 Additionally, there seems to be a potential issue in data collection or extraction, as there was a discrepancy between the data extract created for this project using IPUMS' extract tool and the actual data that ended up being usable for the project. The original intent of this project was to study data from the last 10 years in order to capture how educational attainment has changed over time, with help from the literature. But upon opening and working with the IPUMS data extract, which should have included years 2010-2021, it became clear that only data from 2010-2015 was accessible and usable. It is not clear if this is an issue resulting in incomplete data or with the data extract tool, but either way this could still be an issue future researchers may encounter upon using IPUMS as a data source and extraction tool.
 
@@ -60,7 +60,7 @@ As the data for this project was extracted and downloaded from a third-party too
 
 ### Data Bias
 
-In the initial use of the data, it became apparent that there may also be some data bias within the dataset. This is because when observations are counted by state, a varying amount of individuals are represented in each state, but never fully representing the populations actually present in those states. These counts remain constant year to year, which seems to indicate that the same sample of people was captured each year by the survey. The fact that this data only represents samples may bring up issues in the reliability of the data, in that it is unclear if there was any bias in the collection of the data or if the data may be incorrectly skewed towards representing one group over another. An example of this issue is present in the Figures 3-6 below. If you compare the results of 2010 and 2014, you can see that there are ranging amounts of people represented between both samples by each state, though these sample sizes stay the same across different years. The fact that these population counts are relatively constant across each year brings into question what the selection criteria to be considered for the survey was, and what was considered complete data that could be put into IPUMS. This factor may also impact the findings produced in this project.
+In the initial use of the data, it became apparent that there may also be some data bias within the dataset. This is because when observations are counted by state, a varying amount of individuals are represented in each state, but never fully representing the populations actually present in those states. These counts remain constant year to year, which seems to indicate that the same sample of people was captured each year by the survey. The fact that this data only represents samples may bring up issues in the reliability of the data, in that it is unclear if there was any bias in the collection of the data or if the data may be incorrectly skewed towards representing one group over another. An example of this issue is present in the Tables 1-2 below. If you compare the results of 2010 and 2014, you can see that there are ranging amounts of people represented between both samples by each state, though these sample sizes stay the same across different years. The fact that these population counts are relatively constant across each year brings into question what the selection criteria to be considered for the survey was, and what was considered complete data that could be put into IPUMS. This factor may also impact the findings produced in this project.
 
 Table: 2010 Sample Population Count by State
 
@@ -178,7 +178,7 @@ Issues with data entry could also be present in the data, either on behalf of th
 
 ### Issues in Equity
 
-The last but probably the most important ethical issue that may arise as a result of this project includes the potential issues in equity, that the project generally looks to address. Because this project is rooted in looking for trends in educational attainment, focusing in on gendered, racial, and financial disparities in attainment, the results of this project may have real implications for the groups represented. With that, there should be a great deal of consideration taken when looking at and comparing trends across groups, as well as, when introducing and talking about educational trajectories. This is in order to avoid an unneccessary harm or unreliable characterizations or representations of certain identity groups or specific regions.
+The last but probably the most important ethical issue that may arise as a result of this project includes the potential issues in equity, that the project generally looks to address. Because this project is rooted in looking for trends in educational attainment, focusing in on gendered, racial, and ethnic disparities in attainment, the results of this project may have real implications for the groups represented. With that, there should be a great deal of consideration taken when looking at and comparing trends across groups, as well as, when introducing and talking about educational trajectories. This is in order to avoid an unneccessary harm or unreliable characterizations or representations of certain identity groups or specific regions.
 
 # Related Work
 
@@ -258,21 +258,19 @@ The focus of this chapter is to present the process that will be taken in order 
 
 ## Data Description
 
-One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the range() function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for data, as I was under the impression that more data was being accessed, given that my selected extract should have included 2010-2021. Additionally, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. The goal of this study is to generate key findings for the entirety of the US, split by year, to attempt to capture how rates of educational attainment (based on other variables) change over time. Due to the aforementioned potential issues with the data, this study may result in findings that are not fully representative of the populations being captured within the data, though it should provide some key insights into the trends present in the US.
-
-In future versions of this document, I hope to be able to more clearly elaborate on why this data is inaccessible or not included in the extract.
+One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the range() function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for data, as I was under the impression that more data was being accessed, given that my selected extract should have included 2010-2021. Additionally, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. The goal of this study is to generate key findings for the entirety of the US, split by year, to attempt to capture how rates of educational attainment (based on other variables) change over time. Due to the aforementioned potential issues with the data, this study may result in findings that are not fully representative of the populations being captured within the data, though it should provide some key insights into the trends present in the US. It is unclear why this data is inaccessible or not included in the extract.
 
 The raw data extract from IPUMS, before cleaning and transformation, looked much like the figure below.
 
 ![Raw Data](images/raw-data.JPG)
 
-In order to analyze the data properly, each variable was considered in relation to how it will need to be used in analysis. In the case of CPSIDP, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the SERIAL, YEAR, PERNUM, BPL, INCTOT, and MONTH variables will not be considered in the analysis. The SEX variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The STATEFIP variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order. RACE and HISPAN are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. The full list of number/level assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
+In order to analyze the data properly, each variable was considered in relation to how it will need to be used in analysis. In the case of CPSIDP, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the SERIAL, YEAR, PERNUM, BPL, INCTOT, and MONTH variables will not be considered in the analysis. The SEX variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The STATEFIP variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order.  For use in analysis, however, the EDUC variable will be recoded into a binary variable that will take in a value of 0, indicating an educational attainment at or below some high school participation,  or 1, indicating an educational attainment at or above a high school diploma (or equivalent). RACE and HISPAN are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. Also for the purposes of use in statistical analysis, the RACE and HISPAN variables will be recoded to create binary variables for each identity group captured within the variables. The full list of numerical code assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
 
 ## Descriptive Statistics
 
-For this study, R will be the main tool used to perform data analysis, as such built-in functions such as summary() and count(), along with outside libraries and packages, will be employed to perform the initial exploratory analysis on the data.
+For this study, R will be the main tool used to perform data analysis, as such built-in functions such as summary() and count(), along with outside libraries and packages, will be employed to perform the initial exploratory analysis and statistical analysis of the data.
 
-After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample went from 1,048,575 to 753,243 observations. Additionally, using R's built-in count() function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
+After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample dropped from 1,048,575 to 753,243 observations. Additionally, using R's built-in count() function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
 
 Table: 2010 Race Count
 
@@ -332,7 +330,7 @@ Table: 2015 Hispanic Heritage Count
 |6          |Salvadoran        |136         |
 |7          |Cuban          |89          |
 
-This shows that the number of observations for each of these variables is inconsistent across years, suggesting that this data is only representative of a sample.
+This shows that the number of observations for each of these variables is inconsistent across years, suggesting that this data is only representative of a sample population.
 
 When using summary() in order to generate summary statistics on the data set (filtered for entries where age is 18 and older), the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are either classified as qualitative nominal or ordinal, so the interpretation of these summary statistics is negligible for those variables.
 
@@ -340,22 +338,48 @@ When using summary() in order to generate summary statistics on the data set (fi
 
 Based on these summary statistics, across all of the data points in the extract, the minimum reported total family income was -19,998 and the max reported income was 2,742,997. For age, the minimum value was 18, while the max was 85.
 
-For the initial exploratory analysis of the data, the main focus is to visualize how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following barplots representing data for 2010 were generated. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
+For the initial exploratory analysis of the data, the main focus will be visualizing how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following piecharts representing data for 2010 were generated to aid in descriptive analysis. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
-![US Educational Attainment by Gender](images/genderxedu2010.png)
+**Gender**
 
-![US Educational Attainment by Race](images/racexedu2010.png)
+![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
-![US Educational Attainment by Hispanic Origin](images/hispanxedu2010.png)
+![US Female Educational Attainment in 2010](images/femalexedu2010.png)
+
+**Race**
+
+![US White Educational Attainment in 2010](images/whitexedu2010.png)
+
+![US Black Educational Attainment in 2010](images/blackxedu2010.png)
+
+![US American Indian Educational Attainment in 2010](images/aixedu2010.png)
+
+![US Asian Educational Attainment in 2010](images/asianxedu2010.png)
+
+![US Pacific Islander Educational Attainment in 2010](images/pixedu2010.png)
+
+![US Mixed Race Educational Attainment in 2010](images/mrxedu2010.png)
+
+**Hispanic Ethnicity**
+
+![US Non Hispanic Educational Attainment in 2010](images/nhxedu2010.png)
+
+![US Mexican Educational Attainment in 2010](images/mexxedu2010.png)
+
+![US Puerto Rican Educational Attainment in 2010](images/prxedu2010.png)
+
+![US Cuban Educational Attainment in 2010](images/cubanxedu2010.png)
+
+![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
 In the Experiments section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
 
 ## Tools
 
 [CITE]
-As mentioned in the previous section, R is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly.
+As mentioned in the previous section, R is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly [@rstudio].
 
-The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, SQLite was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R.
+The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, SQLite was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R [@sqlite].
 
 ### R Packages
 
@@ -365,19 +389,19 @@ The following section will touch on the specific R packages that were utilized i
 
 #### tidyverse
 
-One of the packages used most prevalently throughout the project was `Tidyverse`, which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way. In particular, the sub-packages used in this project include dplyr and ggplot2. dplyr specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation. The ggplot2 package from tidyverse supports data visualization by allowing the creation of a variety of high quality graphics. Plots are constructed in ggplot using a data source, a declared x and y variable (coordinates), and a selected way of representing data points (referred to as geoms), based on the "grammar of graphics". In this project, the plots constructed either used points on the plot or as grouped bars to represent data.
+One of the packages used most prevalently throughout the project was [`Tidyverse`](https://www.tidyverse.org/), which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way [@tidy]. In particular, the sub-package used in this project include dplyr. [dplyr](https://dplyr.tidyverse.org/) specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables [@dplyr]. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation.
 
 #### shiny and shinydashboard
 
-In order to actually implement a data analysis dashboard, I chose to employ the use of `shiny` and `shinydashboard` packages in tandem in order to support the development of an interactive web dashboard written in R. A nice feature of the packages are that they provide the structure for a standalone dashboard, while also executing the necessary code to fill the dashboard with visualizations and other relevant output for the project.
+In order to actually implement a data analysis dashboard, I chose to employ the use of [`shiny`](https://shiny.rstudio.com/) and [`shinydashboard`](https://rstudio.github.io/shinydashboard/) packages in tandem in order to support the development of an interactive web dashboard written in R [@shiny] & [@shinydash]. A nice feature of the packages are that they provide the structure for a standalone dashboard, while also executing the necessary code to fill the dashboard with visualizations and other relevant output for the project.
 
 #### plotly
 
-`plotly` is an R package that supports the creation of interactive graphs using the open-source graphing library written in Javascript, plotly.js. This specific package was employed to embed an element of interactivity to the existing ggplot visualizations, specifically through letting users scroll over data points to see the exact reported values, as well as to zoom and pan over values in a relatively simple way.
+[`plotly`](https://plotly.com/r/getting-started/#:~:text=plotly%20is%20an%20R%20package,locally%20through%20the%20htmlwidgets%20framework.) is an R package that supports the creation of interactive graphs using the open-source graphing library written in Javascript, plotly.js [@plot]. This specific package was employed to embed an element of interactivity to the existing ggplot visualizations, specifically through letting users scroll over data points to see the exact reported values, as well as to zoom and pan over values in a relatively simple way.
 
 #### RSQLite
 
-`RSQLite` is a driver for R used to connect database interface (DBI) and database engine of SQLite to R. Through the use of this package, the SQLite database created to house the data from IPUMS is accessible for use throughout the R code in the project. As this package was made to be compliant with the DBI package, many of the common functions employed throughout the project are available in both packages. These functions include dbConnect(), dbGetQuery(), and dbDisconnect(). dbConnect() is used to establish a connection to the SQLite database, while dbDisconnect() is used to close the connection after use. dbGetQuery() is used to fetch data from the database based on specifics provided in the query that's passed in as an argument to the function.
+[`RSQLite`](https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html#:~:text=RSQLite%20is%20a%20DBI%2Dcompatible,library(DBI)) is a driver for R used to connect database interface (DBI) and database engine of SQLite to R [@rsql] & [@rsqlite]. Through the use of this package, the SQLite database created to house the data from IPUMS is accessible for use throughout the R code in the project. As this package was made to be compliant with the DBI package, many of the common functions employed throughout the project are available in both packages. These functions include dbConnect(), dbGetQuery(), and dbDisconnect(). dbConnect() is used to establish a connection to the SQLite database, while dbDisconnect() is used to close the connection after use. dbGetQuery() is used to fetch data from the database based on specifics provided in the query that's passed in as an argument to the function.
 
 #### rsconnect and shinyapps.io
 

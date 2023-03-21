@@ -36,7 +36,7 @@ monofont: # See https://tug.org/FontCatalogue/typewriterfonts.html for fonts
 mathfont: # See https://tug.org/FontCatalogue/mathfonts.html for fonts
 documentclass: report # See https://www.ctan.org/topic/class
 classoption: [titlepage, onecolumn, openany]
-geometry: [a4paper, bindingoffset=0mm, inner=30mm, outer=30mm, top=30mm, bottom=30mm] # See https://ctan.org/pkg/geometry for more options
+geometry: [a4paper, bindingoffset=0mm, inner=30mm, outer=30mm, top=20mm, bottom=30mm] # See https://ctan.org/pkg/geometry for more options
 
 # LaTeX snippets
 header-includes:
