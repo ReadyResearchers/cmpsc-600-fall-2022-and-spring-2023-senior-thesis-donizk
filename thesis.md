@@ -254,7 +254,7 @@ This project presents an interdisciplinary application bridging the disciplines 
 
 The focus of this chapter is to present the process that will be taken in order to complete this project. This process is split into multiple steps, depicted in the flowchart below.
 
-![Methodology Flowchart](images/flowchart.jpg)
+$\includegraphics(images/flowchart.jpg)$
 
 ## Data Description
 
