@@ -414,11 +414,52 @@ Core aspects of identity such as race, gender, and Hispanic ethnicity aren't con
 
 As the response variable of interest for this study is educational attainment and the nature of the recoded EDUC variable's values are binary, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Binary Logistic Regression.
 
-The initial model takes the following form:
+The initial binary logistic regression model takes the following form:
 
-$$logit(EDUC \leq j) = \beta_0 + \beta_1 GENDER + \beta_2 RACE + \beta_3 HISPANIC, j \in [1, J-1]$$
+In this project, the regression considers the following odds.
 
-Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation is needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. The only exception to this is the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below shows the recoding for the RACE variable into individual dummy variables.
+Y_j = \begin{cases} 
+      1 & \mbox{if } EDUC \leq j \\
+      0 & \mbox{if } EDUC > j 
+      \end{cases}
+
+Where if EDUC is equal to 1, the odds of having an educational attainment of a high school diploma or greater are greater. If EDUC is equal to 0, the odds of having an educational attainment of some high school or lesser education are greater.
+
+Then this will be factored into the following regression for the project.
+
+$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_3 \mathrm{HISPANIC}$$
+
+Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation was needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. There are two exceptions to this: firstly, in the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below first shows the recoding of the individual mixed race groups values into a universal "catch-all" variable, while the following code snippet shows the recoding of the RACE variable into individual dummy variables.
+
+**Mixed Race Grouping**
+
+```R
+# filtering
+    result$RACE[result$RACE == "801"]<-"999" #white black
+    result$RACE[result$RACE == "802"]<-"999" #white american indian
+    result$RACE[result$RACE == "803"]<-"999" #white asian
+    result$RACE[result$RACE == "804"]<-"999" #white pacific islander
+    result$RACE[result$RACE == "805"]<-"999" #black american indian
+    result$RACE[result$RACE == "806"]<-"999" #black asian
+    result$RACE[result$RACE == "807"]<-"999" #black pacific islander
+    result$RACE[result$RACE == "808"]<-"999" #american indian asian
+    result$RACE[result$RACE == "809"]<-"999" #asian pacific islander
+    result$RACE[result$RACE == "810"]<-"999" #white black american indian
+    result$RACE[result$RACE == "811"]<-"999" #white black asian
+    result$RACE[result$RACE == "812"]<-"999" #white american indian asian
+    result$RACE[result$RACE == "813"]<-"999" #white asian pacific islander
+    result$RACE[result$RACE == "814"]<-"999" #white black american indian asian
+    result$RACE[result$RACE == "815"]<-"999" #american indian
+    result$RACE[result$RACE == "816"]<-"999" #white black pacific islander
+    result$RACE[result$RACE == "817"]<-"999" #white american indian pacific islander
+    result$RACE[result$RACE == "818"]<-"999" #black american indian asian
+    result$RACE[result$RACE == "819"]<-"999" #white american indian asian pacific islander
+    result$RACE[result$RACE == "820"]<-"999" #mixed race, 2-3, unspecified
+    result$RACE[result$RACE == "830"]<-"999" #mixed race, 4-5, unspecified
+    
+```
+
+**Race Binary Recoding**
 
 ```R
 # race
@@ -429,34 +470,100 @@ result$islander <- ifelse(result$RACE == "652", 1, 0)
 result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
 ```
 
-Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the ordinal logistic regression that will be run to the following:
+The same was done for the Other Hispanic population in the HISPAN variable, in which the Central and South American populations were merged with the Other Hispanic populations rates, in order to consolidate results, due to lower counts of all of these populations in isolation, relative to the other Hispanic races in the analysis. The code snippets for the merging of the Hispanic groups, as well as the binary recoding of the HISPAN variable can be observed below.
 
-$$logit(EDUC \leq j) = \beta_0 + \beta_1 FEMALE + \beta_2 BLACK + \beta_3 AMERICAN INDIAN + \beta_4 ASIAN + \beta_5 ISLANDER + \beta_5 PACIFIC ISLANDER +$$
-$$\beta_6 MIXED RACE + \beta_7 MEXICAN + \beta_8 PUERTO RICAN + \beta_9 CUBAN + \beta_10 DOMINICAN + \beta_11 SALVADORIAN + \beta_12 OTHER HISPANIC +$$
-$$\beta_12 CENTRAL AMERICAN + \beta_13 SOUTH AMERICAN, j \in [1, J-1]$$
-
-In order to run and store the results of running an ordinal logistic regression in R, the polr() function from the MASS package will be used. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
+**Other Hispanic Group Merging**
 
 ```R
-# ordered logistic regression model
-m <- polr(EDUC ~ female + black + amer_indian + asian + islander + mixed_race 
-+ mex + pr + cuban + dom + salv + otherhispan + centralamer 
-+ southamer, data = result, Hess=TRUE, method = c("logistic"))
-
-# summary of model
-summary(m)
+#other hispan filtering
+result$HISPAN[result$HISPAN == "600"]<-"650" # other hispanic
+result$HISPAN[result$HISPAN == "610"]<-"650" # central/south american
+result$HISPAN[result$HISPAN == "611"]<-"650" # central american, excluding salvadorian
+result$HISPAN[result$HISPAN == "612"]<-"650" # south american   
 ```
 
-This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of an ordinal logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to each level of educational attainment.
+**Hispanic Ethnicity Binary Recoding**
 
-In order to compute the odds ratio in R, the exp() and coef() functions need to be used in conjunction taking in the stored variable for the regression model. This line of code will produce an output result of a value for each explanatory variable in the model, to be used when evaluating the results of the regression.
+```R
+# hispanic
+result$mex <- ifelse(result$HISPAN == "100", 1, 0)
+result$pr <- ifelse(result$HISPAN == "200", 1, 0)
+result$cuban <- ifelse(result$HISPAN == "300", 1, 0)result$dom <- ifelse(result$HISPAN == "400", 1, 0)
+result$salv <- ifelse(result$HISPAN == "500", 1, 0)
+result$otherhispan <- ifelse(result$HISPAN == "650", 1, 0)  
+```
+
+Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the regression model that will be run to the following:
+
+$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$$
+
+To run and store the results of running a binary logistic regression in R the glm() function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
+
+```R
+# binary logistic regression model
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
+```
+
+Due to constraints in computing power and the breadth of the data used in this project, the binary logistic regression was run using a randomly selected sample population of 100,000 observations. This did not change the code for binary logistic regression much, only impact the data source for the equation. The code for the sample construction and the subsequent changes to the binary logit are below.
+
+```R
+# sample data
+sample_result <- result[sample(nrow(result), 100000), ]
+    
+# binary logistic regression model
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
+```
+
+This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of a binary logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to educational attainment.
+
+To compute the odds ratio in R, the exp() and coef() functions were used in conjunction, taking in the stored variable representing the regression model as input. This line of code will produce an output result of a value for each explanatory variable in the model, to be used when evaluating the results of the regression.
 
 ```R
 ## odds ratio for interpretation
 exp(coef(m))
 ```
 
-explain expected result
+Additionally, in order to capture how Hispanics, the ethnic group of focus in this study, compare to other racial groups, an additional regression was constructed and run. This regression, like the previous one, looks at the odds of having an educational attainment of a completed high school education or higher. This model took the following form:
+
+$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{hispanic}$$
+
+In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
+
+**Hispanic Recoding**
+
+```R
+#hispan filtering
+result$HISPAN[result$HISPAN == "000"]<-"0" # non hispanic
+result$HISPAN[result$HISPAN == "100"]<-"650" #mexican
+result$HISPAN[result$HISPAN == "200"]<-"650"#puerto rican
+result$HISPAN[result$HISPAN == "300"]<-"650"#cuban
+result$HISPAN[result$HISPAN == "400"]<-"650"#dominican
+result$HISPAN[result$HISPAN == "500"]<-"650"#salvadorian
+result$HISPAN[result$HISPAN == "600"]<-"650" # other hispanic
+result$HISPAN[result$HISPAN == "610"]<-"650" # central/south american
+result$HISPAN[result$HISPAN == "611"]<-"650" # central american, excluding salvadorian
+result$HISPAN[result$HISPAN == "612"]<-"650" # south american 
+
+# binary recode    
+result$hispanic <- ifelse(result$HISPAN == "650", 1, 0)
+```
+
+**2nd Regression**
+
+```R
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + hispanic, family = binomial, data = sample_result)
+```
+
+In order to get more interpretable results, the odds ratio was also generated for this regression.
+
+The results of running the code for both regressions and subsequent odds ratios are as follows:
+
+![Regression 1](images/reg1.jpg)
+![Odds Ratio 1](images/or1.jpg)
+![Regression 2, with Hispanic ethnic subgroups merged together](images/reg2.jpg)
+![Odds Ratio 2](images/or2.jpg)
+
+The interpretation of these results will be further elaborated on in the *Conclusions* chapter.
 
 # Experiments
 
