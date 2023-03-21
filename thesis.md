@@ -376,16 +376,13 @@ In the Experiments section, these and visualizations for the following years wil
 
 ## Tools
 
-[CITE]
-As mentioned in the previous section, R is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly [@rstudio].
+As mentioned in the previous section, [`R`](https://www.r-project.org/about.html) is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics [@r]. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly [@rstudio].
 
 The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, SQLite was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R [@sqlite].
 
 ### R Packages
 
 The following section will touch on the specific R packages that were utilized in the development and completion of this project
-
-[CITE]
 
 #### tidyverse
 
@@ -411,11 +408,11 @@ The `rsconnect` package allows Shiny web apps to be deployed and hosted on the c
 
 As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961 [@schultz]; Becker, 1993 [@beck]; Mincer, 1958 [@mincer]) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
 
-It is difficult to visualize how race, gender, and Hispanic ethnicity could fit into the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Additionally, prior research referenced in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
+Core aspects of identity such as race, gender, and Hispanic ethnicity aren't considered within the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Additionally, prior research referenced in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
 
 ## Regression Analysis
 
-As the response variable of interest for this study is educational attainment and the nature of the variable's values are ordinal, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Ordinal Logistic Regression, otherwise known as the Ordinal logit/probit.
+As the response variable of interest for this study is educational attainment and the nature of the recoded EDUC variable's values are binary, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Binary Logistic Regression.
 
 The initial model takes the following form:
 
@@ -537,6 +534,10 @@ unresolved or special issues remain? What recommendations might you make?
 
 ## Conclusions
 
+## Acknowledgements
+
+ppl: family esp mom for inspiring project and instilling that the most valuable gift in life is the knowledge gained through the education she was able to provide me; jj, bianco, all the other professors that helped provide guidance: obc and econ dept prof (find his name!!), compsci senior class especially my personal comp buddy adriana, roomies, comp buddy, anyone who listened to me drone about my project, mila, veronica
+things: chatgpt, monster energy, rabbit, cc booths
 
 # References
 
