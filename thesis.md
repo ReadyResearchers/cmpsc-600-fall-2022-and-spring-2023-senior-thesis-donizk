@@ -427,7 +427,7 @@ Where if EDUC is equal to 1, the odds of having an educational attainment of a h
 
 Then this will be factored into the following regression for the project.
 
-$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_3 \mathrm{HISPANIC}$$
+$logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_3 \mathrm{HISPANIC}$
 
 Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation was needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. There are two exceptions to this: firstly, in the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below first shows the recoding of the individual mixed race groups values into a universal "catch-all" variable, while the following code snippet shows the recoding of the RACE variable into individual dummy variables.
 
@@ -495,7 +495,7 @@ result$otherhispan <- ifelse(result$HISPAN == "650", 1, 0)
 
 Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the regression model that will be run to the following:
 
-$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$$
+$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$
 
 To run and store the results of running a binary logistic regression in R the glm() function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
@@ -525,7 +525,7 @@ exp(coef(m))
 
 Additionally, in order to capture how Hispanics, the ethnic group of focus in this study, compare to other racial groups, an additional regression was constructed and run. This regression, like the previous one, looks at the odds of having an educational attainment of a completed high school education or higher. This model took the following form:
 
-$$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$$
+$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$
 
 In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
 
