@@ -576,9 +576,30 @@ In this chapter, the experimental set up and evaluation for this project will be
 
 ## Experimental Design
 
-For the experimental design of this project, experiments will be separated into two main sections. The first half of experiments will focus on outlaying the descriptive statistics for this project, consisting of evaluating plots and their corresponding data tables of counts for the amounts of people under each category of race, gender, or Hispanic origin that achieved each level of education. Using these plots and counts, the growth rate for educational attainment amongst each of the different identity groups will be computed as to show how attainment in the varying levels of educational attainment has changed, if at all. This will hopefully target several useful results to questions related to what group maintained the highest average level of educational attainment, as well as, capturing which group experienced the highest growth or decline in educational attainment.
+For the experimental design of this project, experiments will be separated into two main sections: descriptive statistics and statistical analysis
 
-The second section of experiments will be focused on statistical analysis of the data through the use of an ordinal logistic regression, as well as, an odds ratio. The regression and odds ratio will be used in conjunction to determine the presence of a statistical relationship between educational attainment and race, gender, and Hispanic origin. The results from both will be used to determine by how much each of the explanatory variables impacts the level of education a person will receive.
+The first half of experiments will focus on outlaying the descriptive statistics for this project, consisting of evaluating plots, specifically the counts for the amounts of people under each category of race, gender, or Hispanic origin that achieved either a high school diploma or greater or some high school or lesser. Using these plots, the proportions of each population accounted for in the analysis will be used to compare different gender, racial, and Hispanic ethnic subgroups to eachother. This will hopefully target several useful results to questions related to what group maintained the highest average level of educational attainment.
+
+The components of the EduAttain dashboard related to the descriptive statistics portion of the project include:
+
+- **Data & Description**: This page of the dashboard presents a table of the raw data set extracted from IPUMS, summary statistics relating to the age and amount of individuals captured in the data, project description, and a data key for the data table.
+![Data & Description](images/home.jpg)
+
+- **Gender x Educational Attainment**: This page of the dashboard presents pie charts that were generated for each survey year representing the proportion of each gender's population above or below a High School education, and interpretations of the plots that compare female and male educational attainment.
+![Gender x Educational Attainment](images/genxedu.jpg)
+
+- **Race x Educational Attainment**: This page of the dashboard presents pie charts that were generated for each survey year representing the proportion of each racial population above or below a High School education, and interpretations of the plots that compare White, Black, Asian, American Indian, Pacific Islander, and Mixed Race educational attainment.
+![Race x Educational Attainment](images/racexedu.jpg)
+
+- **Hispanic x Educational Attainment**: This page of the dashboard presents pie charts that were generated for each survey year representing the proportion of each Hispanic population above or below a High School education, and interpretations of the plots that compare Non Hispanic, Mexican, Puerto Rican, Cuban, Other Hispanic, Dominican, and Salvadorian educational attainment.
+![Hispanic x Educational Attainment](images/hispanxedu.jpg)
+
+The second section of experiments will be focused on statistical analysis of the data through the use of a binary logistic regression, as well as, an odds ratio. The regression and odds ratio will be used in conjunction to determine the presence of a statistical relationship between educational attainment and race, gender, and Hispanic origin. The results from both will be used to determine how a person's gender, racial, or ethnic identity can impact the education they will receive. In addition, a secondary binary logistic regression and odds ratio will shed light on how the Hispanic ethnic group compares to other racial groups' educational attainment.
+
+The components of the dashboard related to the statistical analysis portion of the project include:
+
+- **Regression**: This page of the dashboard presents the results of the binary logistic regression and corresponding odds ratio, along with interpretations from these figures.
+![Statistical Analysis](images/stats.jpg)
 
 ## Evaluation
 
