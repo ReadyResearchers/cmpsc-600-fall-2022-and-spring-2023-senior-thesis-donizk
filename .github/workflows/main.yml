@@ -16,7 +16,7 @@ jobs:
       - name: Install tectonic
         uses: wtfjoke/setup-tectonic@v1
       - name: Install imagemagick
-        uses: sudo apt-get install imagemagick
+        run: sudo apt-get install imagemagick
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up git repository
