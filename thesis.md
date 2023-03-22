@@ -499,20 +499,28 @@ $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta
 
 To run and store the results of running a binary logistic regression in R the glm() function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
+\small
+
 ```R
 # binary logistic regression model
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex \\ + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
 ```
 
+\normalsize
+
 Due to constraints in computing power and the breadth of the data used in this project, the binary logistic regression was run using a randomly selected sample population of 100,000 observations. This did not change the code for binary logistic regression much, only impacting the data source for the equation. The code for the sample construction and the subsequent changes to the binary logit are below.
+
+\small
 
 ```R
 # sample data
 sample_result <- result[sample(nrow(result), 100000), ]
     
 # binary logistic regression model
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex \\ + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
 ```
+
+\normalsize
 
 This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of a binary logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to educational attainment.
 
@@ -550,9 +558,11 @@ result$hispanic <- ifelse(result$HISPAN == "650", 1, 0)
 
 **2nd Regression**
 
+\small
 ```R
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race \\ + hispanic, family = binomial, data = sample_result)
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + hispanic, family = binomial, data = sample_result)
 ```
+\normalsize
 
 In order to get more interpretable results, the odds ratio was also generated for this regression.
 
