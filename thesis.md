@@ -824,6 +824,8 @@ Overall, the biggest takeaways from this section covering racial differences in 
 
 #### Hispanic Ethnicity and Educational Attainment: Results
 
+One limitation of these results is the lack of available data present for the Salvadorian and Dominican populations.
+
 **2010**
 
 ![US Non Hispanic Educational Attainment in 2010](images/nhxedu2010.png)
