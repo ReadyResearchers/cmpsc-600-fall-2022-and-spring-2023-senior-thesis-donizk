@@ -820,57 +820,61 @@ Across all survey years, certain results from the data were the same including t
 
 The results from 2010-2014 show that the Asian population had the highest proportions of individuals who had completed an education of high school or greater, while in 2015, the largest proportion was accounted for in the White population. Additionally, in 2010, the White population was trailing the Asian population for the highest proportions of high school and college educated individuals, in the years to follow, the White population's proportion of these educated individuals fell behind the rates of both the Pacific Islander and Mixed Race populations.
 
-Overall, the biggest takeaways from this section for the descriptive analysis of racial differences in educational outcomes are that the Asian population tends to lead in rates of having a high school education or higher, followed closely by the Mixed Race, Pacific Islander, and White populations. The populations with the lowest proportions of high school and college educated individuals include the Black and American Indian populations, with American Indian educational attainment falling below that of Black educational attainment for all survey years in this study. The most surprising outcome presented here is that the Mixed Race population had a higher recorded proportion of educated individuals than the White population, which brings into question how the intersection of membership in different racial groups could influence educational attainment.
+Overall, the biggest takeaways from this section covering racial differences in educational outcomes are that the Asian population tends to lead in rates of having a high school education or higher, followed closely by the Mixed Race, Pacific Islander, and White populations. The populations with the lowest proportions of high school and college educated individuals include the Black and American Indian populations, with American Indian educational attainment falling below that of Black educational attainment for all survey years in this study. The most surprising outcome presented here is that the Mixed Race population had a higher recorded proportion of educated individuals than the White population, which brings into question how the intersection of membership in different racial groups could influence educational attainment.
 
 #### Hispanic Ethnicity and Educational Attainment: Results
 
 **2010**
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![US Non Hispanic Educational Attainment in 2010](images/nhxedu2010.png)
+![US Mexican Educational Attainment in 2010](images/mexxedu2010.png)
+![US Puerto Rican Educational Attainment in 2010](images/prxedu2010.png)
+![US Cuban Educational Attainment in 2010](images/cubanxedu2010.png)
+![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
 **2011**
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![US Non Hispanic Educational Attainment in 2011](images/nhxedu2011.png)
+![US Mexican Educational Attainment in 2011](images/mexxedu2011.png)
+![US Puerto Rican Educational Attainment in 2011](images/prxedu2011.png)
+![US Cuban Educational Attainment in 2011](images/cubanxedu2011.png)
+![US Other Hispanic Educational Attainment in 2011](images/otherhxedu2011.png)
 
 **2012**
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![US Non Hispanic Educational Attainment in 2012](images/nhxedu2012.png)
+![US Mexican Educational Attainment in 2012](images/mexxedu2012.png)
+![US Puerto Rican Educational Attainment in 2012](images/prxedu2012.png)
+![US Cuban Educational Attainment in 2012](images/cubanxedu2012.png)
+![US Other Hispanic Educational Attainment in 2012](images/otherhxedu2012.png)
 
 **2013**
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![US Non Hispanic Educational Attainment in 2013](images/nhxedu2013.png)
+![US Mexican Educational Attainment in 2013](images/mexxedu2013.png)
+![US Puerto Rican Educational Attainment in 2013](images/prxedu2013.png)
+![US Cuban Educational Attainment in 2013](images/cubanxedu2013.png)
+![US Other Hispanic Educational Attainment in 2013](images/otherhxedu2013.png)
 
 **2014**
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![US Non Hispanic Educational Attainment in 2014](images/nhxedu2014.png)
+![US Mexican Educational Attainment in 2014](images/mexxedu2014.png)
+![US Puerto Rican Educational Attainment in 2014](images/prxedu2014.png)
+![US Cuban Educational Attainment in 2014](images/cubanxedu2014.png)
+![US Other Hispanic Educational Attainment in 2014](images/otherhxedu2014.png)
+![US Dominican Educational Attainment in 2014](images/domxedu2014.png)
+![US Salvadorian Educational Attainment in 2014](images/salvxedu2014.png)
 
 **2015**
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![US Non Hispanic Educational Attainment in 2015](images/nhxedu2015.png)
+![US Mexican Educational Attainment in 2015](images/mexxedu2015.png)
+![US Puerto Rican Educational Attainment in 2015](images/prxedu2015.png)
+![US Cuban Educational Attainment in 2015](images/cubanxedu2015.png)
+![US Other Hispanic Educational Attainment in 2015](images/otherhxedu2015.png)
+![US Dominican Educational Attainment in 2015](images/domxedu2015.png)
+![US Salvadorian Educational Attainment in 2015](images/salvxedu2015.png)
 
 run through each plot
     - observe and report rate of growth for educ for each var
