@@ -748,8 +748,87 @@ The results of the descriptive analysis presented in the Gender and Educational 
 
 #### Race and Educational Attainment: Results
 
+Within the Race and Educational Attainment page of the dashboard, the following plots were generated in order to show which racial group had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. While there were some general trends present across all years, there was also a slight variability in the trends that makes it relevant to present the results by year.
+
 **2010**
 
+![US White Educational Attainment in 2010](images/whitexedu2010.png)
+![US Black Educational Attainment in 2010](images/blackxedu2010.png)
+![US American Indian Educational Attainment in 2010](images/aixedu2010.png)
+![US Asian Educational Attainment in 2010](images/asianxedu2010.png)
+![US Pacific Islander Educational Attainment in 2010](images/pixedu2010.png)
+![US Mixed Race Educational Attainment in 2010](images/mrxedu2010.png)
+
+In 2010, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the White, Mixed Race, Pacific Islander, Black, and American Indian populations, in order.
+
+**2011**
+
+![US White Educational Attainment in 2011](images/whitexedu2011.png)
+![US Black Educational Attainment in 2011](images/blackxedu2011.png)
+![US American Indian Educational Attainment in 2011](images/aixedu2011.png)
+![US Asian Educational Attainment in 2011](images/asianxedu2011.png)
+![US Pacific Islander Educational Attainment in 2011](images/pixedu2011.png)
+![US Mixed Race Educational Attainment in 2011](images/mrxedu2011.png)
+
+In 2011, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Pacific Islander, Mixed Race, White, Black, and American Indian populations, in order.
+
+**2012**
+
+![US White Educational Attainment in 2012](images/whitexedu2012.png)
+![US Black Educational Attainment in 2012](images/blackxedu2012.png)
+![US American Indian Educational Attainment in 2012](images/aixedu2012.png)
+![US Asian Educational Attainment in 2012](images/asianxedu2012.png)
+![US Pacific Islander Educational Attainment in 2012](images/pixedu2012.png)
+![US Mixed Race Educational Attainment in 2012](images/mrxedu2012.png)
+
+In 2012, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
+
+**2013**
+
+![US White Educational Attainment in 2013](images/whitexedu2013.png)
+![US Black Educational Attainment in 2013](images/blackxedu2013.png)
+![US American Indian Educational Attainment in 2013](images/aixedu2013.png)
+![US Asian Educational Attainment in 2013](images/asianxedu2013.png)
+![US Pacific Islander Educational Attainment in 2013](images/pixedu2013.png)
+![US Mixed Race Educational Attainment in 2013](images/mrxedu2013.png)
+
+In 2013, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
+
+**2014**
+
+![US White Educational Attainment in 2014](images/whitexedu2014.png)
+![US Black Educational Attainment in 2014](images/blackxedu2014.png)
+![US American Indian Educational Attainment in 2014](images/aixedu2014.png)
+![US Asian Educational Attainment in 2014](images/asianxedu2014.png)
+![US Pacific Islander Educational Attainment in 2014](images/pixedu2014.png)
+![US Mixed Race Educational Attainment in 2014](images/mrxedu2014.png)
+
+In 2014, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
+
+**2015**
+
+![US White Educational Attainment in 2015](images/whitexedu2015.png)
+![US Black Educational Attainment in 2015](images/blackxedu2015.png)
+![US American Indian Educational Attainment in 2015](images/aixedu2015.png)
+![US Asian Educational Attainment in 2015](images/asianxedu2015.png)
+![US Pacific Islander Educational Attainment in 2015](images/pixedu2015.png)
+![US Mixed Race Educational Attainment in 2015](images/mrxedu2015.png)
+
+In 2015, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the White population, followed by the attainment of the Asian, Mixed Race, Pacific Islander, Black, and American Indian populations, in order.
+
+Across all survey years, certain results from the data were the same including that Black and American Indian populations in the US tend to have the lowest rates of educational attainment when compared to other racial groups. The aspect that differed the most from year to year was what populations had higher rates of educational attainment.
+
+The results from 2010-2014 show that the Asian population had the highest proportions of individuals who had completed an education of high school or greater, while in 2015, the largest proportion was accounted for in the White population. Additionally, in 2010, the White population was trailing the Asian population for the highest proportions of high school and college educated individuals, in the years to follow, the White population's proportion of these educated individuals fell behind the rates of both the Pacific Islander and Mixed Race populations.
+
+Overall, the biggest takeaways from this section for the descriptive analysis of racial differences in educational outcomes are that the Asian population tends to lead in rates of having a high school education or higher, followed closely by the Mixed Race, Pacific Islander, and White populations. The populations with the lowest proportions of high school and college educated individuals include the Black and American Indian populations, with American Indian educational attainment falling below that of Black educational attainment for all survey years in this study. The most surprising outcome presented here is that the Mixed Race population had a higher recorded proportion of educated individuals than the White population, which brings into question how the intersection of membership in different racial groups could influence educational attainment.
+
+#### Hispanic Ethnicity and Educational Attainment: Results
+
+**2010**
+
+![]()
+![]()
+![]()
 ![]()
 ![]()
 
@@ -757,9 +836,15 @@ The results of the descriptive analysis presented in the Gender and Educational 
 
 ![]()
 ![]()
+![]()
+![]()
+![]()
 
 **2012**
 
+![]()
+![]()
+![]()
 ![]()
 ![]()
 
@@ -767,9 +852,15 @@ The results of the descriptive analysis presented in the Gender and Educational 
 
 ![]()
 ![]()
+![]()
+![]()
+![]()
 
 **2014**
 
+![]()
+![]()
+![]()
 ![]()
 ![]()
 
@@ -777,8 +868,9 @@ The results of the descriptive analysis presented in the Gender and Educational 
 
 ![]()
 ![]()
-
-#### Hispanic Ethnicity and Educational Attainment: Results
+![]()
+![]()
+![]()
 
 run through each plot
     - observe and report rate of growth for educ for each var
@@ -793,6 +885,8 @@ run through each plot
 ## Future Work
 
 - include income, parental education, 
+- filter by race/ethnicity and gender: to better tease out the implications of these intersections of identity on educational outcomes
+- filter education variable differently, college educated vs hs educated
 
 ## Future Ethical Implications and Recommendations
 
