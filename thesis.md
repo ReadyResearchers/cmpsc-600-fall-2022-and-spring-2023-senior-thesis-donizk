@@ -182,7 +182,7 @@ The last but probably the most important ethical issue that may arise as a resul
 
 # Related Work
 
-This chapter presents the existing research related to gender, racial, and ethnic disparities in education, as to further motivate this project and identify any gaps in knowledge, which will be addressed by EduAttain.
+This chapter presents the existing research related to gender, racial, and ethnic disparities in education, as to further motivate this project and identify any gaps in knowledge, which will be addressed by EduAttain. Additionally, this chapter briefly covers any factors not included in this study but that are still relevant to the study of disparities in educational attainment, as well as, presenting Computational Social Science Fusion Analysis as a theoretical framework used in the project.
 
 ## Gender and Educational Attainment
 
@@ -340,7 +340,7 @@ Based on these summary statistics, across all of the data points in the extract,
 
 For the initial exploratory analysis of the data, the main focus will be visualizing how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following piecharts representing data for 2010 were generated to aid in descriptive analysis. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
-### Gender
+**Gender**
 
 ![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
@@ -372,7 +372,7 @@ For the initial exploratory analysis of the data, the main focus will be visuali
 
 ![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
-In the Experiments section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
+In the *Results* section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
 
 ## Tools
 
@@ -386,7 +386,7 @@ The following section will touch on the specific R packages that were utilized i
 
 #### tidyverse
 
-One of the packages used most prevalently throughout the project was [`Tidyverse`](https://www.tidyverse.org/), which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way [@tidy]. In particular, the sub-package used in this project include dplyr. [dplyr](https://dplyr.tidyverse.org/) specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables [@dplyr]. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation.
+One of the packages used most prevalently throughout the project was [`Tidyverse`](https://www.tidyverse.org/), which is an integrated unit/distribution of sub packages, all with specific functionalities meant to support data analysis in a uniform way [@tidy]. In particular, the sub-package used in this project include dplyr. [`dplyr`](https://dplyr.tidyverse.org/) specifically supports the manipulation of a dataset in order to filter through data in order to extrapolate more specific information from other variables [@dplyr]. This allows any unneccessary information to be left out of the analysis, in order to focus on insights about the topics of interest. This project leverages the filter() and count() functions from the dplyr package to support data manipulation.
 
 #### shiny and shinydashboard
 
