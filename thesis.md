@@ -501,7 +501,7 @@ To run and store the results of running a binary logistic regression in R the gl
 
 ```R
 # binary logistic regression model
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex \\ + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
 ```
 
 Due to constraints in computing power and the breadth of the data used in this project, the binary logistic regression was run using a randomly selected sample population of 100,000 observations. This did not change the code for binary logistic regression much, only impacting the data source for the equation. The code for the sample construction and the subsequent changes to the binary logit are below.
@@ -511,7 +511,7 @@ Due to constraints in computing power and the breadth of the data used in this p
 sample_result <- result[sample(nrow(result), 100000), ]
     
 # binary logistic regression model
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex \\ + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
 ```
 
 This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of a binary logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to educational attainment.
@@ -551,7 +551,7 @@ result$hispanic <- ifelse(result$HISPAN == "650", 1, 0)
 **2nd Regression**
 
 ```R
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + hispanic, family = binomial, data = sample_result)
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race \\ + hispanic, family = binomial, data = sample_result)
 ```
 
 In order to get more interpretable results, the odds ratio was also generated for this regression.
