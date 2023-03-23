@@ -340,13 +340,13 @@ Based on these summary statistics, across all of the data points in the extract,
 
 For the initial exploratory analysis of the data, the main focus will be visualizing how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following piecharts representing data for 2010 were generated to aid in descriptive analysis. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
-**Gender**
+### Gender
 
 ![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
 ![US Female Educational Attainment in 2010](images/femalexedu2010.png)
 
-**Race**
+### Race
 
 ![US White Educational Attainment in 2010](images/whitexedu2010.png)
 
@@ -360,7 +360,7 @@ For the initial exploratory analysis of the data, the main focus will be visuali
 
 ![US Mixed Race Educational Attainment in 2010](images/mrxedu2010.png)
 
-**Hispanic Ethnicity**
+### Hispanic Ethnicity
 
 ![US Non Hispanic Educational Attainment in 2010](images/nhxedu2010.png)
 
@@ -860,7 +860,7 @@ Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, 
 
 ![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
-In 2010, 
+In 2010, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican and Other Hispanic populations. The population with the lowest proportion of high school and college educated individuals was the Mexican population.
 
 **2011**
 
