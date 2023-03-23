@@ -870,7 +870,7 @@ Overall, the biggest takeaways from this section covering racial differences in 
 
 #### Hispanic Ethnicity and Educational Attainment: Results
 
-One limitation of these results is the lack of available data present for the Salvadorian and Dominican populations.
+Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, the following plots were generated in order to show which Hispanic ethnic subgroup had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. Much like in the previous section, there were some general trends present across all years, but enough variability in them that make it relevant to present the trends by year. One limitation of these results is the lack of available data present for the Salvadorian and Dominican populations for years 2010-2013, since that specific data was not collected prior to 2014.
 
 **2010**
 
@@ -952,8 +952,6 @@ One limitation of these results is the lack of available data present for the Sa
 
 ![US Salvadorian Educational Attainment in 2015](images/salvxedu2015.png)
 
-run through each plot
-    - observe and report rate of growth for educ for each var
 - run through regression results and interpretations
 - questions for each experiment
     - How has educational attainment varied by gender over the years? Has there been growth or losses in the rates of educational attainment based on differences in gender?
@@ -964,7 +962,7 @@ run through each plot
 
 ## Future Work
 
-- include income, parental education, 
+- include income, parental education, nativity
 - filter by race/ethnicity and gender: to better tease out the implications of these intersections of identity on educational outcomes
 - filter education variable differently, college educated vs hs educated
 
@@ -977,7 +975,7 @@ unresolved or special issues remain? What recommendations might you make?
 
 reiterate results with focus on insights and briefly describe room for future improvement but that the project was successful in ascribing more detail to the study of racial and ethnic inequalities in education.
 
-## Acknowledgements
+# Acknowledgements
 
 ppl: family esp mom for inspiring project and instilling that the most valuable gift in life is the knowledge gained through the education she was able to provide me; jj, bianco, all the other professors that helped provide guidance: obc and econ dept prof (find his name!!), compsci senior class especially my personal comp buddy adriana, roomies, comp buddy, anyone who listened to me drone about my project, mila, veronica
 things: chatgpt, monster energy, rabbit, cc booths
