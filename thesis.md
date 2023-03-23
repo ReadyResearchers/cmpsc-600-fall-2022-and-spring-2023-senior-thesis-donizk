@@ -726,37 +726,25 @@ The summary of results will be separated into two main sections, Descriptive Ana
 
 The results of the descriptive analysis presented in the Gender and Educational Attainment dashboard page showcases that, across all survey years, women had a higher proportion of individuals reporting an education of a High School Diploma or above. This result was achieved by comparing the percentage of those in the male and female population who had either an equivalent high school education or greater or less than some high school or below for each year. The plots showing the breakdown of educational attainment by men and women in this sample are depicted below.
 
-**2010**
-
 ![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
 ![US Female Educational Attainment in 2010](images/femalexedu2010.png)
-
-**2011**
 
 ![US Male Educational Attainment in 2011](images/malexedu2011.png)
 
 ![US Female Educational Attainment in 2011](images/femalexedu2011.png)
 
-**2012**
-
 ![US Male Educational Attainment in 2012](images/malexedu2012.png)
 
 ![US Female Educational Attainment in 2012](images/femalexedu2012.png)
-
-**2013**
 
 ![US Male Educational Attainment in 2013](images/malexedu2013.png)
 
 ![US Female Educational Attainment in 2013](images/femalexedu2013.png)
 
-**2014**
-
 ![US Male Educational Attainment in 2014](images/malexedu2014.png)
 
 ![US Female Educational Attainment in 2014](images/femalexedu2014.png)
-
-**2015**
 
 ![US Male Educational Attainment in 2015](images/malexedu2015.png)
 
@@ -765,8 +753,6 @@ The results of the descriptive analysis presented in the Gender and Educational 
 #### Race and Educational Attainment: Results
 
 Within the Race and Educational Attainment page of the dashboard, the following plots were generated in order to show which racial group had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. While there were some general trends present across all years, there was also a slight variability in the trends that makes it relevant to present the results by year.
-
-**2010**
 
 ![US White Educational Attainment in 2010](images/whitexedu2010.png)
 
@@ -782,8 +768,6 @@ Within the Race and Educational Attainment page of the dashboard, the following 
 
 In 2010, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the White, Mixed Race, Pacific Islander, Black, and American Indian populations, in order.
 
-**2011**
-
 ![US White Educational Attainment in 2011](images/whitexedu2011.png)
 
 ![US Black Educational Attainment in 2011](images/blackxedu2011.png)
@@ -797,8 +781,6 @@ In 2010, the population with the highest proportion of individuals who attained 
 ![US Mixed Race Educational Attainment in 2011](images/mrxedu2011.png)
 
 In 2011, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Pacific Islander, Mixed Race, White, Black, and American Indian populations, in order.
-
-**2012**
 
 ![US White Educational Attainment in 2012](images/whitexedu2012.png)
 
@@ -814,8 +796,6 @@ In 2011, the population with the highest proportion of individuals who attained 
 
 In 2012, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
 
-**2013**
-
 ![US White Educational Attainment in 2013](images/whitexedu2013.png)
 
 ![US Black Educational Attainment in 2013](images/blackxedu2013.png)
@@ -830,8 +810,6 @@ In 2012, the population with the highest proportion of individuals who attained 
 
 In 2013, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
 
-**2014**
-
 ![US White Educational Attainment in 2014](images/whitexedu2014.png)
 
 ![US Black Educational Attainment in 2014](images/blackxedu2014.png)
@@ -845,8 +823,6 @@ In 2013, the population with the highest proportion of individuals who attained 
 ![US Mixed Race Educational Attainment in 2014](images/mrxedu2014.png)
 
 In 2014, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
-
-**2015**
 
 ![US White Educational Attainment in 2015](images/whitexedu2015.png)
 
@@ -883,6 +859,8 @@ Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, 
 ![US Cuban Educational Attainment in 2010](images/cubanxedu2010.png)
 
 ![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
+
+In 2010, 
 
 **2011**
 
@@ -977,8 +955,8 @@ reiterate results with focus on insights and briefly describe room for future im
 
 # Acknowledgements
 
-ppl: family esp mom for inspiring project and instilling that the most valuable gift in life is the knowledge gained through the education she was able to provide me; jj, bianco, all the other professors that helped provide guidance: obc and econ dept prof (find his name!!), compsci senior class especially my personal comp buddy adriana, roomies, comp buddy, anyone who listened to me drone about my project, mila, veronica
-things: chatgpt, monster energy, rabbit, cc booths
+ppl: family esp mom for inspiring project and instilling that the most valuable gift in life is the knowledge gained through the education she was able to provide me; jj, bianco, all the other professors that helped provide guidance: obc and econ dept prof (find his name!!), luman, compsci senior class especially my personal comp buddy adriana, roomies, comp buddy, anyone who listened to me drone about my project, mila, veronica
+things: monster energy, rabbit, cc booths
 
 # References
 
