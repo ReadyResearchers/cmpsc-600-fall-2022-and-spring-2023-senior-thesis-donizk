@@ -964,12 +964,13 @@ According to Figure 109, the female population maintained a higher likelihood of
 
 ## Future Work
 
-- include income, parental education, nativity
-- filter by race/ethnicity and gender: to better tease out the implications of these intersections of identity on educational outcomes
-- filter education variable differently, college educated vs hs educated
-- dont work with a sample size or increase sample size for regression
+In future iterations of this study, there are several improvements that could be made in order to maximize and improve the findings produced. Firstly, the inclusion of other factors relevant to the study of educational disparities in the analysis would help further explain the implication of different intersections of identity on educational outcomes. Namely the inclusion of an income variable would help explain how race, ethnicity, gender, and class intersect and impact educational outcomes.
 
-In future iterations of this study, there are several improvements that could be made in order to maximize and improve the findings produced. Firstly, including other variables relevant to the study of educational disparities would help further explain the implication of different intersections of identity on educational outcomes.
+Additionally, the data in this project could be filtered by race, ethnicity, and gender, in that male and female educational attainment are studied in isolation based on the factors of race and ethnicity. This would be able to explain how gender and race/ethnicity both impact educational attainment, in order to figure out if the advantages of the general female population are true when divided up by race/ethnicity.
+
+In regards educational attainment, the variable could have been recoded in a way that looked at the likelihood of completing a college education by filtering the educational levels in the data into a high school education  and below group and a college education and above group. This suggested recoding would have provided more insight into the differences in college completion amongst the identity groups in the data.
+
+Lastly, improvements can be made to the implementation of the binary logistic regressions used in this project through the use of an increased sample size or the entirety of the data. Results presented by the regression could be misleading as a result of the limited nature of using a sample size, so using the entire data or increased sample size should mitigate these potential issues.
 
 ## Future Ethical Implications and Recommendations
 
