@@ -846,9 +846,9 @@ Overall, the biggest takeaways from this section covering racial differences in 
 
 #### Hispanic Ethnicity and Educational Attainment: Results
 
-Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, the following plots were generated in order to show which Hispanic ethnic subgroup had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. Much like in the previous section, there were some general trends present across all years, but enough variability in them that make it relevant to present the trends by year. One limitation of these results is the lack of available data present for the Salvadorian and Dominican populations for years 2010-2013, since that specific data was not collected prior to 2014.
+Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, the following plots were generated in order to show which Hispanic ethnic subgroup had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. Much like in the previous section, there were some general trends present across all years, but enough variability in them that make it relevant to present the trends by year. One limitation that is important of the  results presented here is the lack of available data present for the Salvadorian and Dominican populations for years 2010-2013, since that specific data was not collected prior to 2014. This is where much of the variability in the trends comes from, since it changes what group has the lowest rates of educational attainment.
 
-**2010**
+From 2010 to 2013, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican and Other Hispanic populations. The population with the lowest proportion of high school and college educated individuals was the Mexican population. The plots used to come to this conclusion are presented below.
 
 ![US Non Hispanic Educational Attainment in 2010](images/nhxedu2010.png)
 
@@ -860,10 +860,6 @@ Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, 
 
 ![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
-In 2010, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican and Other Hispanic populations. The population with the lowest proportion of high school and college educated individuals was the Mexican population.
-
-**2011**
-
 ![US Non Hispanic Educational Attainment in 2011](images/nhxedu2011.png)
 
 ![US Mexican Educational Attainment in 2011](images/mexxedu2011.png)
@@ -873,8 +869,6 @@ In 2010, the population with the highest proportion of individuals with a comple
 ![US Cuban Educational Attainment in 2011](images/cubanxedu2011.png)
 
 ![US Other Hispanic Educational Attainment in 2011](images/otherhxedu2011.png)
-
-**2012**
 
 ![US Non Hispanic Educational Attainment in 2012](images/nhxedu2012.png)
 
@@ -886,8 +880,6 @@ In 2010, the population with the highest proportion of individuals with a comple
 
 ![US Other Hispanic Educational Attainment in 2012](images/otherhxedu2012.png)
 
-**2013**
-
 ![US Non Hispanic Educational Attainment in 2013](images/nhxedu2013.png)
 
 ![US Mexican Educational Attainment in 2013](images/mexxedu2013.png)
@@ -898,7 +890,7 @@ In 2010, the population with the highest proportion of individuals with a comple
 
 ![US Other Hispanic Educational Attainment in 2013](images/otherhxedu2013.png)
 
-**2014**
+From 2014 to 2015, with the inclusion of data for Dominican and Salvadorian populations, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican, Other Hispanic, Dominican, and Mexican populations, in order. The population with the lowest proportion of high school and college educated individuals was the Salvadorian population. The plots used to come to this conclusion are presented below.
 
 ![US Non Hispanic Educational Attainment in 2014](images/nhxedu2014.png)
 
@@ -914,8 +906,6 @@ In 2010, the population with the highest proportion of individuals with a comple
 
 ![US Salvadorian Educational Attainment in 2014](images/salvxedu2014.png)
 
-**2015**
-
 ![US Non Hispanic Educational Attainment in 2015](images/nhxedu2015.png)
 
 ![US Mexican Educational Attainment in 2015](images/mexxedu2015.png)
@@ -930,13 +920,27 @@ In 2010, the population with the highest proportion of individuals with a comple
 
 ![US Salvadorian Educational Attainment in 2015](images/salvxedu2015.png)
 
-- run through regression results and interpretations
-- questions for each experiment
-    - How has educational attainment varied by gender over the years? Has there been growth or losses in the rates of educational attainment based on differences in gender?
-    - How has educational attainment varied by race over the years? Has there been growth or losses in the rates of educational attainment based on differences in race?
-    - How has educational attainment varied by Hispanic ethnicity over the years? Has there been growth or losses in the rates of educational attainment based on differences in ethnicity?
-    - how does the hispanic ethnic group compare to other racial groups in likelihood of completing at least a high school education?
-    - what new insights can be gleaned from this project that are not already detailed in the literature?
+Across all survey years, the proportions of high school and college educated individuals within the Non Hispanic, Cuban, Puerto Rican, and Other Hispanic populations, as well as their positions relative to each other, remained relatively constant. The only differences in the data were as a result of the inclusion of Salvadorian and Dominican data points, which made Salvadorians the Hispanic subgroup with the lowest levels of academic achievement. Though, these results may be skewed, as a result of fewer data points that were available to work with across all the survey years looked at in this study.
+
+Of the results presented in this section, the most interesting is that of how the findings for the Dominican and Salvadorian populations and how they compare to other Hispanic ethnic subgroups. The literature referenced for this study failed to take into account the educational attainment of these populations, which makes these findings all the more interesting. Outside of that, the findings presented in this section related to the Cuban and Mexican Hispanic subgroups solidifies the research done previously.
+
+### Statistical Analysis
+
+#### First Regression, Confusion Matrix, and Odds Ratio
+
+![First Regression Summary](images/reg1.jpg)
+
+![First Confusion Matrix](images/acc1.JPG)
+
+![First Odds Ratio](images/or1.jpg)
+
+#### Second Regression, Confusion Matrix, and Odds Ratio
+
+![First Regression Summary](images/reg2.jpg)
+
+![First Confusion Matrix](images/acc2.JPG)
+
+![First Odds Ratio](images/or2.jpg)
 
 ## Future Work
 
@@ -947,7 +951,7 @@ In 2010, the population with the highest proportion of individuals with a comple
 ## Future Ethical Implications and Recommendations
 
 Especially as pertains to the public release or use of your software or methods, what
-unresolved or special issues remain? What recommendations might you make?
+unresolved or special issues remain? What recommendations might you make?: outdated information, improper use of confusion matrix -- or at least not following recommendations
 
 ## Conclusions
 
