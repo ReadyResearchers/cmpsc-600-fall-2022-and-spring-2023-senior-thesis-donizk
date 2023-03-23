@@ -926,27 +926,50 @@ Of the results presented in this section, the most interesting is that of how th
 
 ### Statistical Analysis
 
-#### First Regression, Confusion Matrix, and Odds Ratio
+#### First Regression, Confusion Matrix Accuracy, and Odds Ratio
 
 ![First Regression Summary](images/reg1.jpg)
 
-![First Confusion Matrix](images/acc1.JPG)
+The results of the first regression, Figure 104, show that all of the explanatory variables included in the model are statistically significant, given their p-values. This statistical significance can also be observed by looking for those results followed by an asterisk.
+
+In order to look at the accuracy of the results, a confusion matrix of values was constructed in order to compute the accuracy of the model. Given the accuracy result depicted in Figure 105, the accuracy of the first binary logit's results were 86.5% accurate.
+
+![First Confusion Matrix Accuracy](images/acc1.JPG)
+
+In order to actually interpret how the explanatory variables impact the response variable, EDUC, an odds ratio was employed to show each identity group's likelihood of completing an education of high school or greater, relative to the male, White, and Non Hispanic populations.
 
 ![First Odds Ratio](images/or1.jpg)
 
-#### Second Regression, Confusion Matrix, and Odds Ratio
+Odds ratios are evaluated based on the value of 1 where if a value falls above 1, higher odds are implicated and if a value falls below 1, lower odds are implicated. In interpreting the odds ratio for the first regression, Figure 106, the only group to have a higher odds of having an educational attainment of high school completion or higher, relative to the male reference population, was the female population.
 
-![First Regression Summary](images/reg2.jpg)
+When compared to the White reference population, all other racial groups had a lower odds of having a completed high school or college education, albeit at varying rates. Following the odds of attainment for White individuals is that of the Mixed Race, Asian, Pacific Islander, Black, and American Indian populations, in order.
 
-![First Confusion Matrix](images/acc2.JPG)
+Looking at the odds ratios for the Hispanic populations shows that all Hispanic ethnic subgroups had a lower odds of having completed high school or college compared to the Non Hispanic population. Following the odds of attainment for Non Hispanic individuals is that of the Salvadorian, Cuban, Puerto Rican, Dominican, Other Hispanic, and Mexican populations, in order.
 
-![First Odds Ratio](images/or2.jpg)
+#### Second Regression, Confusion Matrix Accuracy, and Odds Ratio
+
+In the interest of capturing how the Hispanic ethnic group compared to other racial groups in the realm of educational attainment, a secondary regression was constructed. The results of this regression are presented in Figure 107.
+
+![Second Regression Summary](images/reg2.jpg)
+
+According to the results presented in Figure 107, all explanatory variables included in the model are statistically significant relative to the response variable, educational attainment. A confusion matrix and subsequent accuracy was computed for this model, depicted in Figure 108.
+
+![Second Confusion Matrix Accuracy](images/acc2.JPG)
+
+Much like with the previous regression, an odds ratio was needed in order to aid in interpretation of the model, specifically in understanding the odds of each population completing a high school education or higher. These results are depicted in Figure 109.
+
+![Second Odds Ratio](images/or2.jpg)
+
+According to Figure 109, the female population maintained a higher likelihood of completing an education of high school or above, relative to the male population. Conversely, all racial and ethnic groups had a lower likelihood of completing a high school education or greater, relative to the White, Non Hispanic population.Of these results, the most interesting is that the Hispanic population has the lowest odds of completing an education of high school or above, which affirm that Hispanics are the lowest attaining population as opposed to the American Indian or Black populations, as is commonly thought.
 
 ## Future Work
 
 - include income, parental education, nativity
 - filter by race/ethnicity and gender: to better tease out the implications of these intersections of identity on educational outcomes
 - filter education variable differently, college educated vs hs educated
+- dont work with a sample size or increase sample size for regression
+
+In future iterations of this study, there are several improvements that could be made in order to maximize and improve the findings produced. Firstly, including other variables relevant to the study of educational disparities would help further explain the implication of different intersections of identity on educational outcomes.
 
 ## Future Ethical Implications and Recommendations
 
