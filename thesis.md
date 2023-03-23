@@ -991,11 +991,11 @@ This project successfully bridges the gap in the study of gender, racial, and et
 
 # Acknowledgements
 
-First and foremost, I want to thank my family who have always propelled me to believe in myself and aspire to more, and who have given me so much in life to get to where I am. A special thank you to my mom who has always given me the world and more, and for partly inspiring this project with something she always said to me growing up: "Your education is the greatest gift I will ever give you. Your mind is something that no one can take away." Little did she know when she said those words that I would take them to heart the way I did.
+First and foremost, I want to thank my family who have always propelled me to believe in myself and aspire to more, and who have given me so much in life to get me where I am. A special thank you to my mom who has always given me the world and more, and for partly inspiring this project with something she always said to me growing up: "Your education is the greatest gift I will ever give you. Your mind is something that no one can take away." Little did she know when she said those words that I would take them to heart the way I did.
 
 Thank you to all of the wonderful professors and mentors I have had while at Allegheny, especially Professor Jumadinova and Professor Bianco. This project could not have been completed without your endless support and patience. Special thanks too to Professor Oliver Bonham-Carter and Professor Doug Luman for assisting me throughout the development of my project.
 
-Thank you to all of the graduating Computer Science seniors for struggling alongside me these past four years. I have enjoyed (and almost looked forward to) every week of comp group to have an opportunity to rant to people dealing with the same behemoth of a project.
+I also want to acknowledge all of the graduating Computer Science seniors for struggling alongside me these past four years. I have enjoyed (and almost looked forward to) every week of comp group to have an opportunity to rant to people dealing with the same behemoth of a project.
 
 I want to thank all of my friends turned family, who have been my home away from home while at Allegheny. I especially want to thank my roommates and best friends, Abby, Mimi, Alexa, and Zoey, as well as, my other best friends (apparently I have a few of those) and fellow comp buddies (i.e. I bully them until they provide me company while I work) Adriana, Sam, Mila, and Veronica, who have been my personal entourage of emotional support throughout this whole process.
 
