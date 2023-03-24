@@ -38,21 +38,21 @@ To my knowledge, there is no research that analyzes the combined impact of race,
 
 None of the studies referenced in the development of this project employed the use of regression to study the effects of different factors on educational attainment. One of the goals of this project is to use a regression model to capture how race, Hispanic ethnicity, and gender explain differential trends in educational attainment. This research shed light on the strength of the relationship between each of the factors. It could also help determine which of these factors plays a bigger role as a determinant of educational attainment.
 
-This project also looks to take on the task of an interdisciplinary study, as research from various fields of study including Sociology and Economics will be leveraged in the creation of a tool that is created using computer science and data science fundamentals. The goal is that this project represents a type of study called Computation Social Science Fusion Analysis, where multiple disciplines are used together in order to analyze data and draw greater conclusions from that data (had only traditional data analysis been employed) [@kauf] & [@jing].
+This project also looks to take on the task of an interdisciplinary study, as research from various fields of study including Sociology and Economics are leveraged in the creation of this tool, developed using computer science and data science fundamentals. The goal is that this project represents a type of study called Computation Social Science Fusion Analysis, where multiple disciplines are used together in order to analyze data and draw greater conclusions from that data (had only traditional data analysis been employed) [@kauf] & [@jing].
 
 ## Goals of the Project
 
 **EduAttain** addresses racial, ethnic, and gender inequalities in educational attainment in the United States through the use of interactive visualizations and statistical analysis by way of a *binary logistic regression*. This project leverages data from *Integrated Public Use Microdata (IPUMS) Current Population Survey (CPS)* microdata, which is harmonized to include relevant demographic information about the US population. The data itself is cross-sectional, encompassing years 2010-2015 in the United States. Specifically, the variables in the data extract, created using IPUMS’ platform, include the survey year (YEAR), state identified by FIPS code (STATE), age (AGE), sex (SEX), race (RACE), Hispanic origin (HISPAN), educational attainment code (EDUC), total family income (FTOTVAL), birthplace (BPL), and total personal income (INCTOT). Additional variables were included in the extract, for the purposes of aiding in identification of individuals and individual households, and analysis of specific data: household record of CPSID (CPSID), month (MONTH), household serial number (SERIAL), person number in sample unit (PERNUM), final person-level weight for analysis (WTFINL), and the person-level used for supplement data (ASECWT).
 
-Due to the size of the data extract, an SQLite database was employed to store the data, which allowed access to all of the data to be used in RStudio for data cleaning and manipulation in order to generate statistics and visualizations, telling of the educational trends present amongst the varying identity groups represented in the data. One such transformation is to limit the data to observations at or above 18 years old, to only take adults into account within the analysis. For this project, the pie chart will be the main visualization generated to illustrate the data. These visualizations will be constructed for each year and each identity group, as to give an idea of the proportion of that population that attained a high school education or greater. An example of these visualizations can be observed in **Figures 1-2**.
+Due to the size of the data extract, an SQLite database was employed to store the data, which allowed access to all of the data to be used in RStudio for data cleaning and manipulation in order to generate statistics and visualizations, telling of the educational trends present amongst the varying identity groups represented in the data. One such transformation is to limit the data to observations at or above 18 years old, to only take adults into account within the analysis. For this project, pie charts are the main visualization generated to illustrate the data. These visualizations cover each year and each identity group in the data, as to give an idea of the proportion of that population that attained a high school education or greater. An example of these visualizations can be observed in **Figures 1-2**.
 
 ![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
 ![US Female Educational Attainment in 2010](images/femalexedu2010.png)
 
-**Figure 1** presents a pie chart comprised of proportions of the male population either with an education equivalent to some high school or less or high school diploma or greater, while **Figure 2** presents a similar pie chart but for the female population accounted for in 2010. This along with additional statistics and visualizations will be output on a web-based dashboard, which will allow for users to compare different identity groups or to look at the trend of educational attainment for one identity group over the years.
+**Figure 1** presents a pie chart comprised of proportions of the male population either with an education equivalent to some high school or less or high school diploma or greater, while **Figure 2** presents a similar pie chart but for the female population accounted for in 2010. This along with additional statistics and visualizations are output, which allowing for users to compare different identity groups or to look at the trend of educational attainment for one identity group over the years.
 
-**EduAttain** provides the first interactive data analysis dashboard that will simplify the observation of trends in US educational attainment by race, gender, and Hispanic origin, based on Census data. The dashboard will also draw comparisons between the yearly trends in educational attainment of the identity groups included, through assessing differences in the proportions of each population that attained an education equivalent to or greater than a high school diploma. This is so that the trends based on individual factors can be observed in isolation. A final goal of this project is to determine if there is a statistical relationship between educational attainment and each of these factors, and whether these factors can be viewed as determinants of educational attainment, both of which will be accomplished through the use of a binary logistic regression.
+**EduAttain** provides the first interactive data analysis dashboard that simplifies the observation of trends in US educational attainment by race, gender, and Hispanic origin, based on Census data. The dashboard draws comparisons between the yearly trends in educational attainment of the identity groups included, through assessing differences in the proportions of each population that attained an education equivalent to or greater than a high school diploma. This is so that the trends based on individual factors can be observed in isolation. A final goal of this project is to determine if there is a statistical relationship between educational attainment and each of these factors, and whether these factors can be viewed as determinants of educational attainment, both of which are accomplished through the use of a binary logistic regression.
 
 Many of the findings presented in **EduAttain** echo that of what is already recorded in the literature while also providing detailed insight on specific racial and ethnic populations' rates of educational attainment, at times providing results contrary to what previous scholarship has established.
 
@@ -196,7 +196,7 @@ The last but probably the most important ethical issue that may arise as a resul
 
 # Related Work
 
-This chapter presents the existing research in gender, racial, and ethnic inequalities in education, as to further motivate this project's purpose and identify any gaps in knowledge, which will be addressed by **EduAttain**. The conclusion of this chapter briefly covers any factors not included in the analysis but that are still relevant to the study of disparities in educational attainment, as well as, establishing how *Computational Social Science Fusion Analysis* fit into the development of this project.
+This chapter presents the existing research in gender, racial, and ethnic inequalities in education, as to further motivate this project's purpose and identify any gaps in knowledge, that of which are addressed by findings in **EduAttain**. The conclusion of this chapter briefly covers any factors not included in the analysis but that are still relevant to the study of disparities in educational attainment, as well as, establishing how *Computational Social Science Fusion Analysis* fit into the development of this project.
 
 ## Gender and Educational Attainment
 
@@ -224,7 +224,7 @@ Attainment also varies by race due to the influence of differences in social cap
 
 ## Ethnicity and Educational Attainment
 
-In this project, the main ethnic group that is studied is the Hispanic population. That being said, the Asian ethnic subgroups are also relevant to study, as their rates of educational attainment are relatively high among all levels of education [@aud], [@gamo], [@kao], & [@guerrero]. Furthermore, the Asian ethnic subgroups have the lowest high school drop out rates and highest rates of academic achievement, most times outperforming their White peers [@aud]. Nonetheless, within the scope of this project, the Hispanic population's trends will be the main focus, stipulating reasons why their educational outcomes have followed certain patterns.
+In this project, the main ethnic group that is studied is the Hispanic population. That being said, the Asian ethnic subgroups are also relevant to study, as their rates of educational attainment are relatively high among all levels of education [@aud], [@gamo], [@kao], & [@guerrero]. Furthermore, the Asian ethnic subgroups have the lowest high school drop out rates and highest rates of academic achievement, most times outperforming their White peers [@aud]. Nonetheless, within the scope of this project, the Hispanic population's trends are the main focus, stipulating reasons why their educational outcomes have followed certain patterns.
 
 According to Dyer & Roman-Torres [@dyer], Hispanic origin refers to those from countries that are native speakers of Spanish or have Spanish-speaking ancestry. This can be hard to distinguish from the term Latino, which refers to those of Latin American origin or ancestry, including the Hispanic population and non-Spanish speaking countries like Brazil. For the purposes of this project, the Hispanic and Latino populations will be referred to as Hispanic. Generally, the Hispanic population accounts for the lowest rates of preschool enrollment, high school completion, and college completion, lowest likelihood of taking college entrance exams and applying to college, and highest proportion of high school drop outs [@dyer], [@krog], [@schneider], [@aud], & [@kao]. All of these factors accumulate and contribute to the Hispanic ethnic group accounting for the lowest rates of educational attainment compared to all other racial and ethnic groups.
 
@@ -266,7 +266,7 @@ This project presents an interdisciplinary application bridging the disciplines 
 
 # Method of approach
 
-The focus of this chapter is to present the process that will be taken in order to complete this project. All of the code snippets presented here are from the source files used in the creation of this project, of which are stored on a [**GitHub Repository**](https://github.com/ReadyResearchers/EduAttain). This process is split into multiple steps, depicted in the **Figure 3**.
+The focus of this chapter is to present the process that was followed to complete this project. All of the code snippets presented here are from the source files used in the creation of this project, of which are stored on a [**GitHub Repository**](https://github.com/ReadyResearchers/EduAttain). This process is split into multiple steps, depicted in the **Figure 3**.
 
 ![Methodology Flowchart](images/flowchart.jpg)
 
@@ -285,11 +285,11 @@ Table: Raw Data
 | 2.00912E+13 | 2010 | ...      | 71   | 34814   |
 | 2.00912E+13 | 2010 | ...      | 50   | 34814   |
 
-In order to analyze the data properly, each variable was considered in relation to how it will need to be used in analysis. In the case of *CPSIDP*, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the *SERIAL, YEAR, PERNUM, BPL, INCTOT*, and *MONTH* variables will not be considered in the analysis. The *SEX* variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The *STATEFIP* variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order.  For use in analysis, however, the *EDUC* variable will be recoded into a binary variable that will take in a value of 0, indicating an educational attainment at or below some high school participation,  or 1, indicating an educational attainment at or above a high school diploma (or equivalent). *RACE* and *HISPAN* are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. Also for the purposes of use in statistical analysis, the RACE and HISPAN variables will be recoded to create binary variables for each identity group captured within the variables. The full list of numerical code assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
+In order to analyze the data properly, each variable was considered in relation to how it needs to be used in analysis. In the case of *CPSIDP*, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the *SERIAL, YEAR, PERNUM, BPL, INCTOT*, and *MONTH* variables are not be considered in the analysis. The *SEX* variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The *STATEFIP* variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order.  For use in analysis, however, the *EDUC* variable is recoded into a binary variable that takes in a value of 0, indicating an educational attainment at or below some high school participation,  or 1, indicating an educational attainment at or above a high school diploma (or equivalent). *RACE* and *HISPAN* are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. Also for the purposes of use in statistical analysis, the RACE and HISPAN variables are recoded to create binary variables for each identity group captured within the variables. The full list of numerical code assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT are not be used for analysis, as there are some missing values present.
 
 ## **Descriptive Statistics**
 
-For this study, **R** will be the main tool used to perform data analysis, as such built-in functions such as `summary()` and `count()`, along with outside libraries and packages, will be employed to perform the initial exploratory analysis and statistical analysis of the data.
+For this study, **R** is the main tool used to perform data analysis, as such built-in functions such as `summary()` and `count()`, along with outside libraries and packages, are employed to perform the initial exploratory analysis and statistical analysis of the data.
 
 After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample dropped from 1,048,575 to 753,243 observations. Additionally, using R's built-in `count()` function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed below in **Tables 4-9** covering 2010 and 2015.
 
@@ -359,7 +359,7 @@ When using `summary()` in order to generate summary statistics on the data set (
 
 Based on these summary statistics, across all of the data points in the extract, the minimum reported total family income was -19,998 and the max reported income was 2,742,997. For age, the minimum value was 18, while the max was 85.
 
-For the initial exploratory analysis of the data, the main focus will be visualizing how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following piecharts representing data for 2010 were generated to aid in descriptive analysis. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
+For the initial exploratory analysis of the data, the main focus is to visualize how educational attainment varies by gender, race, and Hispanic ethnicity in the United States across 2010-2015. The goal is to use these to capture changes in rates of educational attainment across years, relative to the amount of observations available for each given year. To briefly preview the results for this component of the analysis, the following piecharts representing data for 2010 were generated to aid in descriptive analysis. The results from these plots can also be observed in the aforementioned results from using the count() function for each variable.
 
 ### Gender
 
@@ -393,7 +393,7 @@ For the initial exploratory analysis of the data, the main focus will be visuali
 
 ![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
-In the *Conclusion* section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
+In the *Conclusion* section, these and visualizations for the following years are used to observe changes in educational attainment based on the aforementioned demographic indicators.
 
 ## Tools
 
@@ -403,7 +403,7 @@ The raw data extract from IPUMS was too large to open in R Studio and as such, a
 
 ### R Packages
 
-The following section will touch on the specific R packages that were utilized in the development and completion of this project
+The following section touch on the specific R packages that were utilized in the development and completion of this project
 
 #### tidyverse
 
@@ -423,13 +423,13 @@ In order to actually implement a data analysis dashboard, I chose to employ the 
 
 #### rsconnect and shinyapps.io
 
-The `rsconnect` package allows Shiny web apps to be deployed and hosted on the cloud, using the [shinyapps.io](https://www.shinyapps.io/) service. In order to allow for ease of use and access of this tool, the project will be deployed on shinyapps.io upon its completion [@shinyapps].
+The `rsconnect` package allows Shiny web apps to be deployed and hosted on the cloud, using the [shinyapps.io](https://www.shinyapps.io/) service. In order to allow for ease of use and access of this tool, the project is deployed on shinyapps.io upon its completion [@shinyapps].
 
 ## Economic Theory
 
-As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. **Human Capital Theory** (Schultz, 1961 [@schultz]; Becker, 1993 [@beck]; Mincer, 1958 [@mincer]) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
+As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that used in the consideration of this project's goals is that of Human Capital Theory. **Human Capital Theory** (Schultz, 1961 [@schultz]; Becker, 1993 [@beck]; Mincer, 1958 [@mincer]) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
 
-Core aspects of identity such as race, gender, and Hispanic ethnicity aren't considered within the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Prior research presented in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
+Core aspects of identity such as race, gender, and Hispanic ethnicity aren't considered within the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Prior research presented in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project aims to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
 
 ## **Statisitical Analysis**
 
@@ -450,7 +450,7 @@ $$Y_j = \begin{cases}
 
 Where if EDUC is equal to 1, the odds of having an educational attainment of a high school diploma or greater are greater. If EDUC is equal to 0, the odds of having an educational attainment of some high school or lesser education are greater.
 
-Then this will be factored into the following regression for the project.
+Then this is factored into the following regression for the project.
 
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_3 \mathrm{HISPANIC}$
 
@@ -523,7 +523,7 @@ result$salv <- ifelse(result$HISPAN == "500", 1, 0)
 result$otherhispan <- ifelse(result$HISPAN == "650", 1, 0)  
 ```
 
-Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the regression model that will be run to the following:
+Instead of using the original variables from the data, the newly created dummy variables are employed in order to run the regression. This then changes the regression model that is run to the following:
 
 
 
@@ -531,7 +531,7 @@ $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta
 
 
 
-To run and store the results of running a binary logistic regression in R the `glm()` function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, `summary()` must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
+To run and store the results of running a binary logistic regression in R the `glm()` function from the stats package is utilized. To display the results of this regression, with information like coefficients and t-values, `summary()` must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
 ```R
 # binary logistic regression model
@@ -550,9 +550,9 @@ m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex
 + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
 ```
 
-This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of a binary logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to educational attainment.
+This regression tests the relationship between each of the explanatory variables to educational attainment. The coefficients of a binary logit are often hard to interpret on their own, so odds ratio is employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to educational attainment.
 
-To compute the odds ratio in R, the exp() and coef() functions were used in conjunction, taking in the stored variable representing the regression model as input. This line of code will produce an output result of a value for each explanatory variable in the model, to be used when evaluating the results of the regression.
+To compute the odds ratio in R, the exp() and coef() functions were used in conjunction, taking in the stored variable representing the regression model as input. This line of code produces an output result of a value for each explanatory variable in the model, to be used when evaluating the results of the regression.
 
 ```R
 ## odds ratio for interpretation
@@ -612,17 +612,17 @@ The results of running the code for both regressions and subsequent odds ratios 
 
 ![Odds Ratio 2](images/or2.jpg)
 
-The interpretation of these results will be further elaborated on in the *Conclusions* chapter.
+The interpretation of these results is further elaborated on in the *Conclusions* chapter.
 
 # Experiments
 
-In this chapter, the experimental set up and evaluation for this project will be presented, as to give a better understand of how the research questions will be addressed and how their results will be validated. Within this, the testing framework for this project will be outlayed in order to explain the steps taken to guarantee that the results generated by this project are as accurate as possible.
+In this chapter, the experimental set up and evaluation for this project is presented, as to give a better understand of how the research questions are addressed and how their results are validated. Within this, the testing framework for this project is outlayed in order to explain the steps taken to guarantee that the results generated by this project are as accurate as possible.
 
 ## Experimental Design
 
-For the experimental design of this project, experiments will be separated into two main sections: *descriptive statistics* and *statistical analysis*.
+For the experimental design of this project, experiments are separated into two main sections: *descriptive statistics* and *statistical analysis*.
 
-The first half of experiments will focus on outlaying the *descriptive statistics* for this project, consisting of evaluating plots, specifically the counts for the amounts of people under each category of race, gender, or Hispanic origin that achieved either a high school diploma or greater or some high school or lesser. Using these plots, the proportions of each population accounted for in the analysis will be used to compare different gender, racial, and Hispanic ethnic subgroups to eachother. This will hopefully target several useful results to questions related to what group maintained the highest average level of educational attainment.
+The first half of experiments focus on outlaying the *descriptive statistics* for this project, consisting of evaluating plots, specifically the counts for the amounts of people under each category of race, gender, or Hispanic origin that achieved either a high school diploma or greater or some high school or lesser. Using these plots, the proportions of each population accounted for in the analysis is used to compare different gender, racial, and Hispanic ethnic subgroups to eachother. This hopefully targets several useful results to questions related to what group maintained the highest average level of educational attainment.
 
 The components of the EduAttain dashboard related to the *descriptive statistics* portion of the project include:
 
@@ -642,7 +642,7 @@ The components of the EduAttain dashboard related to the *descriptive statistics
 
 ![**EduAttain: Hispanic x Educational Attainment**](images/hispanxedu.jpg)
 
-The second section of experiments will be focused on *statistical analysis* of the data through the use of a binary logistic regression, as well as, an odds ratio. The regression and odds ratio will be used in conjunction to determine the presence of a statistical relationship between educational attainment and race, gender, and Hispanic origin. The results from both will be used to determine how a person's gender, racial, or ethnic identity can impact the education they will receive. In addition, a secondary binary logistic regression and odds ratio will shed light on how the Hispanic ethnic group compares to other racial groups' educational attainment.
+The second section of experiments focuses on the *statistical analysis* of the data through the use of a binary logistic regression, as well as, an odds ratio. The regression and odds ratio are used in conjunction to determine the presence of a statistical relationship between educational attainment and race, gender, and Hispanic origin. The results from both determine how a person's gender, racial, or ethnic identity can impact the education an individual receives. In addition, a secondary binary logistic regression and odds ratio shed light on how the Hispanic ethnic group compares to other racial groups' educational attainment.
 
 The components of the dashboard related to the *statistical analysis* portion of the project include:
 
@@ -652,7 +652,7 @@ The components of the dashboard related to the *statistical analysis* portion of
 
 ## Evaluation
 
-To evaluate this project, a couple different techniques will be employed in order to test each component including the use of unit and UX testing, and the support of continuous integration through GitHub Actions. Unit testing will be employed in the evaluation of the dashboard with the use of R's `testthat` in order to test the functionality of certain code segments including testing the creation of a plotly object, connection to the database using a query, and random sampling of the original data for the regression. Test cases will look like the following test case that tests that the SQLite query returns the correct expected output. This and other test cases for the application will be stored in /EduAttain/tests/app_tests.R in the source repository:
+To evaluate this project, a couple different techniques are employed in order to test each component including the use of unit and UX testing, and the support of continuous integration through GitHub Actions. Unit testing is employed in the evaluation of the dashboard with the use of R's `testthat` in order to test the functionality of certain code segments including testing the creation of a plotly object, connection to the database using a query, and random sampling of the original data for the regression. Test cases look like the following test case that tests that the SQLite query returns the correct expected output. This and other test cases for the application are stored in /EduAttain/tests/app_tests.R in the source repository:
 
 ```R
 # Test that the data is queried correctly
@@ -689,7 +689,7 @@ To run the test, the IDE used for this project provided a button when the test f
 
 ![Test Results](images/tests.jpg)
 
-For the evaluation of the accuracy of the generated regression output, a confusion matrix, specifically the accuracy computed by the confusion matrix, will be used to validate the output generated by the `glm()` function for the binary logistic regression. The *confusion matrix* looks at the accuracy of the model by determining the amount of observations that were prediced that did have an education of a high school diploma or greater and comparing those to the predicted values generated from the same data set. These observations are separated into true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), which account for the predictions and their outcomes. If the outcome that was predicted was true, it is a true positive/negative and if it is false, it is a false positive/negative. Both true negative and true positive check for those observations that were predicted to have an education of some high school or less. Accuracy is computed from this confusion matrix following the equation below.
+For the evaluation of the accuracy of the generated regression output, a confusion matrix, specifically the accuracy computed by the confusion matrix, validates the output generated by the `glm()` function for the binary logistic regression. The *confusion matrix* looks at the accuracy of the model by determining the amount of observations that were prediced that did have an education of a high school diploma or greater and comparing those to the predicted values generated from the same data set. These observations are separated into true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), which account for the predictions and their outcomes. If the outcome that was predicted was true, it is a true positive/negative and if it is false, it is a false positive/negative. Both true negative and true positive check for those observations that were predicted to have an education of some high school or less. Accuracy is computed from this confusion matrix following the equation below.
 
 
 
@@ -730,7 +730,7 @@ The accuracy generated by the second regression run for this project, **$logit(Y
 
 This means that this binary logit's results are also 86.5% accurate.
 
-In addition to the unit testing, the data dashboard's functionality will be evaluated according to the following table to perform user experience (UX) testing:
+In addition to the unit testing, the data dashboard's functionality is evaluated according to the following table to perform user experience (UX) testing:
 
 Table: Components to Test on Dashboard - UX Testing
 
@@ -739,13 +739,13 @@ Table: Components to Test on Dashboard - UX Testing
 |1          |Menu Button works        |$\checkmark$        |
 |2          |Raw Dataset is Generated       |$\checkmark$        |
 |3          |Collapsible Windows work        |$\checkmark$        |
-|4          |Link on Homepage works       |$\checkmark$        |
+|4          |Links on pages work       |$\checkmark$        |
 |5          |Every Tab can be Accessed        |$\checkmark$        |
 |6          |6 graphs generated for each subtab, except reg |$\checkmark$        |
 |7          |6 tables generated for each subtab, except reg |$\checkmark$        |
 |8          |Regression, odds ratio, and confusion matrix results are generated   |$\checkmark$        |
 
-For each of the components listed, the functionality will be tested as to simulate a user testing and to make sure that every piece of the dashboard is working as it should be. Specifically, certain buttons will be clicked on and certain output will be checked on to test for completion. This is to ensure that the user experience of EduAttain provides a platform that is easy to use and access.
+For each of the components listed, the functionality is tested as to simulate a user testing and to make sure that every piece of the dashboard is working as it should be. Specifically, certain buttons are clicked on and certain output is checked to test for completion. This is to ensure that the user experience of EduAttain provides a platform that is easy to use and access.
 
 ## Threats to Validity
 
@@ -753,7 +753,7 @@ Existing threats to the validity of this project include the aforementioned prob
 
 Related to this are the threats presented by the way the data was filtered and cleaned for this project. Specifically for the Hispanic, Other Hispanic, and Mixed Race populations, having merged certain populations together may result in inaccurate interpretations of their rates of educational attainment. Additionally, data may have been incorrectly filtered by year or by identity group being observed when constructing the plots, which may result in one population's educational attainment misrepresenting a different population's rates.
 
-One of the additional threats to validity, presented by the content of this chapter, revolves around the limited nature of testing for the dashboard. While unit testing, observational testing, and continuous integration through GitHub Actions will be employed as methods of testing the content presented in EduAttain, the actual testing functionality is rather limited. For unit testing, the only components being tested are that a plotly object is generated, the database is correctly queried and saved as a data frame, and that the random sample generation is accurate. The limited nature of unit testing is as a result of time constraints and lack of the use of reactive content in the dashboard of which to test.
+One of the additional threats to validity, presented by the content of this chapter, revolves around the limited nature of testing for the dashboard. While unit testing, observational testing, and continuous integration through GitHub Actions are employed as methods of testing the content presented in EduAttain, the actual testing functionality is rather limited. For unit testing, the only components being tested are that a plotly object is generated, the database is correctly queried and saved as a data frame, and that the random sample generation is accurate. The limited nature of unit testing is as a result of time constraints and lack of the use of reactive content in the dashboard of which to test.
 
 In order to mitigate these threats, much of the code used throughout the project, specifically for the plots, was reexamined and run thoroughly for any syntax errors or differences in output. The inadequacies of the unit testing are supplemented by the inclusion of additional testing techniques including the use of observational testing and continuous integration.
 
@@ -763,7 +763,7 @@ This chapter covers the results of the descriptive and statistical analysis pres
 
 ## Summary of Results
 
-The summary of results will be separated into two main sections, Descriptive Analysis and Statistical Analysis, where the results generated by the dashboard will be interpreted and discussed at length. These results will provide insight into how EduAttain addresses the gaps in research in the realm of educational disparities based on gender, race, and ethnicity.
+The summary of results are separated into two main sections, Descriptive Analysis and Statistical Analysis, where the results generated by the dashboard are interpreted and discussed at length. These results provide insight into how EduAttain addresses the gaps in research in the realm of educational disparities based on gender, race, and ethnicity.
 
 ### **Descriptive Analysis**
 
