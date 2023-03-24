@@ -252,7 +252,7 @@ This project presents an interdisciplinary application bridging the disciplines 
 
 # Method of approach
 
-The focus of this chapter is to present the process that will be taken in order to complete this project. This process is split into multiple steps, depicted in the **Figure 3**.
+The focus of this chapter is to present the process that will be taken in order to complete this project. All of the code snippets presented here are from the source files used in the creation of this project, of which are stored on a [**GitHub Repository**](https://github.com/ReadyResearchers/EduAttain). This process is split into multiple steps, depicted in the **Figure 3**.
 
 ![Methodology Flowchart](images/flowchart.jpg)
 
