@@ -1,16 +1,16 @@
 # Acknowledgements
 
-First and foremost, I want to thank my family who have always propelled me to believe in myself and aspire to more, and who have given me so much in life to get me where I am. A special thank you to my mom who has always given me the world and more, and for partly inspiring this project with something she always said to me growing up: "Your education is the greatest gift I will ever give you. Your mind is something that no one can take away." Little did she know when she said those words that I would take them to heart the way I did.
+First and foremost, I want to thank my family who have always propelled me to believe in myself and aspire to more, and who have given me so much in life to get me where I am. A special thank you to my mom who has always given me the world and more, and for partly inspiring this project with something she always said to me growing up: *"Your education is the greatest gift I will ever give you. Your mind is something that no one can ever take away."* Little did she know when she said those words that I would take them to heart the way I did.
 
 I want to thank all of my friends turned family, who have been my home away from home while at Allegheny. I especially want to thank my roommates and best friends, Abby, Mimi, Alexa, and Zoey, as well as, my other best friends (apparently I have a few of those) and fellow comp buddies (i.e. I bully them until they provide me company while I work) Adriana, Sam, Mila, and Veronica, who have been my personal entourage of emotional support throughout this whole process.
 
-I additionally want to acknowledge all of the support I receive from the Bonner Service Leader Program and Alpha Chi Omega, as my involvement in these organizations has been quintessential to my experience on campus.
+I additionally want to acknowledge all of the support I receive from the Bonner Service Leader Program and Alpha Chi Omega Sorority, as my involvement in (and the support received from) these organizations has been quintessential to my experience on campus.
 
-Thank you to all of the wonderful professors and mentors I have had while at Allegheny, especially Professor Jumadinova and Professor Bianco. This project could not have been completed without your endless support and patience. Special thanks too to Professor Oliver Bonham-Carter and Professor Doug Luman for assisting me throughout the development of my project.
+Thank you to all of the wonderful professors and mentors I have had while at Allegheny, especially Professor Janyl Jumadinova and Professor Timothy Bianco. This project could not have been completed without your endless support and patience. Special thanks too to Professor Oliver Bonham-Carter and Professor Doug Luman for assisting me throughout the development of my project.
 
 I also want to acknowledge all of the graduating Computer Science seniors for struggling alongside me these past four years. I have enjoyed (and almost looked forward to) every week of comp group to have an opportunity to rant to people dealing with the same behemoth of a project.
 
-Lastly, I want to acknowledge the things that got me through the nightmare that is comping. Namely, endless flows of Monster Energy and Diet Coke, scheduled cuddle sessions with my pet rabbit, the internet, and comfy booths (specifically in Kins) for me to sit on while I comp away for hours.
+Lastly, I want to acknowledge the things that got me through the nightmare that is comping. Namely, endless flows of Monster Energy (provided by Miss Haley Hersh) and Diet Coke, scheduled cuddle sessions with my pet rabbit, the internet (#blessed 2 be of the internet age), and comfy booths (specifically in Kins) for me to sit on while I comp away for hours.
 
 # Introduction
 
