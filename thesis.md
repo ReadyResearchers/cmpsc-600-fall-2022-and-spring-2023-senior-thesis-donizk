@@ -258,19 +258,28 @@ The focus of this chapter is to present the process that will be taken in order 
 
 ## Data Description
 
-One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the range() function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for data, as I was under the impression that more data was being accessed, given that my selected extract should have included 2010-2021. Additionally, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. The goal of this study is to generate key findings for the entirety of the US, split by year, to attempt to capture how rates of educational attainment (based on other variables) change over time. Due to the aforementioned potential issues with the data, this study may result in findings that are not fully representative of the populations being captured within the data, though it should provide some key insights into the trends present in the US. It is unclear why this data is inaccessible or not included in the extract.
+One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the `range()` function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for data, as I was under the impression that more data was being accessed, given that my selected extract should have included 2010-2021. Besides that, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. The goal of this study is to generate key findings for the entirety of the US, split by year, to attempt to capture how rates of educational attainment (based on other variables) change over time. Due to the aforementioned potential issues with the data, this study may result in findings that are not fully representative of the populations being captured within the data, though it should provide some key insights into the trends present in the US. It is unclear why this data is inaccessible or not included in the extract.
 
-The raw data extract from IPUMS, before cleaning and transformation, looked much like the figure below.
+The raw data extract from IPUMS, before cleaning and transformation, looked much like the **Figure 3**.
 
 ![Raw Data](images/raw-data.JPG)
 
-In order to analyze the data properly, each variable was considered in relation to how it will need to be used in analysis. In the case of CPSIDP, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the SERIAL, YEAR, PERNUM, BPL, INCTOT, and MONTH variables will not be considered in the analysis. The SEX variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The STATEFIP variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order.  For use in analysis, however, the EDUC variable will be recoded into a binary variable that will take in a value of 0, indicating an educational attainment at or below some high school participation,  or 1, indicating an educational attainment at or above a high school diploma (or equivalent). RACE and HISPAN are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. Also for the purposes of use in statistical analysis, the RACE and HISPAN variables will be recoded to create binary variables for each identity group captured within the variables. The full list of numerical code assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
+Table: Raw Data
 
-## Descriptive Statistics
+| CPSIDP      | YEAR | SERIAL | MONTH | STATEFIP | PERNUM | WTFINL | ASECWT | AGE | SEX | RACE | BPL   | HISPAN | EDUC | FTOTVAL |
+|:-------------|:------|:--------|:-------|:----------|:--------|:--------|:--------|:-----|:-----|:------|:-------|:--------|:------|:---------|
+| 2.00912E+13 | 2010 | 1      | 3     | 23       | 1      |        | 485.99 | 65  | 2   | 100  | 9900  | 0      | 81   | 13992   |
+| 2.00912E+13 | 2010 | 2      | 3     | 23       | 1      |        | 531.71 | 54  | 1   | 100  | 15000 | 0      | 71   | 12000   |
+| 2.00912E+13 | 2010 | 3      | 3     | 23       | 1      |        | 474.4  | 73  | 2   | 100  | 9900  | 0      | 71   | 34814   |
+| 2.00912E+13 | 2010 | 3      | 3     | 23       | 1      |        | 474.4  | 71  | 1   | 100  | 9900  | 0      | 50   | 34814   |
 
-For this study, R will be the main tool used to perform data analysis, as such built-in functions such as summary() and count(), along with outside libraries and packages, will be employed to perform the initial exploratory analysis and statistical analysis of the data.
+In order to analyze the data properly, each variable was considered in relation to how it will need to be used in analysis. In the case of *CPSIDP*, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the *SERIAL, YEAR, PERNUM, BPL, INCTOT*, and *MONTH* variables will not be considered in the analysis. The *SEX* variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The *STATEFIP* variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order.  For use in analysis, however, the *EDUC* variable will be recoded into a binary variable that will take in a value of 0, indicating an educational attainment at or below some high school participation,  or 1, indicating an educational attainment at or above a high school diploma (or equivalent). *RACE* and *HISPAN* are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. Also for the purposes of use in statistical analysis, the RACE and HISPAN variables will be recoded to create binary variables for each identity group captured within the variables. The full list of numerical code assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
 
-After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample dropped from 1,048,575 to 753,243 observations. Additionally, using R's built-in count() function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
+## **Descriptive Statistics**
+
+For this study, **R** will be the main tool used to perform data analysis, as such built-in functions such as `summary()` and `count()`, along with outside libraries and packages, will be employed to perform the initial exploratory analysis and statistical analysis of the data.
+
+After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample dropped from 1,048,575 to 753,243 observations. Additionally, using R's built-in `count()` function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
 
 Table: 2010 Race Count
 
@@ -283,7 +292,7 @@ Table: 2010 Race Count
 |5          |American Indian|1977         |
 |6          |Pacific Islander|705          |
 
-table: 2015 Race Count
+Table: 2015 Race Count
 
 |Row number | RACE | n |
 |:----------|:------------|:------------|
@@ -332,7 +341,7 @@ Table: 2015 Hispanic Heritage Count
 
 This shows that the number of observations for each of these variables is inconsistent across years, suggesting that this data is only representative of a sample population.
 
-When using summary() in order to generate summary statistics on the data set (filtered for entries where age is 18 and older), the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are either classified as qualitative nominal or ordinal, so the interpretation of these summary statistics is negligible for those variables.
+When using `summary()` in order to generate summary statistics on the data set (filtered for entries where age is 18 and older), the following results are output. Only the results for the income and age variable are shown, as the remainder of the variables in the data set are either classified as qualitative nominal or ordinal, so the interpretation of these summary statistics is negligible for those variables.
 
 ![Summary Stats](images/summary-stats.JPG)
 
@@ -372,13 +381,13 @@ For the initial exploratory analysis of the data, the main focus will be visuali
 
 ![US Other Hispanic Educational Attainment in 2010](images/otherhxedu2010.png)
 
-In the *Results* section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
+In the *Conclusion* section, these and visualizations for the following years will be used to observe changes in educational attainment based on the aforementioned demographic indicators.
 
 ## Tools
 
-As mentioned in the previous section, [`R`](https://www.r-project.org/about.html) is the primary tool used in the analysis of data. R is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics [@r]. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, RStudio was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly [@rstudio].
+As mentioned in the previous section, [`R`](https://www.r-project.org/about.html) is the primary tool used in the analysis of data. *R* is a free, open-source programming language, used for data manipulation, statistical computing, and high-quality graphics [@r]. This tool was selected to perform statistical analysis and generate visualizations due to the wide variety of different methods available within the language (either built-in or through outside packages). Along with the use of R, *RStudio* was employed as the main integrated development environment (IDE) for this project, as the use of both in conjunction made development of this project go more smoothly [@rstudio].
 
-The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, SQLite was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R [@sqlite].
+The raw data extract from IPUMS was too large to open in R Studio and as such, a separate database software was needed in order to support storing the data for use in a program. For this, *SQLite* was employed to serve as the database engine due to its relative ease of use. SQLite is a library written using C, that faciltates the use of an SQL database engine, which in the case of this project, allows for the analysis of larger datasets in languages such as Python or R [@sqlite].
 
 ### R Packages
 
@@ -406,22 +415,26 @@ The `rsconnect` package allows Shiny web apps to be deployed and hosted on the c
 
 ## Economic Theory
 
-As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. Human Capital Theory (Schultz, 1961 [@schultz]; Becker, 1993 [@beck]; Mincer, 1958 [@mincer]) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
+As an interdisciplinary project attempting to leverage computational applications with Econometric statistical techniques, the main model that will be used in the consideration of this project's goals is that of Human Capital Theory. **Human Capital Theory** (Schultz, 1961 [@schultz]; Becker, 1993 [@beck]; Mincer, 1958 [@mincer]) states that humans have the ability of increasing their productive capacity, along with their earning potential, through the attainment of higher levels of educational attainment and/or specialized skill training by public or private investment. Whenever individuals or public institutions invest more into education, the higher people's lifetime earnings, access to high-paying jobs, and reduced potential for unemployment become.
 
-Core aspects of identity such as race, gender, and Hispanic ethnicity aren't considered within the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Additionally, prior research referenced in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
+Core aspects of identity such as race, gender, and Hispanic ethnicity aren't considered within the framework of Human Capital Theory, as it doesn't consider the impact of systemic social inequity present in the form of institutional barriers and instead postulates that the only way of increasing your productive capacity is to invest in more education or training. Barriers to receiving more education and those that exist even despite an education include differences in social and cultural expectations, as well as, discrimination or bias on the basis of race or sex, and even at times both. These barriers, while not considered within the theory of Human Capital, are important considerations to make as these circumstances can drastically impact a person's productive capacity and/or level of education (which then feeds into their productive capacity). Prior research presented in the related works section supports the idea that race and gender, factors which are outside of the Human Capital Model, can be significant determinants of educational attainment. This project will aim to prove this point by testing for a statistical relationship between the level of education a person receives and their race, gender, and Hispanic origin.
 
-## Regression Analysis
+## **Statisitical Analysis**
 
-As the response variable of interest for this study is educational attainment and the nature of the recoded EDUC variable's values are binary, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Binary Logistic Regression.
+As the response variable of interest for this study is educational attainment and the nature of the recoded *EDUC* variable's values are binary, the most appropriate method to determine a relationship to the explanatory variables of race, gender, and Hispanic ethnicity is through making use of an Binary Logistic Regression.
 
 The initial binary logistic regression model takes the following form:
 
 In this project, the regression considers the following odds.
 
+\\
+
 $$Y_j = \begin{cases} 
       1 & \mbox{if } EDUC \leq j \\
       0 & \mbox{if } EDUC > j 
       \end{cases}$$
+
+\\
 
 Where if EDUC is equal to 1, the odds of having an educational attainment of a high school diploma or greater are greater. If EDUC is equal to 0, the odds of having an educational attainment of some high school or lesser education are greater.
 
@@ -430,6 +443,8 @@ Then this will be factored into the following regression for the project.
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_3 \mathrm{HISPANIC}$
 
 Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation was needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. There are two exceptions to this: firstly, in the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below first shows the recoding of the individual mixed race groups values into a universal "catch-all" variable, while the following code snippet shows the recoding of the RACE variable into individual dummy variables.
+
+\\
 
 **Mixed Race Grouping**
 
@@ -472,6 +487,8 @@ result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
 
 The same was done for the Other Hispanic population in the HISPAN variable, in which the Central and South American populations were merged with the Other Hispanic populations rates, in order to consolidate results, due to lower counts of all of these populations in isolation, relative to the other Hispanic races in the analysis. The code snippets for the merging of the Hispanic groups, as well as the binary recoding of the HISPAN variable can be observed below.
 
+\\
+
 **Other Hispanic Group Merging**
 
 ```R
@@ -488,39 +505,38 @@ result$HISPAN[result$HISPAN == "612"]<-"650" # south american
 # hispanic
 result$mex <- ifelse(result$HISPAN == "100", 1, 0)
 result$pr <- ifelse(result$HISPAN == "200", 1, 0)
-result$cuban <- ifelse(result$HISPAN == "300", 1, 0)result$dom <- ifelse(result$HISPAN == "400", 1, 0)
+result$cuban <- ifelse(result$HISPAN == "300", 1, 0)
+result$dom <- ifelse(result$HISPAN == "400", 1, 0)
 result$salv <- ifelse(result$HISPAN == "500", 1, 0)
 result$otherhispan <- ifelse(result$HISPAN == "650", 1, 0)  
 ```
 
 Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the regression model that will be run to the following:
 
+\\
+
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$
 
-To run and store the results of running a binary logistic regression in R the glm() function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, summary() must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
+\\
 
-\small
+To run and store the results of running a binary logistic regression in R the `glm()` function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, `summary()` must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
 ```R
 # binary logistic regression model
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex
+ + pr + cuban + dom + salv + otherhispan, family = binomial, data = result)
 ```
 
-\normalsize
-
 Due to constraints in computing power and the breadth of the data used in this project, the binary logistic regression was run using a randomly selected sample population of 100,000 observations. This did not change the code for binary logistic regression much, only impacting the data source for the equation. The code for the sample construction and the subsequent changes to the binary logit are below.
-
-\small
 
 ```R
 # sample data
 sample_result <- result[sample(nrow(result), 100000), ]
     
 # binary logistic regression model
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex + pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + mex 
++ pr + cuban + dom + salv + otherhispan, family = binomial, data = sample_result)  
 ```
-
-\normalsize
 
 This regression will test the relationship between each of the explanatory variables to educational attainment. The coefficients of a binary logit are often hard to interpret on their own, so odds ratio will be employed to aid in the interpretation of a statistical relationship between race, gender, and Hispanic origin to educational attainment.
 
@@ -533,7 +549,11 @@ exp(coef(m))
 
 Additionally, in order to capture how Hispanics, the ethnic group of focus in this study, compare to other racial groups, an additional regression was constructed and run. This regression, like the previous one, looks at the odds of having an educational attainment of a completed high school education or higher. This model took the following form:
 
+\\
+
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$
+
+\\
 
 In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
 
@@ -558,11 +578,11 @@ result$hispanic <- ifelse(result$HISPAN == "650", 1, 0)
 
 **2nd Regression**
 
-\small
+
 ```R
-m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + hispanic, family = binomial, data = sample_result)
+m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race 
++ hispanic, family = binomial, data = sample_result)
 ```
-\normalsize
 
 In order to get more interpretable results, the odds ratio was also generated for this regression.
 
@@ -571,11 +591,13 @@ The results of running the code for both regressions and subsequent odds ratios 
 **First Regression and Odds Ratio**
 
 ![Regression 1](images/reg1.jpg)
+
 ![Odds Ratio 1](images/or1.jpg)
 
 **Second Regression and Odds Ratio**
 
 ![Regression 2, with Hispanic ethnic subgroups merged together](images/reg2.jpg)
+
 ![Odds Ratio 2](images/or2.jpg)
 
 The interpretation of these results will be further elaborated on in the *Conclusions* chapter.
