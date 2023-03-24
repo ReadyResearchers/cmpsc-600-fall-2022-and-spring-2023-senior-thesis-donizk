@@ -1,3 +1,17 @@
+# Acknowledgements
+
+First and foremost, I want to thank my family who have always propelled me to believe in myself and aspire to more, and who have given me so much in life to get me where I am. A special thank you to my mom who has always given me the world and more, and for partly inspiring this project with something she always said to me growing up: "Your education is the greatest gift I will ever give you. Your mind is something that no one can take away." Little did she know when she said those words that I would take them to heart the way I did.
+
+I want to thank all of my friends turned family, who have been my home away from home while at Allegheny. I especially want to thank my roommates and best friends, Abby, Mimi, Alexa, and Zoey, as well as, my other best friends (apparently I have a few of those) and fellow comp buddies (i.e. I bully them until they provide me company while I work) Adriana, Sam, Mila, and Veronica, who have been my personal entourage of emotional support throughout this whole process.
+
+I additionally want to acknowledge all of the support I receive from the Bonner Service Leader Program and Alpha Chi Omega, as my involvement in these organizations has been quintessential to my experience on campus.
+
+Thank you to all of the wonderful professors and mentors I have had while at Allegheny, especially Professor Jumadinova and Professor Bianco. This project could not have been completed without your endless support and patience. Special thanks too to Professor Oliver Bonham-Carter and Professor Doug Luman for assisting me throughout the development of my project.
+
+I also want to acknowledge all of the graduating Computer Science seniors for struggling alongside me these past four years. I have enjoyed (and almost looked forward to) every week of comp group to have an opportunity to rant to people dealing with the same behemoth of a project.
+
+Lastly, I want to acknowledge the things that got me through the nightmare that is comping. Namely, endless flows of Monster Energy and Diet Coke, scheduled cuddle sessions with my pet rabbit, the internet, and comfy booths (specifically in Kins) for me to sit on while I comp away for hours.
+
 # Introduction
 
 This chapter introduces the existing research behind **EduAttain**, and detail the motivation and goals of the project.
@@ -753,9 +767,9 @@ The summary of results will be separated into two main sections, Descriptive Ana
 
 ### **Descriptive Analysis**
 
-#### Gender and Educational Attainment: Results
+#### **Gender and Educational Attainment: Results**
 
-The results of the descriptive analysis presented in the Gender and Educational Attainment dashboard page showcases that, across all survey years, women had a higher proportion of individuals reporting an education of a High School Diploma or above. This result was achieved by comparing the percentage of those in the male and female population who had either an equivalent high school education or greater or less than some high school or below for each year. The plots showing the breakdown of educational attainment by men and women in this sample are depicted below.
+The results of the descriptive analysis presented in the Gender and Educational Attainment dashboard page showcases that, across all survey years, women had a higher proportion of individuals reporting an education of a High School Diploma or above. This result was achieved by comparing the percentage of those in the male and female population who had either an equivalent high school education or greater or less than some high school or below for each year. The plots showing the breakdown of educational attainment by men and women in this sample are depicted in **Figures 22-32**.
 
 ![US Male Educational Attainment in 2010](images/malexedu2010.png)
 
@@ -781,9 +795,11 @@ The results of the descriptive analysis presented in the Gender and Educational 
 
 ![US Female Educational Attainment in 2015](images/femalexedu2015.png)
 
-#### Race and Educational Attainment: Results
+#### **Race and Educational Attainment: Results**
 
-Within the Race and Educational Attainment page of the dashboard, the following plots were generated in order to show which racial group had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. While there were some general trends present across all years, there was also a slight variability in the trends that makes it relevant to present the results by year.
+Within the Race and Educational Attainment page of the dashboard, the following plots were generated in order to show which racial group had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. While there were some general trends present across all years, there was also a slight variability in the trends that makes it relevant to present the results by year. These trends can be observed in **Figures 34-69**
+
+##### Educational Attainment by Race in 2010
 
 ![US White Educational Attainment in 2010](images/whitexedu2010.png)
 
@@ -799,6 +815,8 @@ Within the Race and Educational Attainment page of the dashboard, the following 
 
 In 2010, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the White, Mixed Race, Pacific Islander, Black, and American Indian populations, in order.
 
+##### Educational Attainment by Race in 2011
+
 ![US White Educational Attainment in 2011](images/whitexedu2011.png)
 
 ![US Black Educational Attainment in 2011](images/blackxedu2011.png)
@@ -812,6 +830,8 @@ In 2010, the population with the highest proportion of individuals who attained 
 ![US Mixed Race Educational Attainment in 2011](images/mrxedu2011.png)
 
 In 2011, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Pacific Islander, Mixed Race, White, Black, and American Indian populations, in order.
+
+##### Educational Attainment by Race in 2012
 
 ![US White Educational Attainment in 2012](images/whitexedu2012.png)
 
@@ -827,6 +847,8 @@ In 2011, the population with the highest proportion of individuals who attained 
 
 In 2012, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
 
+##### Educational Attainment by Race in 2013
+
 ![US White Educational Attainment in 2013](images/whitexedu2013.png)
 
 ![US Black Educational Attainment in 2013](images/blackxedu2013.png)
@@ -841,6 +863,8 @@ In 2012, the population with the highest proportion of individuals who attained 
 
 In 2013, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
 
+##### Educational Attainment by Race in 2014
+
 ![US White Educational Attainment in 2014](images/whitexedu2014.png)
 
 ![US Black Educational Attainment in 2014](images/blackxedu2014.png)
@@ -854,6 +878,8 @@ In 2013, the population with the highest proportion of individuals who attained 
 ![US Mixed Race Educational Attainment in 2014](images/mrxedu2014.png)
 
 In 2014, the population with the highest proportion of individuals who attained an education equivalent to or above high school level was the Asian population, followed by the attainment of the Mixed Race, White, Pacific Islander, Black, and American Indian populations, in order.
+
+##### Educational Attainment by Race in 2015
 
 ![US White Educational Attainment in 2015](images/whitexedu2015.png)
 
@@ -875,11 +901,13 @@ The results from 2010-2014 show that the Asian population had the highest propor
 
 Overall, the biggest takeaways from this section covering racial differences in educational outcomes are that the Asian population tends to lead in rates of having a high school education or higher, followed closely by the Mixed Race, Pacific Islander, and White populations. The populations with the lowest proportions of high school and college educated individuals include the Black and American Indian populations, with American Indian educational attainment falling below that of Black educational attainment for all survey years in this study. The most surprising outcome presented here is that the Mixed Race population had a higher recorded proportion of educated individuals than the White population, which brings into question how the intersection of membership in different racial groups could influence educational attainment.
 
-#### Hispanic Ethnicity and Educational Attainment: Results
+#### **Hispanic Ethnicity and Educational Attainment: Results**
 
 Within the Hispanic Ethnicity and Educational Attainment page of the dashboard, the following plots were generated in order to show which Hispanic ethnic subgroup had the highest proportion of individuals reporting an educational attainment of a high school diploma or greater. Much like in the previous section, there were some general trends present across all years, but enough variability in them that make it relevant to present the trends by year. One limitation that is important of the  results presented here is the lack of available data present for the Salvadorian and Dominican populations for years 2010-2013, since that specific data was not collected prior to 2014. This is where much of the variability in the trends comes from, since it changes what group has the lowest rates of educational attainment.
 
-From 2010 to 2013, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican and Other Hispanic populations. The population with the lowest proportion of high school and college educated individuals was the Mexican population. The plots used to come to this conclusion are presented below.
+##### Educational Attainment by Hispanic Subgroup from 2010-2013
+
+From 2010 to 2013, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican and Other Hispanic populations. The population with the lowest proportion of high school and college educated individuals was the Mexican population. The plots used to come to this conclusion are presented in **Figures 70-89**.
 
 ![US Non Hispanic Educational Attainment in 2010](images/nhxedu2010.png)
 
@@ -921,7 +949,9 @@ From 2010 to 2013, the population with the highest proportion of individuals wit
 
 ![US Other Hispanic Educational Attainment in 2013](images/otherhxedu2013.png)
 
-From 2014 to 2015, with the inclusion of data for Dominican and Salvadorian populations, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican, Other Hispanic, Dominican, and Mexican populations, in order. The population with the lowest proportion of high school and college educated individuals was the Salvadorian population. The plots used to come to this conclusion are presented below.
+##### Educational Attainment by Hispanic Subgroup from 2014-2015
+
+From 2014 to 2015, with the inclusion of data for Dominican and Salvadorian populations, the population with the highest proportion of individuals with a completed high school education or greater was the Non Hispanic population. Within the Hispanic ethnic group, the highest attaining subgroup was the Cuban population, followed by the Puerto Rican, Other Hispanic, Dominican, and Mexican populations, in order. The population with the lowest proportion of high school and college educated individuals was the Salvadorian population. The plots used to come to this conclusion are presented in **Figures 90-103**.
 
 ![US Non Hispanic Educational Attainment in 2014](images/nhxedu2014.png)
 
@@ -955,9 +985,9 @@ Across all survey years, the proportions of high school and college educated ind
 
 Of the results presented in this section, the most interesting is that of how the findings for the Dominican and Salvadorian populations and how they compare to other Hispanic ethnic subgroups. The literature referenced for this study failed to take into account the educational attainment of these populations, which makes these findings all the more interesting. Outside of that, the findings presented in this section related to the Cuban and Mexican Hispanic subgroups solidifies the research done previously.
 
-### Statistical Analysis
+### **Statistical Analysis**
 
-#### First Regression, Confusion Matrix Accuracy, and Odds Ratio
+#### **First Regression, Confusion Matrix Accuracy, and Odds Ratio**
 
 ![First Regression Summary](images/reg1.jpg)
 
@@ -977,7 +1007,7 @@ When compared to the White reference population, all other racial groups had a l
 
 Looking at the odds ratios for the Hispanic populations shows that all Hispanic ethnic subgroups had a lower odds of having completed high school or college compared to the Non Hispanic population. Following the odds of attainment for Non Hispanic individuals is that of the Salvadorian, Cuban, Puerto Rican, Dominican, Other Hispanic, and Mexican populations, in order.
 
-#### Second Regression, Confusion Matrix Accuracy, and Odds Ratio
+#### **Second Regression, Confusion Matrix Accuracy, and Odds Ratio**
 
 In the interest of capturing how the Hispanic ethnic group compared to other racial groups in the realm of educational attainment, a secondary regression was constructed. The results of this regression are presented in Figure 107.
 
@@ -1013,24 +1043,12 @@ Additionally, the confusion matrices used in this project to calculate the accur
 
 Disparities in educational outcomes based on differences in gender, racial, and Hispanic ethnic identity were explored in detail within EduAttain.
 
-The findings within the descriptive statistics section of the project match much of what has been previously established about gender, racial, and ethnic inequalities in education. Comparisons of piecharts showed that the female, Asian, Non Hispanic, Cuban populations had the highest proportions of high school and college aged individuals, which matches the literature. Outcomes of interest from comparing these plots include that the Mixed Race population had a higher proportion of high school and college educated individuals than the White population. Furthermore, the findings for the Dominican and Salvadorian populations add to the gaps present in the literature for these Hispanic ethnic subgroups. Within the Hispanic population, the highest proportion of individuals with a high school diploma or greater was the Cuban population, followed by the  Puerto Rican, Other
+The findings within the descriptive statistics section of the project match much of what has been previously established about gender, racial, and ethnic inequalities in education. Comparisons of piecharts showed that the female, Asian, Non Hispanic, and Cuban populations had the highest proportions of high school and college aged individuals, which matches the literature. Outcomes of interest from comparing these plots include that the Mixed Race population had a higher proportion of high school and college educated individuals than the White population. Furthermore, the findings for the Dominican and Salvadorian populations add to the gaps present in the literature for these Hispanic ethnic subgroups. Within the Hispanic population, the highest proportion of individuals with a high school diploma or greater was the Cuban population, followed by the  Puerto Rican, Other
 Hispanic, Dominican, Mexican, and Salvadorian populations, in order.
 
 The statistical analysis presented in this project also contributes new findings to the study of educational inequality. The results produced by the first regression point to a statistically significant relationship between educational attainment and the factors of gender, race, and Hispanic ethnicity. In looking at the odds of attaining a high school education or greater using an odds ratio, the female population had a higher odds of attaining this level of education compared to the male population. The odds for the racial comparisons shows that, when compared to the White population, all other racial groups had a lower odds of having a high school education or greater, which contrasts findings in the literature. The Hispanic comparisons showed that, when compared to the non Hispanic population, all Hispanic ethnic subgroups had a lower odds of having an education of high school or greater, matching the findings in the literature. The second binary logit compared the entire Hispanic population to other racial groups and found that Hispanics had the lowest odds of having an educational attainment at or greater than high school level, supporting the findings presented in prior research.
 
 This project successfully bridges the gap in the study of gender, racial, and ethnic inequality in education by providing new insight into specific populations not previously captured and validating the findings of previous research in this field.
-
-# Acknowledgements
-
-First and foremost, I want to thank my family who have always propelled me to believe in myself and aspire to more, and who have given me so much in life to get me where I am. A special thank you to my mom who has always given me the world and more, and for partly inspiring this project with something she always said to me growing up: "Your education is the greatest gift I will ever give you. Your mind is something that no one can take away." Little did she know when she said those words that I would take them to heart the way I did.
-
-Thank you to all of the wonderful professors and mentors I have had while at Allegheny, especially Professor Jumadinova and Professor Bianco. This project could not have been completed without your endless support and patience. Special thanks too to Professor Oliver Bonham-Carter and Professor Doug Luman for assisting me throughout the development of my project.
-
-I also want to acknowledge all of the graduating Computer Science seniors for struggling alongside me these past four years. I have enjoyed (and almost looked forward to) every week of comp group to have an opportunity to rant to people dealing with the same behemoth of a project.
-
-I want to thank all of my friends turned family, who have been my home away from home while at Allegheny. I especially want to thank my roommates and best friends, Abby, Mimi, Alexa, and Zoey, as well as, my other best friends (apparently I have a few of those) and fellow comp buddies (i.e. I bully them until they provide me company while I work) Adriana, Sam, Mila, and Veronica, who have been my personal entourage of emotional support throughout this whole process.
-
-Lastly, I want to acknowledge the things that got me through the nightmare that is comping. Namely, endless flows of Monster Energy and Diet Coke, scheduled cuddle sessions with my pet rabbit, the internet, and comfy booths (specifically in Kins) for me to sit on while I comp away for hours.
 
 # References
 
