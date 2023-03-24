@@ -252,7 +252,7 @@ This project presents an interdisciplinary application bridging the disciplines 
 
 # Method of approach
 
-The focus of this chapter is to present the process that will be taken in order to complete this project. This process is split into multiple steps, depicted in the flowchart below.
+The focus of this chapter is to present the process that will be taken in order to complete this project. This process is split into multiple steps, depicted in the **Figure 3**.
 
 ![Methodology Flowchart](images/flowchart.jpg)
 
