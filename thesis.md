@@ -608,34 +608,39 @@ In this chapter, the experimental set up and evaluation for this project will be
 
 ## Experimental Design
 
-For the experimental design of this project, experiments will be separated into two main sections: descriptive statistics and statistical analysis
+For the experimental design of this project, experiments will be separated into two main sections: *descriptive statistics* and *statistical analysis*.
 
-The first half of experiments will focus on outlaying the descriptive statistics for this project, consisting of evaluating plots, specifically the counts for the amounts of people under each category of race, gender, or Hispanic origin that achieved either a high school diploma or greater or some high school or lesser. Using these plots, the proportions of each population accounted for in the analysis will be used to compare different gender, racial, and Hispanic ethnic subgroups to eachother. This will hopefully target several useful results to questions related to what group maintained the highest average level of educational attainment.
+The first half of experiments will focus on outlaying the *descriptive statistics* for this project, consisting of evaluating plots, specifically the counts for the amounts of people under each category of race, gender, or Hispanic origin that achieved either a high school diploma or greater or some high school or lesser. Using these plots, the proportions of each population accounted for in the analysis will be used to compare different gender, racial, and Hispanic ethnic subgroups to eachother. This will hopefully target several useful results to questions related to what group maintained the highest average level of educational attainment.
 
-The components of the EduAttain dashboard related to the descriptive statistics portion of the project include:
+The components of the EduAttain dashboard related to the *descriptive statistics* portion of the project include:
 
 - **Data & Description**: This page of the dashboard presents a table of the raw data set extracted from IPUMS, summary statistics relating to the age and amount of individuals captured in the data, project description, and a data key for the data table.
-![Data & Description](images/home.jpg)
+
+![**EduAttain: Data & Description**](images/home.jpg)
 
 - **Gender x Educational Attainment**: This page of the dashboard presents pie charts that were generated for each survey year representing the proportion of each gender's population above or below a High School education, and interpretations of the plots that compare female and male educational attainment.
-![Gender x Educational Attainment](images/genxedu.jpg)
+
+![**EduAttain: Gender x Educational Attainment**](images/genxedu.jpg)
 
 - **Race x Educational Attainment**: This page of the dashboard presents pie charts that were generated for each survey year representing the proportion of each racial population above or below a High School education, and interpretations of the plots that compare White, Black, Asian, American Indian, Pacific Islander, and Mixed Race educational attainment.
-![Race x Educational Attainment](images/racexedu.jpg)
+
+![**EduAttain: Race x Educational Attainment**](images/racexedu.jpg)
 
 - **Hispanic x Educational Attainment**: This page of the dashboard presents pie charts that were generated for each survey year representing the proportion of each Hispanic population above or below a High School education, and interpretations of the plots that compare Non Hispanic, Mexican, Puerto Rican, Cuban, Other Hispanic, Dominican, and Salvadorian educational attainment.
-![Hispanic x Educational Attainment](images/hispanxedu.jpg)
 
-The second section of experiments will be focused on statistical analysis of the data through the use of a binary logistic regression, as well as, an odds ratio. The regression and odds ratio will be used in conjunction to determine the presence of a statistical relationship between educational attainment and race, gender, and Hispanic origin. The results from both will be used to determine how a person's gender, racial, or ethnic identity can impact the education they will receive. In addition, a secondary binary logistic regression and odds ratio will shed light on how the Hispanic ethnic group compares to other racial groups' educational attainment.
+![**EduAttain: Hispanic x Educational Attainment**](images/hispanxedu.jpg)
 
-The components of the dashboard related to the statistical analysis portion of the project include:
+The second section of experiments will be focused on *statistical analysis* of the data through the use of a binary logistic regression, as well as, an odds ratio. The regression and odds ratio will be used in conjunction to determine the presence of a statistical relationship between educational attainment and race, gender, and Hispanic origin. The results from both will be used to determine how a person's gender, racial, or ethnic identity can impact the education they will receive. In addition, a secondary binary logistic regression and odds ratio will shed light on how the Hispanic ethnic group compares to other racial groups' educational attainment.
 
-- **Regression**: This page of the dashboard presents the results of the binary logistic regression and corresponding odds ratio, along with interpretations from these figures.
-![Statistical Analysis](images/stats.jpg)
+The components of the dashboard related to the *statistical analysis* portion of the project include:
+
+- **Regression**: This page of the dashboard presents the results of the two binary logistic regressions and corresponding odds ratios computed for this project, along with interpretations from these figures.
+
+![**EduAttain: Statistical Analysis**](images/stats.jpg)
 
 ## Evaluation
 
-To evaluate this project, a couple different techniques will be employed in order to test each component. Unit testing will be employed in the evaluation of the dashboard with the use of R's `testthat` in order to test the functionality of certain code segments including testing the creation of a plotly object, connection to the database using a query, and random sampling of the original data for the regression. Test cases will look like the following test case that tests that the SQLite query returns the correct expected output. This and other test cases for the application will be stored in /EduAttain/tests/app_tests.R in the source repository:
+To evaluate this project, a couple different techniques will be employed in order to test each component including the use of unit and UX testing, and the support of continuous integration through GitHub Actions. Unit testing will be employed in the evaluation of the dashboard with the use of R's `testthat` in order to test the functionality of certain code segments including testing the creation of a plotly object, connection to the database using a query, and random sampling of the original data for the regression. Test cases will look like the following test case that tests that the SQLite query returns the correct expected output. This and other test cases for the application will be stored in /EduAttain/tests/app_tests.R in the source repository:
 
 ```R
 # Test that the data is queried correctly
@@ -657,7 +662,8 @@ test_that("SQLite query returns expected output", {
     conn <- dbConnect(RSQLite::SQLite(), dbname = db)
 
     # query
-    result <- dbGetQuery(conn,"SELECT cpsidp, sex, educ, race, hispan, age FROM CPS WHERE age >= 18 AND cpsidp !='CPSIDP'")
+    result <- dbGetQuery(conn,"SELECT cpsidp, sex, educ, race, hispan, age 
+    FROM CPS WHERE age >= 18 AND cpsidp !='CPSIDP'")
 
     # check if result is data frame
     expect_true(is.data.frame(result))
@@ -671,15 +677,20 @@ To run the test, the IDE used for this project provided a button when the test f
 
 ![Test Results](images/tests.jpg)
 
-For the evaluation of the accuracy of the generated regression output, a confusion matrix, specifically the accuracy computed by the confusion matrix, will be used to validate the output generated by the `glm()` function for the binary logistic regression. The confusion matrix looks at the accuracy of the model by determining the amount of observations that were prediced that did have an education of a high school diploma or greater and comparing those to the predicted values generated from the same data set. These observations are separated into true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), which account for the predictions and their outcomes. If the outcome that was predicted was true, it is a true positive/negative and if it is false, it is a false positive/negative. Both true negative and true positive check for those observations that were predicted to have an education of some high school or less. Accuracy is computed from this confusion matrix following the equation below.
+For the evaluation of the accuracy of the generated regression output, a confusion matrix, specifically the accuracy computed by the confusion matrix, will be used to validate the output generated by the `glm()` function for the binary logistic regression. The *confusion matrix* looks at the accuracy of the model by determining the amount of observations that were prediced that did have an education of a high school diploma or greater and comparing those to the predicted values generated from the same data set. These observations are separated into true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), which account for the predictions and their outcomes. If the outcome that was predicted was true, it is a true positive/negative and if it is false, it is a false positive/negative. Both true negative and true positive check for those observations that were predicted to have an education of some high school or less. Accuracy is computed from this confusion matrix following the equation below.
+
 \\
+
 $accuracy = \frac{TP + TN}{total}$
+
 \\
+
 To construct the confusion matrix and get the accuracy of the binary logistic model being run, the following steps were taken after running the regression:
 
 ```R
 # binary logistic regression model
-    m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race + hispanic, family = binomial, data = sample_result)
+    m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race 
+    + hispanic, family = binomial, data = sample_result)
     
     # obtain predictions
     predict <- predict(m, type="response")
@@ -695,21 +706,21 @@ To construct the confusion matrix and get the accuracy of the binary logistic mo
     cat("Accuracy: ", round(accuracy,4))
 ```
 
-The accuracy generated by the first regression run for this project, $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$, is as follows.
+The accuracy generated by the first regression run for this project, **$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$**, is as follows.
 
 ![Accuracy of First Regression](images/acc1.JPG)
 
 This means that this binary logit's results are 86.5% accurate.
 
-The accuracy generated by the second regression run for this project, $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$, is as follows.
+The accuracy generated by the second regression run for this project, **$logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$**, is as follows.
 
 ![Accuracy of Second Regression](images/acc2.JPG)
 
 This means that this binary logit's results are also 86.5% accurate.
 
-In addition to the unit testing, the data dashboard's functionality will be evaluated according to the following table:
+In addition to the unit testing, the data dashboard's functionality will be evaluated according to the following table to perform user experience (UX) testing:
 
-Table: Components to Test on Dashboard
+Table: Components to Test on Dashboard - UX Testing
 
 |Row number | Component | Check |
 |:----------|:------------|:------------|
@@ -722,7 +733,7 @@ Table: Components to Test on Dashboard
 |7          |6 tables generated for each subtab, except reg |$\checkmark$        |
 |8          |Regression, odds ratio, and confusion matrix results are generated   |$\checkmark$        |
 
-For each of the components listed, the functionality will be tested as to simulate a user testing and to make sure that every piece of the dashboard is working as it should be. Specifically, certain buttons will be clicked on and certain output will be checked on to test for completion.
+For each of the components listed, the functionality will be tested as to simulate a user testing and to make sure that every piece of the dashboard is working as it should be. Specifically, certain buttons will be clicked on and certain output will be checked on to test for completion. This is to ensure that the user experience of EduAttain provides a platform that is easy to use and access.
 
 ## Threats to Validity
 
@@ -732,17 +743,17 @@ Related to this are the threats presented by the way the data was filtered and c
 
 One of the additional threats to validity, presented by the content of this chapter, revolves around the limited nature of testing for the dashboard. While unit testing, observational testing, and continuous integration through GitHub Actions will be employed as methods of testing the content presented in EduAttain, the actual testing functionality is rather limited. For unit testing, the only components being tested are that a plotly object is generated, the database is correctly queried and saved as a data frame, and that the random sample generation is accurate. The limited nature of unit testing is as a result of time constraints and lack of the use of reactive content in the dashboard of which to test.
 
-In order to mitigate these threats, much of the code used throughout the project, specifically for the plots, was reexamined and run thoroughly for any syntax errors or differences in output. Additionally, the inadequacies of the unit testing are aided by the inclusion of additional testing techniques including the use of observational testing and continuous integration.
+In order to mitigate these threats, much of the code used throughout the project, specifically for the plots, was reexamined and run thoroughly for any syntax errors or differences in output. The inadequacies of the unit testing are supplemented by the inclusion of additional testing techniques including the use of observational testing and continuous integration.
 
 # Conclusion
 
-This chapter covers the results of the descriptive and statistical analysis presented in EduAttain, while covering opportunities for Future Work and any Future Ethical Implications and Recommendations.
+This chapter covers the results of the descriptive and statistical analysis presented in **EduAttain**, while covering opportunities for future work and any future ethical implications and recommendations.
 
 ## Summary of Results
 
 The summary of results will be separated into two main sections, Descriptive Analysis and Statistical Analysis, where the results generated by the dashboard will be interpreted and discussed at length. These results will provide insight into how EduAttain addresses the gaps in research in the realm of educational disparities based on gender, race, and ethnicity.
 
-### Descriptive Analysis
+### **Descriptive Analysis**
 
 #### Gender and Educational Attainment: Results
 
