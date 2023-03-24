@@ -260,18 +260,16 @@ The focus of this chapter is to present the process that will be taken in order 
 
 One noteworthy element of this data extract is that even though I had selected the data to encompass the years of 2010-2021, when I was actually able to open up and work with the data extract in RStudio (using the `range()` function), I found that the data set only included data for 2010 until 2015. This is something I would consider a potential limitation of using IPUMS for data, as I was under the impression that more data was being accessed, given that my selected extract should have included 2010-2021. Besides that, I had been under the impression that in creating my data extract, equal or at least representative amounts of data for all of the United States would appear in the extract, which was not the case. The goal of this study is to generate key findings for the entirety of the US, split by year, to attempt to capture how rates of educational attainment (based on other variables) change over time. Due to the aforementioned potential issues with the data, this study may result in findings that are not fully representative of the populations being captured within the data, though it should provide some key insights into the trends present in the US. It is unclear why this data is inaccessible or not included in the extract.
 
-The raw data extract from IPUMS, before cleaning and transformation, looked much like the **Figure 3**.
-
-![Raw Data](images/raw-data.JPG)
+The raw data extract from IPUMS, before cleaning and transformation, looked much like the **Table 3**.
 
 Table: Raw Data
 
-| CPSIDP      | YEAR | SERIAL | MONTH | STATEFIP | PERNUM | WTFINL | ASECWT | AGE | SEX | RACE | BPL   | HISPAN | EDUC | FTOTVAL |
-|:-------------|:------|:--------|:-------|:----------|:--------|:--------|:--------|:-----|:-----|:------|:-------|:--------|:------|:---------|
-| 2.00912E+13 | 2010 | 1      | 3     | 23       | 1      |        | 485.99 | 65  | 2   | 100  | 9900  | 0      | 81   | 13992   |
-| 2.00912E+13 | 2010 | 2      | 3     | 23       | 1      |        | 531.71 | 54  | 1   | 100  | 15000 | 0      | 71   | 12000   |
-| 2.00912E+13 | 2010 | 3      | 3     | 23       | 1      |        | 474.4  | 73  | 2   | 100  | 9900  | 0      | 71   | 34814   |
-| 2.00912E+13 | 2010 | 3      | 3     | 23       | 1      |        | 474.4  | 71  | 1   | 100  | 9900  | 0      | 50   | 34814   |
+| CPSIDP      | YEAR | ... | EDUC | FTOTVAL |
+|:-------------|:------|:--------|:------|:---------|
+| 2.00912E+13 | 2010 | ...      | 81   | 13992   |
+| 2.00912E+13 | 2010 | ...      | 71   | 12000   |
+| 2.00912E+13 | 2010 | ...      | 71   | 34814   |
+| 2.00912E+13 | 2010 | ...      | 50   | 34814   |
 
 In order to analyze the data properly, each variable was considered in relation to how it will need to be used in analysis. In the case of *CPSIDP*, the nature of the variable is to serve as an identifier variable for each person in the sample, made using a combination of the survey year, the unique identifier assigned each person from every household (captured in the data), and the survey month. This variable will not be considered in analysis because of the nature of the variable and because of the several instances of blank values in the data extract. Additionally, the *SERIAL, YEAR, PERNUM, BPL, INCTOT*, and *MONTH* variables will not be considered in the analysis. The *SEX* variable is a binary variable, taking in values of either 1 or 2, with 1 representing males and 2 representing females. The *STATEFIP* variable represents a qualitative nominal variable, which is one that is seperated into levels of no particular order, and specifies entries by state with a numerical code. EDUC is an ordinal variable, as the entries are sorted into numerical codes, each representing a level of education, in order.  For use in analysis, however, the *EDUC* variable will be recoded into a binary variable that will take in a value of 0, indicating an educational attainment at or below some high school participation,  or 1, indicating an educational attainment at or above a high school diploma (or equivalent). *RACE* and *HISPAN* are also qualitative nominal variables, where each level of identification of race, and Hispanic ethnicity is assigned to a numerical code, in no particular order. Also for the purposes of use in statistical analysis, the RACE and HISPAN variables will be recoded to create binary variables for each identity group captured within the variables. The full list of numerical code assignments is available on the IPUMS CPS official website. Although recommended by IPUMS, WTFINL and ASECWT will not be used for analysis, as there are some missing values present.
 
@@ -279,7 +277,7 @@ In order to analyze the data properly, each variable was considered in relation 
 
 For this study, **R** will be the main tool used to perform data analysis, as such built-in functions such as `summary()` and `count()`, along with outside libraries and packages, will be employed to perform the initial exploratory analysis and statistical analysis of the data.
 
-After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample dropped from 1,048,575 to 753,243 observations. Additionally, using R's built-in `count()` function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed in the tables below for 2010 and 2015.
+After filtering the data to only include entries accounting for adults (18 and older in age), the amount of observations in the data sample dropped from 1,048,575 to 753,243 observations. Additionally, using R's built-in `count()` function, counts for the amount of individuals by race, gender, and Hispanic Heritage were generated for each year. These results can be observed below in **Tables 4-9** covering 2010 and 2015.
 
 Table: 2010 Race Count
 
@@ -427,14 +425,14 @@ The initial binary logistic regression model takes the following form:
 
 In this project, the regression considers the following odds.
 
-\\
+
 
 $$Y_j = \begin{cases} 
       1 & \mbox{if } EDUC \leq j \\
       0 & \mbox{if } EDUC > j 
       \end{cases}$$
 
-\\
+
 
 Where if EDUC is equal to 1, the odds of having an educational attainment of a high school diploma or greater are greater. If EDUC is equal to 0, the odds of having an educational attainment of some high school or lesser education are greater.
 
@@ -444,7 +442,7 @@ $logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_
 
 Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation was needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. There are two exceptions to this: firstly, in the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below first shows the recoding of the individual mixed race groups values into a universal "catch-all" variable, while the following code snippet shows the recoding of the RACE variable into individual dummy variables.
 
-\\
+
 
 **Mixed Race Grouping**
 
@@ -487,7 +485,7 @@ result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
 
 The same was done for the Other Hispanic population in the HISPAN variable, in which the Central and South American populations were merged with the Other Hispanic populations rates, in order to consolidate results, due to lower counts of all of these populations in isolation, relative to the other Hispanic races in the analysis. The code snippets for the merging of the Hispanic groups, as well as the binary recoding of the HISPAN variable can be observed below.
 
-\\
+
 
 **Other Hispanic Group Merging**
 
@@ -513,11 +511,11 @@ result$otherhispan <- ifelse(result$HISPAN == "650", 1, 0)
 
 Instead of using the original variables from the data, the newly created dummy variables will be employed in order to run the regression. This then changes the regression model that will be run to the following:
 
-\\
+
 
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{MEXICAN} + \beta_9 \mathrm{PUERTO~RICAN} + \beta_{10} \mathrm{CUBAN} + \beta_{11} \mathrm{DOMINICAN} + \beta_{12} \mathrm{SALVADORIAN} + \beta_{13} \mathrm{OTHER~HISPANIC}$
 
-\\
+
 
 To run and store the results of running a binary logistic regression in R the `glm()` function from the stats package will be utilized. To display the results of this regression, with information like coefficients and t-values, `summary()` must be used with the stored name of the regression. A code snippet displaying the aforementioned process of computing a regression in R is pictured below.
 
@@ -549,11 +547,11 @@ exp(coef(m))
 
 Additionally, in order to capture how Hispanics, the ethnic group of focus in this study, compare to other racial groups, an additional regression was constructed and run. This regression, like the previous one, looks at the odds of having an educational attainment of a completed high school education or higher. This model took the following form:
 
-\\
+
 
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta_3 \mathrm{AMERICAN~INDIAN} + \beta_4 \mathrm{ASIAN} + \beta_5 \mathrm{ISLANDER} + \beta_6 \mathrm{PACIFIC~ISLANDER} + \beta_7 \mathrm{MIXED~RACE} + \beta_8 \mathrm{HISPANIC}$
 
-\\
+
 
 In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
 
@@ -679,11 +677,11 @@ To run the test, the IDE used for this project provided a button when the test f
 
 For the evaluation of the accuracy of the generated regression output, a confusion matrix, specifically the accuracy computed by the confusion matrix, will be used to validate the output generated by the `glm()` function for the binary logistic regression. The *confusion matrix* looks at the accuracy of the model by determining the amount of observations that were prediced that did have an education of a high school diploma or greater and comparing those to the predicted values generated from the same data set. These observations are separated into true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN), which account for the predictions and their outcomes. If the outcome that was predicted was true, it is a true positive/negative and if it is false, it is a false positive/negative. Both true negative and true positive check for those observations that were predicted to have an education of some high school or less. Accuracy is computed from this confusion matrix following the equation below.
 
-\\
+
 
 $accuracy = \frac{TP + TN}{total}$
 
-\\
+
 
 To construct the confusion matrix and get the accuracy of the binary logistic model being run, the following steps were taken after running the regression:
 
