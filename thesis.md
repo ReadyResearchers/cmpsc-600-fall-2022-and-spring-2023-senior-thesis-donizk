@@ -640,6 +640,13 @@ The results of running the code for both regressions and subsequent odds ratios 
  
  
 
+ 
+
+ 
+
+ 
+
+ 
 **First Regression and Odds Ratio**
 
 ![Regression 1](images/reg1.jpg)
