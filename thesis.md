@@ -464,6 +464,9 @@ Due to the fact that this model encompasses explanatory variables that are both 
 
 
 
+
+
+
 **Mixed Race Grouping**
 
 ```R
@@ -504,6 +507,10 @@ result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
 ```
 
 The same was done for the Other Hispanic population in the HISPAN variable, in which the Central and South American populations were merged with the Other Hispanic populations rates, in order to consolidate results, due to lower counts of all of these populations in isolation, relative to the other Hispanic races in the analysis. The code snippets for the merging of the Hispanic groups, as well as the binary recoding of the HISPAN variable can be observed below.
+
+
+
+
 
 
 
@@ -575,6 +582,10 @@ $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta
 
 In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
 
+
+
+
+
 **Hispanic Recoding**
 
 ```R
@@ -606,11 +617,16 @@ In order to get more interpretable results, the odds ratio was also generated fo
 
 The results of running the code for both regressions and subsequent odds ratios are as follows:
 
+
+
+
 **First Regression and Odds Ratio**
 
 ![Regression 1](images/reg1.jpg)
 
 ![Odds Ratio 1](images/or1.jpg)
+
+
 
 **Second Regression and Odds Ratio**
 
