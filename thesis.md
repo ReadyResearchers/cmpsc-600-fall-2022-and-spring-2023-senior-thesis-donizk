@@ -461,12 +461,10 @@ Then this is factored into the following regression for the project.
 $logit(Y_j) = \beta_0 + \beta_1 \mathrm{GENDER} + \beta_2 \mathrm{RACE} + \beta_3 \mathrm{HISPANIC}$
 
 Due to the fact that this model encompasses explanatory variables that are both binary and categorical in nature, further data manipulation was needed in order to convert these variables into ones that can be used to create interpretable and valid results within a regression model. The unique values for each of these variables are recoded into dummy variables to achieve this goal. There are two exceptions to this: firstly, in the RACE variable in that the mixed race categories represented in the data were merged to create a single mixed race category in order to also aid in simplifying the interpretation of the model's results. The code snippet below first shows the recoding of the individual mixed race groups values into a universal "catch-all" variable, while the following code snippet shows the recoding of the RACE variable into individual dummy variables.
-
-
-
-
-
-
+ 
+ 
+ 
+ 
 **Mixed Race Grouping**
 
 ```R
@@ -494,7 +492,8 @@ Due to the fact that this model encompasses explanatory variables that are both 
     result$RACE[result$RACE == "830"]<-"999" #mixed race, 4-5, unspecified
     
 ```
-
+ 
+ 
 **Race Binary Recoding**
 
 ```R
@@ -508,12 +507,8 @@ result$mixed_race <- ifelse(result$RACE == "999", 1, 0)
 
 The same was done for the Other Hispanic population in the HISPAN variable, in which the Central and South American populations were merged with the Other Hispanic populations rates, in order to consolidate results, due to lower counts of all of these populations in isolation, relative to the other Hispanic races in the analysis. The code snippets for the merging of the Hispanic groups, as well as the binary recoding of the HISPAN variable can be observed below.
 
-
-
-
-
-
-
+ 
+ 
 **Other Hispanic Group Merging**
 
 ```R
@@ -523,7 +518,8 @@ result$HISPAN[result$HISPAN == "610"]<-"650" # central/south american
 result$HISPAN[result$HISPAN == "611"]<-"650" # central american, excluding salvadorian
 result$HISPAN[result$HISPAN == "612"]<-"650" # south american   
 ```
-
+ 
+ 
 **Hispanic Ethnicity Binary Recoding**
 
 ```R
@@ -581,11 +577,8 @@ $logit(Y_j) = \beta_0 + \beta_1 \mathrm{FEMALE} + \beta_2 \mathrm{BLACK} + \beta
 
 
 In order to construct this additional binary logistic regression in R, the HISPAN variable was recoded to merge all of the Hispanic values together. This merged values was then recoded into a binary variable, taking in values of 0 (non-hispanic) or 1 (hispanic). The code snippets for the recoding of HISPAN, as well as the newly constructed regression are below.
-
-
-
-
-
+ 
+ 
 **Hispanic Recoding**
 
 ```R
@@ -616,17 +609,13 @@ m <- glm(EDUC~female + black + amer_indian + asian + islander + mixed_race
 In order to get more interpretable results, the odds ratio was also generated for this regression.
 
 The results of running the code for both regressions and subsequent odds ratios are as follows:
-
-
-
-
+ 
+ 
 **First Regression and Odds Ratio**
 
 ![Regression 1](images/reg1.jpg)
 
 ![Odds Ratio 1](images/or1.jpg)
-
-
 
 **Second Regression and Odds Ratio**
 
