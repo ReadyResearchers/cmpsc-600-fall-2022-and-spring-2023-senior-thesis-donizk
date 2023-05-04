@@ -631,6 +631,10 @@ In order to get more interpretable results, the odds ratio was also generated fo
 The results of running the code for both regressions and subsequent odds ratios are as follows:
  
 
+ 
+
+ 
+
 **First Regression and Odds Ratio**
 
 ![Regression 1](images/reg1.jpg)
