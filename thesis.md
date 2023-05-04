@@ -597,6 +597,9 @@ In order to construct this additional binary logistic regression in R, the HISPA
  
 
  
+ 
+
+ 
 **Hispanic Recoding**
 
 ```R
@@ -653,6 +656,11 @@ The results of running the code for both regressions and subsequent odds ratios 
 
 ![Odds Ratio 1](images/or1.jpg)
 
+ 
+
+ 
+
+ 
 **Second Regression and Odds Ratio**
 
 ![Regression 2, with Hispanic ethnic subgroups merged together](images/reg2.jpg)
