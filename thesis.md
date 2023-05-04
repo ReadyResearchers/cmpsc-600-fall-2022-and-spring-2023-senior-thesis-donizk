@@ -465,6 +465,11 @@ Due to the fact that this model encompasses explanatory variables that are both 
  
 
  
+
+ 
+
+ 
+ 
 **Mixed Race Grouping**
 
 ```R
@@ -494,7 +499,6 @@ Due to the fact that this model encompasses explanatory variables that are both 
 ```
  
 
- 
 **Race Binary Recoding**
 
 ```R
