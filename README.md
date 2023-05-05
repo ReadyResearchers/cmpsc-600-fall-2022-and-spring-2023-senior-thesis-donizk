@@ -53,53 +53,53 @@ baseline requirements. Please note that these are only baseline requirements and
 it is expected that an exceptional senior thesis will exceed these requirements.
 
 **General Thesis Requirements**:
-  - [ ] The abstract provides a concise and compelling summary of the research
-  - [ ] The thesis was submitted on time as a PDF in a tagged release on GitHub
-  - [ ] The GitHub repository of the thesis contains evidence of many commits
-  - [ ] The GitHub repository of the thesis contains multiple releases using the
+  - [X] The abstract provides a concise and compelling summary of the research
+  - [X] The thesis was submitted on time as a PDF in a tagged release on GitHub
+  - [X] The GitHub repository of the thesis contains evidence of many commits
+  - [X] The GitHub repository of the thesis contains multiple releases using the
     [Semantic Versioning Standard](https://semver.org/)
-  - [ ] In adherence to the [Semantic Versioning Standard](https://semver.org/),
+  - [X] In adherence to the [Semantic Versioning Standard](https://semver.org/),
     the GitHub repository of the thesis contains a release greater than `1.0.0`
     for the work in CMPSC 600 and a release greater than `2.0.0` for CMPSC 610
-  - [ ] The thesis has the correct format created through the use of Pandoc and
+  - [X] The thesis has the correct format created through the use of Pandoc and
     LaTeX and the senior thesis template for the Department of Computer Science
-  - [ ] The title of the thesis is both interesting and appropriate
-  - [ ] The thesis includes at least twelve references
-  - [ ] Unless there is a convincing reason to require otherwise, each chapter
+  - [X] The title of the thesis is both interesting and appropriate
+  - [X] The thesis includes at least twelve references
+  - [X] Unless there is a convincing reason to require otherwise, each chapter
     in the senior thesis should contain at least ten to twenty pages of
     contents formatting in the required style
-  - [ ] The thesis consists of at least `7500` words
-  - [ ] The thesis follows a logical flow at the level of chapters, sections,
+  - [X] The thesis consists of at least `7500` words
+  - [X] The thesis follows a logical flow at the level of chapters, sections,
     subsections, and individual paragraphs
-  - [ ] The thesis includes appropriate visual aids, which fall under the broad
+  - [X] The thesis includes appropriate visual aids, which fall under the broad
     categories of:
   * `image`
   * `figure`
   * `table`
   * `graph`
-  - [ ] The thesis contains a sufficient amount of content with a focus on
+  - [X] The thesis contains a sufficient amount of content with a focus on
     scientific, technical, engineering, and/or mathematical content
-  - [ ] The thesis highlights and explains the societal impacts and ethical
+  - [X] The thesis highlights and explains the societal impacts and ethical
     implications of the completed research
-  - [ ] There are no typographical or grammatical errors in the thesis
-  - [ ] There is no extraneous text in the thesis
+  - [X] There are no typographical or grammatical errors in the thesis
+  - [X] There is no extraneous text in the thesis
 
 **Introduction Section Requirements**
-  - [ ] The introduction section clearly describes the completed work
-  - [ ] The introduction section motivates the completed work from a
+  - [X] The introduction section clearly describes the completed work
+  - [X] The introduction section motivates the completed work from a
     professional perspective focused on science, technology, engineering,
     mathematics, and societal implications
-  - [ ] The introduction section outlines the ethical implications of the thesis
+  - [X] The introduction section outlines the ethical implications of the thesis
 
 **Related Work Section Requirements**
-  - [ ] The related work section references and describes relevant literature
-  - [ ] The related work section explains how relevant literature connects to the thesis
-  - [ ] The related work section does not provide a "laundry list" of the related literature
-  - [ ] The related work section situates the completed project in the broader scope
+  - [X] The related work section references and describes relevant literature
+  - [X] The related work section explains how relevant literature connects to the thesis
+  - [X] The related work section does not provide a "laundry list" of the related literature
+  - [X] The related work section situates the completed project in the broader scope
 
 **Method Section Requirements**
-  - [ ] The method section explains the process utilized in the completed study
-  - [ ] The method section addresses as many of the following which are
+  - [X] The method section explains the process utilized in the completed study
+  - [X] The method section addresses as many of the following which are
     applicable (minimum `1`):
   * `description of algorithms`
   * `programming languages`
@@ -107,26 +107,26 @@ it is expected that an exceptional senior thesis will exceed these requirements.
   * `platforms`
   * `software tools`
   * `hardware`
-  - [ ] The method section references the GitHub repository that contains the
+  - [X] The method section references the GitHub repository that contains the
     implementation of the project's computational artifact(s)
-  - [ ] The method section gives examples of the input and output of the
+  - [X] The method section gives examples of the input and output of the
     project's computational artifact(s) and, when appropriate, explains how to
     run the computational artifact (note that the `README.md` file of the GitHub
     repository that contains the computational artifact(s) should furnish
     complete details about the input, output, behavior, and use of the project)
 
 **Experimental Results Section Requirements**
-  - [ ] The experimental results section includes a description of experiments
+  - [X] The experimental results section includes a description of experiments
     such that a reader should be able to reproduce them
-  - [ ] The evaluation subsection describes how the work is validated
-  - [ ] The evaluation subsection contains at least one graph, table of data, or
+  - [X] The evaluation subsection describes how the work is validated
+  - [X] The evaluation subsection contains at least one graph, table of data, or
     some other relevant presentation of the results from the experimental study
-  - [ ] The experimental results section details threats to validity
+  - [X] The experimental results section details threats to validity
 
 **Discussion and Future Work Section Requirements**
-  - [ ] The discussion and future work section discusses the impact of the completed research project
-  - [ ] The discussion and future work section critically reflects on the completed research project
-  - [ ] The conclusion outlines, with sufficient depth and detail, avenues for further and/or future work
+  - [X] The discussion and future work section discusses the impact of the completed research project
+  - [X] The discussion and future work section critically reflects on the completed research project
+  - [X] The conclusion outlines, with sufficient depth and detail, avenues for further and/or future work
 
 ## Explanation
 
